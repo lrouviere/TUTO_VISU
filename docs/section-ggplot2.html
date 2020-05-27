@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapitre 2 Le package ggplot2 | Visualisation avec R</title>
+  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapitre 2 Le package ggplot2 | Visualisation avec R" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapitre 2 Le package ggplot2 | Visualisation avec R" />
+  
+  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+<meta name="author" content="Laurent Rouvière" />
+
+
+<meta name="date" content="2020-05-27" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="section-literature.html"/>
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a></li>
+<li class="chapter" data-level="2" data-path="section-ggplot2.html"><a href="section-ggplot2.html"><i class="fa fa-check"></i><b>2</b> Le package ggplot2</a><ul>
+<li class="chapter" data-level="2.1" data-path="section-ggplot2.html"><a href="section-ggplot2.html#section-fonctions-graphiques-conventionnelles"><i class="fa fa-check"></i><b>2.1</b> Fonctions graphiques conventionnelles</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="section-ggplot2.html"><a href="section-ggplot2.html#section-la-fonction-plot"><i class="fa fa-check"></i><b>2.1.1</b> La fonction <strong>plot</strong></a></li>
+<li class="chapter" data-level="2.1.2" data-path="section-ggplot2.html"><a href="section-ggplot2.html#section-graphes-interactifs-avec-ramcharts"><i class="fa fa-check"></i><b>2.1.2</b> Graphes interactifs avec rAmCharts</a></li>
+<li class="chapter" data-level="2.1.3" data-path="section-ggplot2.html"><a href="section-ggplot2.html#section-exercice-1"><i class="fa fa-check"></i><b>2.1.3</b> Exercice 1</a></li>
+<li class="chapter" data-level="2.1.4" data-path="section-ggplot2.html"><a href="section-ggplot2.html#section-exercice-2"><i class="fa fa-check"></i><b>2.1.4</b> Exercice 2</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="section-literature.html"><a href="section-literature.html"><i class="fa fa-check"></i><b>3</b> Literature</a></li>
+<li class="chapter" data-level="4" data-path="section-methods.html"><a href="section-methods.html"><i class="fa fa-check"></i><b>4</b> Methods</a></li>
+<li class="chapter" data-level="5" data-path="section-applications.html"><a href="section-applications.html"><i class="fa fa-check"></i><b>5</b> Applications</a><ul>
+<li class="chapter" data-level="5.1" data-path="section-applications.html"><a href="section-applications.html#section-example-one"><i class="fa fa-check"></i><b>5.1</b> Example one</a></li>
+<li class="chapter" data-level="5.2" data-path="section-applications.html"><a href="section-applications.html#section-example-two"><i class="fa fa-check"></i><b>5.2</b> Example two</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="section-final-words.html"><a href="section-final-words.html"><i class="fa fa-check"></i><b>6</b> Final Words</a></li>
+<li class="chapter" data-level="" data-path="section-references.html"><a href="section-references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Visualisation avec R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="section-ggplot2" class="section level1">
+<h1><span class="header-section-number">Chapitre 2</span> Le package ggplot2</h1>
+<p>Il est souvent nécessaire d’utiliser des techniques de visualisation à toutes les étapes d’une étude statistique. Un des avantages de <strong>R</strong> est qu’il est relativement simple de mettre en oeuvre tout les types de graphes généralement utilisés. Dans cette fiche, nous présentons tout d’abord les fonctions classiques qui permettent de tracer des figures. Nous proposons ensuite une introduction aux graphes <strong>ggplot</strong> qui sont de plus en plus utilisés pour faire de la visualisation.</p>
+<div id="section-fonctions-graphiques-conventionnelles" class="section level2">
+<h2><span class="header-section-number">2.1</span> Fonctions graphiques conventionnelles</h2>
+<p>Pour commencer il est intéressant d’examiner quelques exemples de représentations graphiques construits avec <strong>R</strong>. On peut les obtenir à l’aide de la fonction <strong>demo</strong>.</p>
+<div class="sourceCode" id="section-cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw">demo</span>(graphics)</a></code></pre></div>
+<div id="section-la-fonction-plot" class="section level3">
+<h3><span class="header-section-number">2.1.1</span> La fonction <strong>plot</strong></h3>
+<p>C’est une <strong>fonction générique</strong> que l’on peut utiliser pour représenter différents types de données. L’utilisation standard consiste à visualiser une variable <em>y</em> en fonction d’une variable <em>x</em>. On peut par exemple obtenir le graphe de la fonction <span class="math inline">\(x\mapsto \sin(2\pi x)\)</span> sur <span class="math inline">\([0,1]\)</span>, à l’aide de</p>
+<div class="sourceCode" id="section-cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">x &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="op">-</span><span class="dv">2</span><span class="op">*</span>pi,<span class="dv">2</span><span class="op">*</span>pi,<span class="dt">by=</span><span class="fl">0.05</span>)</a>
+<a class="sourceLine" id="cb3-2" data-line-number="2">y &lt;-<span class="st"> </span><span class="kw">sin</span>(x)</a>
+<a class="sourceLine" id="cb3-3" data-line-number="3"><span class="kw">plot</span>(x,y) <span class="co">#points (par défaut)</span></a></code></pre></div>
+<p><img src="TUTO_VISU_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<div class="sourceCode" id="section-cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw">plot</span>(x,y,<span class="dt">type=</span><span class="st">&quot;l&quot;</span>) <span class="co">#représentation sous forme de ligne</span></a></code></pre></div>
+<p><img src="TUTO_VISU_files/figure-html/unnamed-chunk-4-2.png" width="672" /></p>
+<p>Nous proposons des exemples de représentations de variables quantitatives et qualitatives à l’aide du jeu de données <strong>ozone.txt</strong> que l’on importe avec</p>
+<div class="sourceCode" id="section-cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1">ozone &lt;-<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;ozone.txt&quot;</span>)</a>
+<a class="sourceLine" id="cb5-2" data-line-number="2"><span class="kw">summary</span>(ozone)</a></code></pre></div>
+<pre><code>##      maxO3              T9             T12             T15       
+##  Min.   : 42.00   Min.   :11.30   Min.   :14.00   Min.   :14.90  
+##  1st Qu.: 70.75   1st Qu.:16.20   1st Qu.:18.60   1st Qu.:19.27  
+##  Median : 81.50   Median :17.80   Median :20.55   Median :22.05  
+##  Mean   : 90.30   Mean   :18.36   Mean   :21.53   Mean   :22.63  
+##  3rd Qu.:106.00   3rd Qu.:19.93   3rd Qu.:23.55   3rd Qu.:25.40  
+##  Max.   :166.00   Max.   :27.00   Max.   :33.50   Max.   :35.50  
+##       Ne9             Ne12            Ne15           Vx9         
+##  Min.   :0.000   Min.   :0.000   Min.   :0.00   Min.   :-7.8785  
+##  1st Qu.:3.000   1st Qu.:4.000   1st Qu.:3.00   1st Qu.:-3.2765  
+##  Median :6.000   Median :5.000   Median :5.00   Median :-0.8660  
+##  Mean   :4.929   Mean   :5.018   Mean   :4.83   Mean   :-1.2143  
+##  3rd Qu.:7.000   3rd Qu.:7.000   3rd Qu.:7.00   3rd Qu.: 0.6946  
+##  Max.   :8.000   Max.   :8.000   Max.   :8.00   Max.   : 5.1962  
+##       Vx12             Vx15            maxO3v          vent      pluie   
+##  Min.   :-7.878   Min.   :-9.000   Min.   : 42.00   Est  :10   Pluie:43  
+##  1st Qu.:-3.565   1st Qu.:-3.939   1st Qu.: 71.00   Nord :31   Sec  :69  
+##  Median :-1.879   Median :-1.550   Median : 82.50   Ouest:50             
+##  Mean   :-1.611   Mean   :-1.691   Mean   : 90.57   Sud  :21             
+##  3rd Qu.: 0.000   3rd Qu.: 0.000   3rd Qu.:106.00                        
+##  Max.   : 6.578   Max.   : 5.000   Max.   :166.00</code></pre>
+<p>On visualise tout d’abord 2 variables quantitatives à l’aide d’un nuage de points : la concentration en ozone maximale <strong>maxO3</strong> en fonction de la température à 12h <strong>T12</strong>.</p>
+<div class="sourceCode" id="section-cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="kw">plot</span>(ozone[,<span class="st">&quot;T12&quot;</span>],ozone[,<span class="st">&quot;maxO3&quot;</span>])</a></code></pre></div>
+<p><img src="TUTO_VISU_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p>Comme les deux variables appartiennent au même jeu de données, on peut obtenir la même représentation à l’aide d’une sytaxe plus claire qui ajoutent automatiquement les noms des variables sur les axes :</p>
+<div class="sourceCode" id="section-cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="kw">plot</span>(maxO3<span class="op">~</span>T12,<span class="dt">data=</span>ozone)</a></code></pre></div>
+<p><img src="TUTO_VISU_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p>Une autre façon de faire (moins naturelle) :</p>
+<div class="sourceCode" id="section-cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1"><span class="kw">plot</span>(ozone[,<span class="st">&quot;T12&quot;</span>],ozone[,<span class="st">&quot;maxO3&quot;</span>],<span class="dt">xlab=</span><span class="st">&quot;T12&quot;</span>,<span class="dt">ylab=</span><span class="st">&quot;maxO3&quot;</span>)</a></code></pre></div>
+<p><img src="TUTO_VISU_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p>Il existe des fonctions spécifiques pour chaque type de graphs, par exemple <strong>histogram</strong>, <strong>barplot</strong> et <strong>boxplot</strong> :</p>
+<div class="sourceCode" id="section-cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" data-line-number="1"><span class="kw">hist</span>(ozone<span class="op">$</span>maxO3,<span class="dt">main=</span><span class="st">&quot;Histogram&quot;</span>)</a></code></pre></div>
+<p><img src="TUTO_VISU_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<div class="sourceCode" id="section-cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" data-line-number="1"><span class="kw">barplot</span>(<span class="kw">table</span>(ozone<span class="op">$</span>vent)<span class="op">/</span><span class="kw">nrow</span>(ozone),<span class="dt">col=</span><span class="st">&quot;blue&quot;</span>)</a></code></pre></div>
+<p><img src="TUTO_VISU_files/figure-html/unnamed-chunk-9-2.png" width="672" /></p>
+<div class="sourceCode" id="section-cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" data-line-number="1"><span class="kw">boxplot</span>(maxO3<span class="op">~</span>vent,<span class="dt">data=</span>ozone)</a></code></pre></div>
+<p><img src="TUTO_VISU_files/figure-html/unnamed-chunk-9-3.png" width="672" /></p>
+</div>
+<div id="section-graphes-interactifs-avec-ramcharts" class="section level3">
+<h3><span class="header-section-number">2.1.2</span> Graphes interactifs avec rAmCharts</h3>
+<p>On peut utiliser ce package pour obtenir des graphes dynamiques. L’utilisation est relativement simple, il suffit d’ajouter le prefixe <strong>am</strong> devant le nom de la fonction :</p>
+<div class="sourceCode" id="section-cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" data-line-number="1"><span class="kw">library</span>(rAmCharts)</a>
+<a class="sourceLine" id="cb13-2" data-line-number="2"><span class="kw">amHist</span>(ozone<span class="op">$</span>maxO3)</a></code></pre></div>
+<div id="htmlwidget-38d6c8d10502de0290d3" style="width:100%;height:500px;" class="ramcharts_base html-widget"></div>
+<script type="application/json" data-for="htmlwidget-38d6c8d10502de0290d3">{"x":{"chartData":{"columnSpacing":0,"columnWidth":1,"fillAlphas":1,"lineAlpha":1,"categoryAxis":{"title":"ozone$maxO3"},"categoryField":"x","creditsPosition":"bottom-right","dataProvider":[{"x":50,"y":10,"cut":"(from 40 to 60)","color":"#1e90ff"},{"x":70,"y":43,"cut":"(from 60 to 80)","color":"#1e90ff"},{"x":90,"y":27,"cut":"(from 80 to 100)","color":"#1e90ff"},{"x":110,"y":16,"cut":"(from 100 to 120)","color":"#1e90ff"},{"x":130,"y":5,"cut":"(from 120 to 140)","color":"#1e90ff"},{"x":150,"y":10,"cut":"(from 140 to 160)","color":"#1e90ff"},{"x":170,"y":1,"cut":"(from 160 to 180)","color":"#1e90ff"}],"graphs":[{"animationPlayed":false,"fillAlphas":0.8,"lineAlpha":1,"fillColorsField":"color","lineColor":"#1e90ff","labelText":"","balloonText":"<b>[[value]]<\/b> <br/> [[cut]] ","type":"column","valueField":"y"}],"theme":"light","type":"serial","valueAxes":[{"minimum":0,"maximum":45.15,"title":"Frequency"}]},"background":"#ffffff","listeners":null,"axes_listeners":null,"axes_listenersIndices":null,"categoryAxis_listeners":null,"chartCursor_listeners":null,"dataSetSelector_listeners":null,"legend_listeners":null,"panels_listeners":null,"panels_listenersIndices":null,"periodSelector_listeners":null,"valueAxes_listeners":null,"valueAxes_listenersIndices":[],"stockLegend_listeners":null,"group":null,"is_ts_module":false},"evals":[],"jsHooks":[]}</script>
+<div class="sourceCode" id="section-cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" data-line-number="1"><span class="kw">amPlot</span>(ozone,<span class="dt">col=</span><span class="kw">c</span>(<span class="st">&quot;T9&quot;</span>,<span class="st">&quot;T12&quot;</span>))</a></code></pre></div>
+<div id="htmlwidget-def3ec762b4d08c95a1f" style="width:100%;height:500px;" class="ramcharts_base html-widget"></div>
+<script type="application/json" data-for="htmlwidget-def3ec762b4d08c95a1f">{"x":{"chartData":{"precision":2,"categoryAxis":{"title":"index","position":"bottom","id":"x"},"categoryField":"amCategory","dataProvider":[{"T9":15.6,"T12":18.5,"amCategory":"Obs. 1"},{"T9":17,"T12":18.4,"amCategory":"Obs. 2"},{"T9":15.3,"T12":17.6,"amCategory":"Obs. 3"},{"T9":16.2,"T12":19.7,"amCategory":"Obs. 4"},{"T9":17.4,"T12":20.5,"amCategory":"Obs. 5"},{"T9":17.7,"T12":19.8,"amCategory":"Obs. 6"},{"T9":16.8,"T12":15.6,"amCategory":"Obs. 7"},{"T9":14.9,"T12":17.5,"amCategory":"Obs. 8"},{"T9":16.1,"T12":19.6,"amCategory":"Obs. 9"},{"T9":18.3,"T12":21.9,"amCategory":"Obs. 10"},{"T9":17.3,"T12":19.3,"amCategory":"Obs. 11"},{"T9":17.6,"T12":20.3,"amCategory":"Obs. 12"},{"T9":18.3,"T12":19.6,"amCategory":"Obs. 13"},{"T9":17.1,"T12":18.2,"amCategory":"Obs. 14"},{"T9":15.4,"T12":17.4,"amCategory":"Obs. 15"},{"T9":15.9,"T12":19.1,"amCategory":"Obs. 16"},{"T9":21,"T12":24.6,"amCategory":"Obs. 17"},{"T9":16.2,"T12":22.4,"amCategory":"Obs. 18"},{"T9":19.7,"T12":24.2,"amCategory":"Obs. 19"},{"T9":23.6,"T12":28.6,"amCategory":"Obs. 20"},{"T9":20.4,"T12":25.2,"amCategory":"Obs. 21"},{"T9":27,"T12":32.7,"amCategory":"Obs. 22"},{"T9":24,"T12":23.5,"amCategory":"Obs. 23"},{"T9":19.7,"T12":22.9,"amCategory":"Obs. 24"},{"T9":20.1,"T12":22.4,"amCategory":"Obs. 25"},{"T9":19.6,"T12":25.1,"amCategory":"Obs. 26"},{"T9":19.5,"T12":23.4,"amCategory":"Obs. 27"},{"T9":18.8,"T12":22.7,"amCategory":"Obs. 28"},{"T9":24.1,"T12":28.4,"amCategory":"Obs. 29"},{"T9":26.6,"T12":30.1,"amCategory":"Obs. 30"},{"T9":19.5,"T12":18.8,"amCategory":"Obs. 31"},{"T9":16.8,"T12":18.2,"amCategory":"Obs. 32"},{"T9":20.8,"T12":23.7,"amCategory":"Obs. 33"},{"T9":17.5,"T12":18.2,"amCategory":"Obs. 34"},{"T9":18.1,"T12":21.2,"amCategory":"Obs. 35"},{"T9":19.2,"T12":22,"amCategory":"Obs. 36"},{"T9":19.4,"T12":20.7,"amCategory":"Obs. 37"},{"T9":19.2,"T12":21,"amCategory":"Obs. 38"},{"T9":13.8,"T12":17.3,"amCategory":"Obs. 39"},{"T9":14.3,"T12":14.5,"amCategory":"Obs. 40"},{"T9":15.6,"T12":18.6,"amCategory":"Obs. 41"},{"T9":16.9,"T12":19.1,"amCategory":"Obs. 42"},{"T9":17.4,"T12":20.4,"amCategory":"Obs. 43"},{"T9":15.1,"T12":20.5,"amCategory":"Obs. 44"},{"T9":15.1,"T12":15.6,"amCategory":"Obs. 45"},{"T9":16.7,"T12":19.1,"amCategory":"Obs. 46"},{"T9":16.9,"T12":20.3,"amCategory":"Obs. 47"},{"T9":18,"T12":21.6,"amCategory":"Obs. 48"},{"T9":18.6,"T12":21.9,"amCategory":"Obs. 49"},{"T9":18.8,"T12":22.5,"amCategory":"Obs. 50"},{"T9":19,"T12":22.5,"amCategory":"Obs. 51"},{"T9":19.9,"T12":26.9,"amCategory":"Obs. 52"},{"T9":23.8,"T12":27.7,"amCategory":"Obs. 53"},{"T9":24,"T12":28.3,"amCategory":"Obs. 54"},{"T9":23.3,"T12":27.6,"amCategory":"Obs. 55"},{"T9":25,"T12":29.6,"amCategory":"Obs. 56"},{"T9":24.9,"T12":30.5,"amCategory":"Obs. 57"},{"T9":20.5,"T12":26.3,"amCategory":"Obs. 58"},{"T9":25.3,"T12":29.5,"amCategory":"Obs. 59"},{"T9":21.3,"T12":23.8,"amCategory":"Obs. 60"},{"T9":20,"T12":18.2,"amCategory":"Obs. 61"},{"T9":18.7,"T12":20.6,"amCategory":"Obs. 62"},{"T9":18.6,"T12":18.7,"amCategory":"Obs. 63"},{"T9":19.2,"T12":23,"amCategory":"Obs. 64"},{"T9":19.9,"T12":21.6,"amCategory":"Obs. 65"},{"T9":18.7,"T12":21.4,"amCategory":"Obs. 66"},{"T9":18.4,"T12":17.1,"amCategory":"Obs. 67"},{"T9":17.1,"T12":20,"amCategory":"Obs. 68"},{"T9":17.8,"T12":22.8,"amCategory":"Obs. 69"},{"T9":20.9,"T12":25.2,"amCategory":"Obs. 70"},{"T9":18.8,"T12":20.5,"amCategory":"Obs. 71"},{"T9":23.5,"T12":29.8,"amCategory":"Obs. 72"},{"T9":20.8,"T12":23.7,"amCategory":"Obs. 73"},{"T9":18.8,"T12":21.1,"amCategory":"Obs. 74"},{"T9":17.8,"T12":21.3,"amCategory":"Obs. 75"},{"T9":20.6,"T12":24.8,"amCategory":"Obs. 76"},{"T9":21.6,"T12":26.9,"amCategory":"Obs. 77"},{"T9":22.7,"T12":28.4,"amCategory":"Obs. 78"},{"T9":19.8,"T12":27.2,"amCategory":"Obs. 79"},{"T9":25,"T12":33.5,"amCategory":"Obs. 80"},{"T9":20.1,"T12":22.9,"amCategory":"Obs. 81"},{"T9":21,"T12":26.3,"amCategory":"Obs. 82"},{"T9":21,"T12":24.4,"amCategory":"Obs. 83"},{"T9":16.9,"T12":17.8,"amCategory":"Obs. 84"},{"T9":17.5,"T12":18.6,"amCategory":"Obs. 85"},{"T9":16.5,"T12":20.3,"amCategory":"Obs. 86"},{"T9":17.7,"T12":20.2,"amCategory":"Obs. 87"},{"T9":17.3,"T12":22.7,"amCategory":"Obs. 88"},{"T9":15.3,"T12":16.8,"amCategory":"Obs. 89"},{"T9":15.9,"T12":19.2,"amCategory":"Obs. 90"},{"T9":16.2,"T12":18.9,"amCategory":"Obs. 91"},{"T9":18.3,"T12":18.3,"amCategory":"Obs. 92"},{"T9":16.9,"T12":20.8,"amCategory":"Obs. 93"},{"T9":17.3,"T12":19.8,"amCategory":"Obs. 94"},{"T9":14.2,"T12":22.2,"amCategory":"Obs. 95"},{"T9":15.8,"T12":18.7,"amCategory":"Obs. 96"},{"T9":15.2,"T12":17.9,"amCategory":"Obs. 97"},{"T9":17.1,"T12":17.7,"amCategory":"Obs. 98"},{"T9":15.4,"T12":17.7,"amCategory":"Obs. 99"},{"T9":13.7,"T12":14,"amCategory":"Obs. 100"},{"T9":12.7,"T12":14.3,"amCategory":"Obs. 101"},{"T9":14.8,"T12":16.3,"amCategory":"Obs. 102"},{"T9":15.5,"T12":18,"amCategory":"Obs. 103"},{"T9":11.3,"T12":19.4,"amCategory":"Obs. 104"},{"T9":15.2,"T12":19.7,"amCategory":"Obs. 105"},{"T9":14.7,"T12":17.6,"amCategory":"Obs. 106"},{"T9":13.3,"T12":17.7,"amCategory":"Obs. 107"},{"T9":13.3,"T12":17.7,"amCategory":"Obs. 108"},{"T9":16.2,"T12":20.8,"amCategory":"Obs. 109"},{"T9":16.9,"T12":23,"amCategory":"Obs. 110"},{"T9":16.9,"T12":19.8,"amCategory":"Obs. 111"},{"T9":15.7,"T12":18.6,"amCategory":"Obs. 112"}],"graphs":[{"animationPlayed":false,"lineAlpha":1,"bullet":"round","fill_alphas":0,"bulletAlpha":0,"maxBulletSize":0,"balloonText":"value: <b>[[value]]<\/b>","title":"T9","type":"line","valueField":"T9"},{"animationPlayed":false,"lineAlpha":1,"bullet":"round","fill_alphas":0,"bulletAlpha":0,"maxBulletSize":0,"balloonText":"value: <b>[[value]]<\/b>","title":"T12","type":"line","valueField":"T12"}],"type":"serial","valueAxes":[{"position":"left","id":"y","title":"ozone"}]},"background":"#ffffff","listeners":null,"axes_listeners":null,"axes_listenersIndices":null,"categoryAxis_listeners":null,"chartCursor_listeners":null,"dataSetSelector_listeners":null,"legend_listeners":null,"panels_listeners":null,"panels_listenersIndices":null,"periodSelector_listeners":null,"valueAxes_listeners":null,"valueAxes_listenersIndices":[],"stockLegend_listeners":null,"group":null,"is_ts_module":false},"evals":[],"jsHooks":[]}</script>
+<div class="sourceCode" id="section-cb15"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb15-1" data-line-number="1"><span class="kw">amBoxplot</span>(maxO3<span class="op">~</span>vent,<span class="dt">data=</span>ozone)</a></code></pre></div>
+<div id="htmlwidget-33cde522b9876b8dfaf3" style="width:100%;height:500px;" class="ramcharts_base html-widget"></div>
+<script type="application/json" data-for="htmlwidget-33cde522b9876b8dfaf3">{"x":{"chartData":{"rotate":false,"categoryField":"cat","dataProvider":[{"cat":"Est","low_outlier":92,"low":92,"open":96,"median":109,"close":121,"high":146,"high_outlier":146,"color":"#1e90ff","real_outlier_1":"45","individual_1":"<b> Individual <\/b>: 40"},{"cat":"Nord","low_outlier":42,"low":42,"open":71,"median":81,"close":94.5,"high":121,"high_outlier":121,"color":"#1e90ff","real_outlier_1":"153","individual_1":"<b> Individual <\/b>: 53","real_outlier_2":"159","individual_2":"<b> Individual <\/b>: 54"},{"cat":"Ouest","low_outlier":55,"low":55,"open":67,"median":76,"close":88,"high":113,"high_outlier":113,"color":"#1e90ff","real_outlier_1":"131","individual_1":"<b> Individual <\/b>: 78","real_outlier_2":"145","individual_2":"<b> Individual <\/b>: 17","real_outlier_3":"149","individual_3":"<b> Number of outliers <\/b>: 2","real_outlier_4":"156","individual_4":"<b> Individual <\/b>: 57","real_outlier_5":"166","individual_5":"<b> Individual <\/b>: 79"},{"cat":"Sud","low_outlier":54,"low":54,"open":81,"median":99,"close":116,"high":160,"high_outlier":160,"color":"#1e90ff"}],"graphs":[{"animationPlayed":false,"id":"g1","closeField":"close","fillColorsField":"color","highField":"high","lineColor":"#7f8da9","lineAlpha":1,"lowField":"low","fillAlphas":"0.9","negativeLineColor":"#7f8da9","openField":"open","columnWidth":0.4,"balloonText":"High = <b>[[high_outlier]]<\/b><br/>3rd quart. = <b>[[close]]<\/b><br/>Median = <b>[[median]]<\/b><br/>1st quart. = <b>[[open]]<\/b><br/>Low = <b>[[low_outlier]]<\/b><br/>","title":"Price:","type":"candlestick","valueField":"close"},{"animationPlayed":false,"id":"g2","lineColor":"black","noStepRisers":true,"lineThickness":3,"periodSpan":0.4,"balloonText":"","type":"step","valueField":"median"},{"animationPlayed":false,"id":"g3","lineColor":"black","noStepRisers":true,"periodSpan":0.3,"balloonText":"","type":"step","valueField":"low_outlier"},{"animationPlayed":false,"id":"g4","lineColor":"black","noStepRisers":true,"periodSpan":0.3,"balloonText":"","type":"step","valueField":"high_outlier"},{"animationPlayed":false,"id":"g5","lineColor":"black","lineAlpha":0,"bullet":"round","noStepRisers":true,"periodSpan":0.5,"balloonText":"","type":"line","valueField":"real_outlier"},{"animationPlayed":false,"lineColor":"black","lineAlpha":0,"bullet":"round","noStepRisers":true,"periodSpan":0.5,"balloonText":"[[individual_1]]<br/><b> Value <\/b>: [[real_outlier_1]]","type":"line","valueField":"real_outlier_1"},{"animationPlayed":false,"lineColor":"black","lineAlpha":0,"bullet":"round","noStepRisers":true,"periodSpan":0.5,"balloonText":"[[individual_2]]<br/><b> Value <\/b>: [[real_outlier_2]]","type":"line","valueField":"real_outlier_2"},{"animationPlayed":false,"lineColor":"black","lineAlpha":0,"bullet":"round","noStepRisers":true,"periodSpan":0.5,"balloonText":"[[individual_3]]<br/><b> Value <\/b>: [[real_outlier_3]]","type":"line","valueField":"real_outlier_3"},{"animationPlayed":false,"lineColor":"black","lineAlpha":0,"bullet":"round","noStepRisers":true,"periodSpan":0.5,"balloonText":"[[individual_4]]<br/><b> Value <\/b>: [[real_outlier_4]]","type":"line","valueField":"real_outlier_4"},{"animationPlayed":false,"lineColor":"black","lineAlpha":0,"bullet":"round","noStepRisers":true,"periodSpan":0.5,"balloonText":"[[individual_5]]<br/><b> Value <\/b>: [[real_outlier_5]]","type":"line","valueField":"real_outlier_5"},{"animationPlayed":false,"lineColor":"black","lineAlpha":0,"bullet":"round","noStepRisers":true,"periodSpan":0.5,"balloonText":"[[individual_6]]<br/><b> Value <\/b>: [[real_outlier_6]]","type":"line","valueField":"real_outlier_6"},{"animationPlayed":false,"lineColor":"black","lineAlpha":0,"bullet":"round","noStepRisers":true,"periodSpan":0.5,"balloonText":"[[individual_7]]<br/><b> Value <\/b>: [[real_outlier_7]]","type":"line","valueField":"real_outlier_7"},{"animationPlayed":false,"lineColor":"black","lineAlpha":0,"bullet":"round","noStepRisers":true,"periodSpan":0.5,"balloonText":"[[individual_8]]<br/><b> Value <\/b>: [[real_outlier_8]]","type":"line","valueField":"real_outlier_8"},{"animationPlayed":false,"lineColor":"black","lineAlpha":0,"bullet":"round","noStepRisers":true,"periodSpan":0.5,"balloonText":"[[individual_9]]<br/><b> Value <\/b>: [[real_outlier_9]]","type":"line","valueField":"real_outlier_9"},{"animationPlayed":false,"lineColor":"black","lineAlpha":0,"bullet":"round","noStepRisers":true,"periodSpan":0.5,"balloonText":"[[individual_10]]<br/><b> Value <\/b>: [[real_outlier_10]]","type":"line","valueField":"real_outlier_10"},{"animationPlayed":false,"lineColor":"black","lineAlpha":0,"bullet":"round","noStepRisers":true,"periodSpan":0.5,"balloonText":"[[individual_11]]<br/><b> Value <\/b>: [[real_outlier_11]]","type":"line","valueField":"real_outlier_11"}],"theme":"light","type":"serial"},"background":"#ffffff","listeners":null,"axes_listeners":null,"axes_listenersIndices":null,"categoryAxis_listeners":null,"chartCursor_listeners":null,"dataSetSelector_listeners":null,"legend_listeners":null,"panels_listeners":null,"panels_listenersIndices":null,"periodSelector_listeners":null,"valueAxes_listeners":null,"valueAxes_listenersIndices":null,"stockLegend_listeners":null,"group":null,"is_ts_module":false},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="section-exercice-1" class="section level3">
+<h3><span class="header-section-number">2.1.3</span> Exercice 1</h3>
+<div class="sourceCode" id="section-cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" data-line-number="1">aa &lt;-<span class="st"> </span><span class="ot">TRUE</span></a>
+<a class="sourceLine" id="cb16-2" data-line-number="2">bb &lt;-<span class="st"> </span><span class="ot">FALSE</span></a></code></pre></div>
+
+<div class="exercise">
+<p><span id="section-exr:exo1" class="exercise"><strong>Exercice 2.1  (Pythagorean theorem)  </strong></span></p>
+<ol style="list-style-type: decimal">
+<li>Tracer la fonction <strong>sinus</strong> entre <span class="math inline">\(0\)</span> et <span class="math inline">\(2\pi\)</span>.</li>
+<li>A l’’aide de la fonction <strong>title</strong> ajouter le titre <strong>Représentation de la fonction sinus</strong>.
+</div></li>
+</ol>
+<div class="sourceCode" id="section-cb17"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb17-1" data-line-number="1">x &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">0</span>,<span class="dv">2</span><span class="op">*</span>pi,<span class="dt">length=</span><span class="dv">1000</span>)</a>
+<a class="sourceLine" id="cb17-2" data-line-number="2"><span class="kw">plot</span>(x,<span class="kw">sin</span>(x),<span class="dt">type=</span><span class="st">&quot;l&quot;</span>)</a>
+<a class="sourceLine" id="cb17-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb17-4" data-line-number="4"><span class="kw">title</span>(<span class="st">&quot;Représentation de la fonction sinus&quot;</span>)</a></code></pre></div>
+<p><img src="TUTO_VISU_files/figure-html/test-a-1.png" width="672" /></p>
+</div>
+<div id="section-exercice-2" class="section level3">
+<h3><span class="header-section-number">2.1.4</span> Exercice 2</h3>
+<ul>
+<li>Tracer la densité de la loi normale centrée réduite entre <span class="math inline">\(-4\)</span> et 4 (utiliser <strong>dnorm</strong>).</li>
+<li>Ajouter une ligne verticale (en tirets) qui passe par <span class="math inline">\(x=0\)</span> (utiliser <strong>abline</strong> avec <strong>lty=2</strong>).</li>
+<li>Sur le même graphe, ajouter les densités de loi la de Student à 5 et 30 degrés de liberté (utiliser <strong>dt</strong>). On utilisera la fonction <strong>lines</strong> et des couleurs différentes pour chaque densité.</li>
+<li>Ajouter une légende qui permet de repérer chaque densité (fonction <strong>legend</strong>).</li>
+</ul>
+<div class="sourceCode" id="section-cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" data-line-number="1">x &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="op">-</span><span class="dv">4</span>,<span class="dv">4</span>,<span class="dt">by=</span><span class="fl">0.01</span>)</a>
+<a class="sourceLine" id="cb18-2" data-line-number="2"><span class="kw">plot</span>(x,<span class="kw">dnorm</span>(x),<span class="dt">type=</span><span class="st">&quot;l&quot;</span>)</a>
+<a class="sourceLine" id="cb18-3" data-line-number="3"><span class="kw">abline</span>(<span class="dt">v=</span><span class="dv">0</span>,<span class="dt">lty=</span><span class="dv">2</span>)</a>
+<a class="sourceLine" id="cb18-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb18-5" data-line-number="5"><span class="kw">lines</span>(x,<span class="kw">dt</span>(x,<span class="dv">5</span>),<span class="dt">col=</span><span class="dv">2</span>)</a>
+<a class="sourceLine" id="cb18-6" data-line-number="6"><span class="kw">lines</span>(x,<span class="kw">dt</span>(x,<span class="dv">30</span>),<span class="dt">col=</span><span class="dv">3</span>)</a>
+<a class="sourceLine" id="cb18-7" data-line-number="7"></a>
+<a class="sourceLine" id="cb18-8" data-line-number="8"><span class="kw">legend</span>(<span class="st">&quot;topleft&quot;</span>,<span class="dt">legend=</span><span class="kw">c</span>(<span class="st">&quot;normal&quot;</span>,<span class="st">&quot;Student(5)&quot;</span>,<span class="st">&quot;Student(30)&quot;</span>),<span class="dt">col=</span><span class="dv">1</span><span class="op">:</span><span class="dv">3</span>,<span class="dt">lty=</span><span class="dv">1</span>)</a></code></pre></div>
+<p><img src="TUTO_VISU_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<p>You can label chapter and section titles using <code>{#label}</code> after them, e.g., we can reference Chapter <a href="#section-intro"><strong>??</strong></a>. If you do not manually label them, there will be automatic labels anyway, e.g., Chapter <a href="section-methods.html#section-methods">4</a>.</p>
+<p>Figures and tables with captions will be placed in <code>figure</code> and <code>table</code> environments, respectively.</p>
+<div class="sourceCode" id="section-cb19"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb19-1" data-line-number="1"><span class="kw">par</span>(<span class="dt">mar =</span> <span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">4</span>, <span class="fl">.1</span>, <span class="fl">.1</span>))</a>
+<a class="sourceLine" id="cb19-2" data-line-number="2"><span class="kw">plot</span>(pressure, <span class="dt">type =</span> <span class="st">&#39;b&#39;</span>, <span class="dt">pch =</span> <span class="dv">19</span>)</a></code></pre></div>
+<div class="figure" style="text-align: center"><span id="fig:nice-fig"></span>
+<img src="TUTO_VISU_files/figure-html/nice-fig-1.png" alt="Here is a nice figure!" width="80%" />
+<p class="caption">
+Figure 2.1: Here is a nice figure!
+</p>
+</div>
+<p>Reference a figure by its code chunk label with the <code>fig:</code> prefix, e.g., see Figure <a href="section-ggplot2.html#fig:nice-fig">2.1</a>. Similarly, you can reference tables generated from <code>knitr::kable()</code>, e.g., see Table <a href="section-ggplot2.html#tab:nice-tab">2.1</a>.</p>
+<div class="sourceCode" id="section-cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" data-line-number="1">knitr<span class="op">::</span><span class="kw">kable</span>(</a>
+<a class="sourceLine" id="cb20-2" data-line-number="2">  <span class="kw">head</span>(iris, <span class="dv">20</span>), <span class="dt">caption =</span> <span class="st">&#39;Here is a nice table!&#39;</span>,</a>
+<a class="sourceLine" id="cb20-3" data-line-number="3">  <span class="dt">booktabs =</span> <span class="ot">TRUE</span></a>
+<a class="sourceLine" id="cb20-4" data-line-number="4">)</a></code></pre></div>
+<table>
+<caption><span id="tab:nice-tab">Table 2.1: </span>Here is a nice table!</caption>
+<thead>
+<tr class="header">
+<th align="right">Sepal.Length</th>
+<th align="right">Sepal.Width</th>
+<th align="right">Petal.Length</th>
+<th align="right">Petal.Width</th>
+<th align="left">Species</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">5.1</td>
+<td align="right">3.5</td>
+<td align="right">1.4</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="even">
+<td align="right">4.9</td>
+<td align="right">3.0</td>
+<td align="right">1.4</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="odd">
+<td align="right">4.7</td>
+<td align="right">3.2</td>
+<td align="right">1.3</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="even">
+<td align="right">4.6</td>
+<td align="right">3.1</td>
+<td align="right">1.5</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="odd">
+<td align="right">5.0</td>
+<td align="right">3.6</td>
+<td align="right">1.4</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="even">
+<td align="right">5.4</td>
+<td align="right">3.9</td>
+<td align="right">1.7</td>
+<td align="right">0.4</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="odd">
+<td align="right">4.6</td>
+<td align="right">3.4</td>
+<td align="right">1.4</td>
+<td align="right">0.3</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="even">
+<td align="right">5.0</td>
+<td align="right">3.4</td>
+<td align="right">1.5</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="odd">
+<td align="right">4.4</td>
+<td align="right">2.9</td>
+<td align="right">1.4</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="even">
+<td align="right">4.9</td>
+<td align="right">3.1</td>
+<td align="right">1.5</td>
+<td align="right">0.1</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="odd">
+<td align="right">5.4</td>
+<td align="right">3.7</td>
+<td align="right">1.5</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="even">
+<td align="right">4.8</td>
+<td align="right">3.4</td>
+<td align="right">1.6</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="odd">
+<td align="right">4.8</td>
+<td align="right">3.0</td>
+<td align="right">1.4</td>
+<td align="right">0.1</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="even">
+<td align="right">4.3</td>
+<td align="right">3.0</td>
+<td align="right">1.1</td>
+<td align="right">0.1</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="odd">
+<td align="right">5.8</td>
+<td align="right">4.0</td>
+<td align="right">1.2</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="even">
+<td align="right">5.7</td>
+<td align="right">4.4</td>
+<td align="right">1.5</td>
+<td align="right">0.4</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="odd">
+<td align="right">5.4</td>
+<td align="right">3.9</td>
+<td align="right">1.3</td>
+<td align="right">0.4</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="even">
+<td align="right">5.1</td>
+<td align="right">3.5</td>
+<td align="right">1.4</td>
+<td align="right">0.3</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="odd">
+<td align="right">5.7</td>
+<td align="right">3.8</td>
+<td align="right">1.7</td>
+<td align="right">0.3</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="even">
+<td align="right">5.1</td>
+<td align="right">3.8</td>
+<td align="right">1.5</td>
+<td align="right">0.3</td>
+<td align="left">setosa</td>
+</tr>
+</tbody>
+</table>
+<p>You can write citations, too. For example, we are using the <strong>bookdown</strong> package <span class="citation">(Xie <a href="section-references.html#section-ref-R-bookdown">2020</a>)</span> in this sample book, which was built on top of R Markdown and <strong>knitr</strong> <span class="citation">(Xie <a href="section-references.html#section-ref-xie2015">2015</a>)</span>.</p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="section-literature.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["TUTO_VISU.pdf", "TUTO_VISU.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
