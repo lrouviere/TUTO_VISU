@@ -24,7 +24,7 @@
 <meta name="author" content="Laurent Rouvière" />
 
 
-<meta name="date" content="2020-05-27" />
+<meta name="date" content="2020-05-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="ggplot2.html"/>
-<link rel="next" href="references.html"/>
+<link rel="next" href="cartes-interactives-avec-leaflet.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -160,7 +160,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.3" data-path="ggplot2.html"><a href="ggplot2.html#compléments"><i class="fa fa-check"></i><b>1.3</b> Compléments</a></li>
 <li class="chapter" data-level="1.4" data-path="ggplot2.html"><a href="ggplot2.html#quelques-exercices-supplémentaires"><i class="fa fa-check"></i><b>1.4</b> Quelques exercices supplémentaires</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="cartographie.html"><a href="cartographie.html"><i class="fa fa-check"></i><b>2</b> Cartographie</a></li>
+<li class="chapter" data-level="2" data-path="cartographie.html"><a href="cartographie.html"><i class="fa fa-check"></i><b>2</b> Cartographie</a><ul>
+<li class="chapter" data-level="2.1" data-path="cartographie.html"><a href="cartographie.html#le-package-ggmap"><i class="fa fa-check"></i><b>2.1</b> Le package ggmap</a></li>
+<li class="chapter" data-level="2.2" data-path="cartographie.html"><a href="cartographie.html#cartes-avec-contours-le-format-shapefile"><i class="fa fa-check"></i><b>2.2</b> Cartes avec contours, le format shapefile</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="cartographie.html"><a href="cartographie.html#challenge-1-carte-des-températures-avec-ggmap"><i class="fa fa-check"></i><b>2.2.1</b> Challenge 1 : carte des températures avec ggmap</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="cartes-interactives-avec-leaflet.html"><a href="cartes-interactives-avec-leaflet.html"><i class="fa fa-check"></i><b>3</b> Cartes interactives avec <strong>leaflet</strong></a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -184,24 +190,295 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="cartographie" class="section level1">
 <h1><span class="header-section-number">Chapitre 2</span> Cartographie</h1>
-<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb101-1" data-line-number="1"><span class="kw">library</span>(leaflet)</a>
-<a class="sourceLine" id="cb101-2" data-line-number="2">m &lt;-<span class="st"> </span><span class="kw">leaflet</span>()</a>
-<a class="sourceLine" id="cb101-3" data-line-number="3">m &lt;-<span class="st"> </span><span class="kw">addTiles</span>(m)</a>
-<a class="sourceLine" id="cb101-4" data-line-number="4">m</a></code></pre></div>
-<div id="htmlwidget-dd40cfa6607ab3a9c052" style="width:672px;height:480px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-dd40cfa6607ab3a9c052">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]}]},"evals":[],"jsHooks":[]}</script>
-<div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb102-1" data-line-number="1"><span class="kw">leaflet</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">addTiles</span>() <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb102-2" data-line-number="2"><span class="st">  </span><span class="kw">addMarkers</span>(</a>
-<a class="sourceLine" id="cb102-3" data-line-number="3">    <span class="dt">lng=</span><span class="op">-</span><span class="fl">118.456554</span>, <span class="dt">lat=</span><span class="fl">34.078039</span>,</a>
-<a class="sourceLine" id="cb102-4" data-line-number="4">    <span class="dt">label=</span><span class="st">&#39;This is a label&#39;</span>) </a></code></pre></div>
-<div id="htmlwidget-d8965e115ee914659bfd" style="width:672px;height:480px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-d8965e115ee914659bfd">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[34.078039,-118.456554,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,"This is a label",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[34.078039,34.078039],"lng":[-118.456554,-118.456554]}},"evals":[],"jsHooks":[]}</script>
-<div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb103-1" data-line-number="1"><span class="kw">data</span>(quakes)</a>
-<a class="sourceLine" id="cb103-2" data-line-number="2"><span class="kw">leaflet</span>(<span class="dt">data =</span> quakes[<span class="dv">1</span><span class="op">:</span><span class="dv">20</span>,]) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">addTiles</span>() <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb103-3" data-line-number="3"><span class="st">  </span><span class="kw">addMarkers</span>(<span class="op">~</span>long, <span class="op">~</span>lat, <span class="dt">popup =</span> <span class="op">~</span><span class="kw">as.character</span>(mag))</a></code></pre></div>
-<div id="htmlwidget-1ea25b091a55ba948379" style="width:672px;height:480px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-1ea25b091a55ba948379">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[[-20.42,-20.62,-26,-17.97,-20.42,-19.68,-11.7,-28.11,-28.74,-17.47,-21.44,-12.26,-18.54,-21,-20.7,-15.94,-13.64,-17.83,-23.5,-22.63],[181.62,181.03,184.1,181.66,181.96,184.31,166.1,181.93,181.74,179.59,180.69,167,182.11,181.66,169.92,184.95,165.96,181.5,179.78,180.31],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["4.8","4.2","5.4","4.1","4","4","4.8","4.4","4.7","4.3","4.4","4.6","4.4","4.4","6.1","4.3","6","4.5","4.4","4.4"],null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-28.74,-11.7],"lng":[165.96,184.95]}},"evals":[],"jsHooks":[]}</script>
+<p>De nombreuses données comportent des informations de géolocalisation. Il est alors naturel d’utiliser des cartes pour les visualiser. On peut généralement si’ntéresser à deux types de cartes :</p>
+<ul>
+<li><strong>statiques</strong> : des cartes figées que l’on pourra exporter aux formats <strong>pdf</strong> ou <strong>png</strong> par exemple, ce type est généralement utilisé pour des rapports ;</li>
+<li><strong>dynamiques</strong> ou <strong>interactives</strong> : des cartes que l’on pourra visualiser dans un navigateur et sur lesquelles on pourra zoomer ou obtenir des informations auxiliaires lorsu’on clique sur certaines parties de la carte.</li>
+</ul>
+<p>De nombreux packages <strong>R</strong> permettent de d’obtenir des cartes. Dans cette partie, on s’interessera aux packages <code>ggmap</code> et <code>sf</code> pour les cartes statiques et <code>leaflet</code> pour les cartes interactives.</p>
+<div id="le-package-ggmap" class="section level2">
+<h2><span class="header-section-number">2.1</span> Le package ggmap</h2>
+<p>Nous montrons dans cette section comment récupérer des fonds de carte et ajouter quelques informations à l’aide de <code>ggmap</code>. Pour plus de détails sur ce package, on pourra consulter <a href="https://journal.r-project.org/archive/2013-1/kahle-wickham.pdf">cet article</a> pour plus de détails.</p>
+<p><strong>ggmap</strong> permet de récupérer facilement des fonds de carte. Par exemple :</p>
+<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb88-1" data-line-number="1"><span class="op">&gt;</span><span class="st"> </span><span class="kw">library</span>(ggmap)</a>
+<a class="sourceLine" id="cb88-2" data-line-number="2"><span class="op">&gt;</span><span class="st"> </span>us &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dt">left =</span> <span class="dv">-125</span>, <span class="dt">bottom =</span> <span class="fl">25.75</span>, <span class="dt">right =</span> <span class="dv">-67</span>, <span class="dt">top =</span> <span class="dv">49</span>)</a>
+<a class="sourceLine" id="cb88-3" data-line-number="3"><span class="op">&gt;</span><span class="st"> </span>map &lt;-<span class="st"> </span><span class="kw">get_stamenmap</span>(us, <span class="dt">zoom =</span> <span class="dv">5</span>, <span class="dt">maptype =</span> <span class="st">&quot;toner-lite&quot;</span>)</a>
+<a class="sourceLine" id="cb88-4" data-line-number="4"><span class="op">&gt;</span><span class="st"> </span><span class="kw">ggmap</span>(map)</a></code></pre></div>
+<p><img src="TUTO_VISU_files/figure-html/unnamed-chunk-70-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Pour l’Europe on fait</p>
+<div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb89-1" data-line-number="1"><span class="op">&gt;</span><span class="st"> </span>europe &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dt">left =</span> <span class="dv">-12</span>, <span class="dt">bottom =</span> <span class="dv">35</span>, <span class="dt">right =</span> <span class="dv">30</span>, <span class="dt">top =</span> <span class="dv">63</span>)</a>
+<a class="sourceLine" id="cb89-2" data-line-number="2"><span class="op">&gt;</span><span class="st"> </span><span class="kw">get_stamenmap</span>(europe, <span class="dt">zoom =</span> <span class="dv">5</span>,<span class="st">&quot;toner-lite&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggmap</span>()</a></code></pre></div>
+<p><img src="TUTO_VISU_files/figure-html/unnamed-chunk-71-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>On peut également changer le fond de carte</p>
+<div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb90-1" data-line-number="1"><span class="op">&gt;</span><span class="st"> </span><span class="kw">get_stamenmap</span>(europe, <span class="dt">zoom =</span> <span class="dv">5</span>,<span class="st">&quot;toner-background&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggmap</span>()</a></code></pre></div>
+<p><img src="TUTO_VISU_files/figure-html/unnamed-chunk-72-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Pour la france, on aura</p>
+<div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb91-1" data-line-number="1"><span class="op">&gt;</span><span class="st"> </span>fr &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dt">left =</span> <span class="dv">-6</span>, <span class="dt">bottom =</span> <span class="dv">41</span>, <span class="dt">right =</span> <span class="dv">10</span>, <span class="dt">top =</span> <span class="dv">52</span>)</a>
+<a class="sourceLine" id="cb91-2" data-line-number="2"><span class="op">&gt;</span><span class="st"> </span><span class="kw">get_stamenmap</span>(fr, <span class="dt">zoom =</span> <span class="dv">5</span>,<span class="st">&quot;toner-lite&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggmap</span>()</a></code></pre></div>
+<p><img src="TUTO_VISU_files/figure-html/unnamed-chunk-73-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>La fonction <code>geocode</code> de <code>ggmap</code>qui permettait de récupérer des latitudes et longitudes nécessite désormais une <strong>API</strong>, ce qui contraint son utilisation. Nous proposons d’utiliser la fonction suivante :</p>
+<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb92-1" data-line-number="1"><span class="op">&gt;</span><span class="st"> </span><span class="cf">if</span> (<span class="op">!</span>(<span class="kw">require</span>(jsonlite))) <span class="kw">install.packages</span>(<span class="st">&quot;jsonlite&quot;</span>)</a>
+<a class="sourceLine" id="cb92-2" data-line-number="2"><span class="op">&gt;</span><span class="st"> </span>mygeocode &lt;-<span class="st"> </span><span class="cf">function</span>(adresses){</a>
+<a class="sourceLine" id="cb92-3" data-line-number="3"><span class="op">+</span><span class="st"> </span><span class="co"># adresses est un vecteur contenant toutes les adresses sous forme de chaine de caracteres</span></a>
+<a class="sourceLine" id="cb92-4" data-line-number="4"><span class="op">+</span><span class="st">   </span>nominatim_osm &lt;-<span class="st"> </span><span class="cf">function</span>(<span class="dt">address =</span> <span class="ot">NULL</span>){</a>
+<a class="sourceLine" id="cb92-5" data-line-number="5"><span class="op">+</span><span class="st">     </span><span class="co">## details: http://wiki.openstreetmap.org/wiki/Nominatim</span></a>
+<a class="sourceLine" id="cb92-6" data-line-number="6"><span class="op">+</span><span class="st">     </span><span class="co">## fonction nominatim_osm proposée par D.Kisler</span></a>
+<a class="sourceLine" id="cb92-7" data-line-number="7"><span class="op">+</span><span class="st">     </span><span class="cf">if</span>(<span class="kw">suppressWarnings</span>(<span class="kw">is.null</span>(address)))  <span class="kw">return</span>(<span class="kw">data.frame</span>())</a>
+<a class="sourceLine" id="cb92-8" data-line-number="8"><span class="op">+</span><span class="st">     </span><span class="kw">tryCatch</span>(</a>
+<a class="sourceLine" id="cb92-9" data-line-number="9"><span class="op">+</span><span class="st">       </span>d &lt;-<span class="st"> </span>jsonlite<span class="op">::</span><span class="kw">fromJSON</span>(</a>
+<a class="sourceLine" id="cb92-10" data-line-number="10"><span class="op">+</span><span class="st">         </span><span class="kw">gsub</span>(<span class="st">&#39;</span><span class="ch">\\</span><span class="st">@addr</span><span class="ch">\\</span><span class="st">@&#39;</span>, <span class="kw">gsub</span>(<span class="st">&#39;</span><span class="ch">\\</span><span class="st">s+&#39;</span>, <span class="st">&#39;</span><span class="ch">\\</span><span class="st">%20&#39;</span>, address),</a>
+<a class="sourceLine" id="cb92-11" data-line-number="11"><span class="op">+</span><span class="st">              &#39;http://nominatim.openstreetmap.org/search/@addr@?format=json&amp;addressdetails=0&amp;limit=1&#39;</span>)</a>
+<a class="sourceLine" id="cb92-12" data-line-number="12"><span class="op">+</span><span class="st">       </span>), <span class="dt">error =</span> <span class="cf">function</span>(c) <span class="kw">return</span>(<span class="kw">data.frame</span>())</a>
+<a class="sourceLine" id="cb92-13" data-line-number="13"><span class="op">+</span><span class="st">     </span>)</a>
+<a class="sourceLine" id="cb92-14" data-line-number="14"><span class="op">+</span><span class="st">     </span><span class="cf">if</span>(<span class="kw">length</span>(d) <span class="op">==</span><span class="st"> </span><span class="dv">0</span>) <span class="kw">return</span>(<span class="kw">data.frame</span>())</a>
+<a class="sourceLine" id="cb92-15" data-line-number="15"><span class="op">+</span><span class="st">     </span><span class="kw">return</span>(<span class="kw">c</span>(<span class="kw">as.numeric</span>(d<span class="op">$</span>lon), <span class="kw">as.numeric</span>(d<span class="op">$</span>lat)))</a>
+<a class="sourceLine" id="cb92-16" data-line-number="16"><span class="op">+</span><span class="st">   </span>}</a>
+<a class="sourceLine" id="cb92-17" data-line-number="17"><span class="op">+</span><span class="st">   </span>tableau &lt;-<span class="st"> </span><span class="kw">t</span>(<span class="kw">sapply</span>(adresses,nominatim_osm))</a>
+<a class="sourceLine" id="cb92-18" data-line-number="18"><span class="op">+</span><span class="st">   </span><span class="kw">colnames</span>(tableau) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;lon&quot;</span>,<span class="st">&quot;lat&quot;</span>)</a>
+<a class="sourceLine" id="cb92-19" data-line-number="19"><span class="op">+</span><span class="st">   </span><span class="kw">return</span>(tableau)</a>
+<a class="sourceLine" id="cb92-20" data-line-number="20"><span class="op">+</span><span class="st"> </span>}</a></code></pre></div>
+<p>Cette fonction permet de récupérer les latitudes et longitudes de lieux à spécifier :</p>
+<div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb93-1" data-line-number="1"><span class="op">&gt;</span><span class="st"> </span><span class="kw">mygeocode</span>(<span class="st">&quot;the white house&quot;</span>)</a>
+<a class="sourceLine" id="cb93-2" data-line-number="2"><span class="co">##                       lon     lat</span></a>
+<a class="sourceLine" id="cb93-3" data-line-number="3"><span class="co">## the white house -77.03655 38.8977</span></a>
+<a class="sourceLine" id="cb93-4" data-line-number="4"><span class="op">&gt;</span><span class="st"> </span><span class="kw">mygeocode</span>(<span class="st">&quot;Paris&quot;</span>)</a>
+<a class="sourceLine" id="cb93-5" data-line-number="5"><span class="co">##            lon     lat</span></a>
+<a class="sourceLine" id="cb93-6" data-line-number="6"><span class="co">## Paris 2.351462 48.8567</span></a>
+<a class="sourceLine" id="cb93-7" data-line-number="7"><span class="op">&gt;</span><span class="st"> </span><span class="kw">mygeocode</span>(<span class="st">&quot;Rennes&quot;</span>)</a>
+<a class="sourceLine" id="cb93-8" data-line-number="8"><span class="co">##             lon      lat</span></a>
+<a class="sourceLine" id="cb93-9" data-line-number="9"><span class="co">## Rennes -1.68002 48.11134</span></a></code></pre></div>
 
+<div class="exercise">
+<span id="exr:exo-carto-ggmap" class="exercise"><strong>Exercice 2.1  (Populations des grandes villes de france)  </strong></span>
+</div>
+
+<ol style="list-style-type: decimal">
+<li>Récupérer les latitudes et longitudes de Paris, Lyon et Marseille et représenter ces 3 villes sur une carte de la france.</li>
+</ol>
+<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb94-1" data-line-number="1"><span class="op">&gt;</span><span class="st"> </span>V &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Paris&quot;</span>,<span class="st">&quot;Lyon&quot;</span>,<span class="st">&quot;Marseille&quot;</span>)</a>
+<a class="sourceLine" id="cb94-2" data-line-number="2"><span class="op">&gt;</span><span class="st"> </span>A &lt;-<span class="st"> </span><span class="kw">mygeocode</span>(V)</a>
+<a class="sourceLine" id="cb94-3" data-line-number="3"><span class="op">&gt;</span><span class="st"> </span>A &lt;-<span class="st"> </span>A <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">as_tibble</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">Villes=</span>V)</a>
+<a class="sourceLine" id="cb94-4" data-line-number="4"><span class="op">&gt;</span><span class="st"> </span>fr &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dt">left =</span> <span class="dv">-6</span>, <span class="dt">bottom =</span> <span class="dv">41</span>, <span class="dt">right =</span> <span class="dv">10</span>, <span class="dt">top =</span> <span class="dv">52</span>)</a>
+<a class="sourceLine" id="cb94-5" data-line-number="5"><span class="op">&gt;</span><span class="st"> </span>fond &lt;-<span class="st"> </span><span class="kw">get_stamenmap</span>(fr, <span class="dt">zoom =</span> <span class="dv">5</span>,<span class="st">&quot;toner-lite&quot;</span>) </a>
+<a class="sourceLine" id="cb94-6" data-line-number="6"><span class="op">&gt;</span><span class="st"> </span><span class="kw">ggmap</span>(fond)<span class="op">+</span><span class="kw">geom_point</span>(<span class="dt">data=</span>A,<span class="kw">aes</span>(<span class="dt">x=</span>lon,<span class="dt">y=</span>lat),<span class="dt">color=</span><span class="st">&quot;red&quot;</span>)</a></code></pre></div>
+<p><img src="TUTO_VISU_files/figure-html/unnamed-chunk-76-1.png" width="672" style="display: block; margin: auto;" /></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Le fichier <strong>villes_fr.csv</strong> contient les populations des 30 plus grandes villes de france. Représenter à l’aide d’un point les 30 plus grandes villes de france. On fera varier la taille du point en fonction de la population en 2014.</li>
+</ol>
+<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb95-1" data-line-number="1"><span class="op">&gt;</span><span class="st"> </span>df &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;villes_fr.csv&quot;</span>)</a>
+<a class="sourceLine" id="cb95-2" data-line-number="2"><span class="op">&gt;</span><span class="st"> </span>df<span class="op">$</span>Commune &lt;-<span class="st"> </span><span class="kw">as.character</span>(df<span class="op">$</span>Commune)</a>
+<a class="sourceLine" id="cb95-3" data-line-number="3"><span class="op">&gt;</span><span class="st"> </span>df<span class="op">$</span>Commune[<span class="dv">10</span>] &lt;-<span class="st"> &quot;Lille&quot;</span></a>
+<a class="sourceLine" id="cb95-4" data-line-number="4"><span class="op">&gt;</span><span class="st"> </span>coord &lt;-<span class="st"> </span><span class="kw">mygeocode</span>(<span class="kw">as.character</span>(df<span class="op">$</span>Commune)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">as_tibble</span>()</a>
+<a class="sourceLine" id="cb95-5" data-line-number="5"><span class="op">&gt;</span><span class="st"> </span>df1 &lt;-<span class="st"> </span><span class="kw">bind_cols</span>(df,coord)</a>
+<a class="sourceLine" id="cb95-6" data-line-number="6"><span class="op">&gt;</span><span class="st"> </span><span class="kw">ggmap</span>(fond)<span class="op">+</span><span class="kw">geom_point</span>(<span class="dt">data=</span>df1,<span class="kw">aes</span>(<span class="dt">x=</span>lon,<span class="dt">y=</span>lat),<span class="dt">color=</span><span class="st">&quot;red&quot;</span>)</a></code></pre></div>
+<p><img src="TUTO_VISU_files/figure-html/unnamed-chunk-77-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb96-1" data-line-number="1"><span class="op">&gt;</span><span class="st"> </span><span class="kw">ggmap</span>(fond)<span class="op">+</span><span class="kw">geom_point</span>(<span class="dt">data=</span>df1,<span class="kw">aes</span>(<span class="dt">x=</span>lon,<span class="dt">y=</span>lat,<span class="dt">size=</span><span class="st">`</span><span class="dt">2014</span><span class="st">`</span>),<span class="dt">color=</span><span class="st">&quot;red&quot;</span>)</a></code></pre></div>
+<p><img src="TUTO_VISU_files/figure-html/unnamed-chunk-77-2.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+<div id="cartes-avec-contours-le-format-shapefile" class="section level2">
+<h2><span class="header-section-number">2.2</span> Cartes avec contours, le format shapefile</h2>
+<p><code>ggmap</code> permet de récupérer facilement des fonds de cartes et de placer des points dessus avec la syntaxe <code>ggplot</code>. Cependant, de nombreuses fonctions de ca package nécessitent une API et il est difficile de définir des contours (frontières de pays, départements ou régions) avec <code>ggmap</code>. Nous proposons ici de présenter brièvement le package <strong>sf</strong> qui va nous permettre de créer des cartes “avancées”, en gérant les contours à l’aide d’objets particuliers mais aussi en prenant en compte différents systèmes de coordonnées. En effet, la terre n’est pas plate… mais une carte est souvent visualisée en 2D, il faut par conséquent réaliser des projections pour représenter des lieux définis par une coordonnée (comme la latitue et la longitude) sur une carte 2D. Ces projections sont généralement gérées par les packages qui permettent de faire de la cartographie comme <strong>sf</strong>.On pourra trouver de la documentation sur ce package aux url suivantes :</p>
+<ul>
+<li><a href="https://statnmap.com/fr/2018-07-14-initiation-a-la-cartographie-avec-sf-et-compagnie/">https://statnmap.com/fr/2018-07-14-initiation-a-la-cartographie-avec-sf-et-compagnie/</a></li>
+<li>dans les <strong>vignettes</strong> sur la page du cran de ce package : <a href="https://cran.r-project.org/web/packages/sf/index.html">https://cran.r-project.org/web/packages/sf/index.html</a></li>
+</ul>
+<p>Ce package propose de définir un nouveau format <strong>sf</strong> adapté à la cartographie. Regardons par exemple l’objet <strong>nc</strong></p>
+<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb97-1" data-line-number="1"><span class="op">&gt;</span><span class="st"> </span><span class="kw">library</span>(sf)</a>
+<a class="sourceLine" id="cb97-2" data-line-number="2"><span class="op">&gt;</span><span class="st"> </span>nc &lt;-<span class="st"> </span><span class="kw">st_read</span>(<span class="kw">system.file</span>(<span class="st">&quot;shape/nc.shp&quot;</span>, <span class="dt">package =</span> <span class="st">&quot;sf&quot;</span>), <span class="dt">quiet =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb97-3" data-line-number="3"><span class="op">&gt;</span><span class="st"> </span><span class="kw">class</span>(nc)</a>
+<a class="sourceLine" id="cb97-4" data-line-number="4"><span class="co">## [1] &quot;sf&quot;         &quot;data.frame&quot;</span></a>
+<a class="sourceLine" id="cb97-5" data-line-number="5"><span class="op">&gt;</span><span class="st"> </span>nc</a>
+<a class="sourceLine" id="cb97-6" data-line-number="6"><span class="co">## Simple feature collection with 100 features and 14 fields</span></a>
+<a class="sourceLine" id="cb97-7" data-line-number="7"><span class="co">## geometry type:  MULTIPOLYGON</span></a>
+<a class="sourceLine" id="cb97-8" data-line-number="8"><span class="co">## dimension:      XY</span></a>
+<a class="sourceLine" id="cb97-9" data-line-number="9"><span class="co">## bbox:           xmin: -84.32385 ymin: 33.88199 xmax: -75.45698 ymax: 36.58965</span></a>
+<a class="sourceLine" id="cb97-10" data-line-number="10"><span class="co">## CRS:            4267</span></a>
+<a class="sourceLine" id="cb97-11" data-line-number="11"><span class="co">## First 10 features:</span></a>
+<a class="sourceLine" id="cb97-12" data-line-number="12"><span class="co">##     AREA PERIMETER CNTY_ CNTY_ID        NAME  FIPS FIPSNO CRESS_ID BIR74 SID74</span></a>
+<a class="sourceLine" id="cb97-13" data-line-number="13"><span class="co">## 1  0.114     1.442  1825    1825        Ashe 37009  37009        5  1091     1</span></a>
+<a class="sourceLine" id="cb97-14" data-line-number="14"><span class="co">## 2  0.061     1.231  1827    1827   Alleghany 37005  37005        3   487     0</span></a>
+<a class="sourceLine" id="cb97-15" data-line-number="15"><span class="co">## 3  0.143     1.630  1828    1828       Surry 37171  37171       86  3188     5</span></a>
+<a class="sourceLine" id="cb97-16" data-line-number="16"><span class="co">## 4  0.070     2.968  1831    1831   Currituck 37053  37053       27   508     1</span></a>
+<a class="sourceLine" id="cb97-17" data-line-number="17"><span class="co">## 5  0.153     2.206  1832    1832 Northampton 37131  37131       66  1421     9</span></a>
+<a class="sourceLine" id="cb97-18" data-line-number="18"><span class="co">## 6  0.097     1.670  1833    1833    Hertford 37091  37091       46  1452     7</span></a>
+<a class="sourceLine" id="cb97-19" data-line-number="19"><span class="co">## 7  0.062     1.547  1834    1834      Camden 37029  37029       15   286     0</span></a>
+<a class="sourceLine" id="cb97-20" data-line-number="20"><span class="co">## 8  0.091     1.284  1835    1835       Gates 37073  37073       37   420     0</span></a>
+<a class="sourceLine" id="cb97-21" data-line-number="21"><span class="co">## 9  0.118     1.421  1836    1836      Warren 37185  37185       93   968     4</span></a>
+<a class="sourceLine" id="cb97-22" data-line-number="22"><span class="co">## 10 0.124     1.428  1837    1837      Stokes 37169  37169       85  1612     1</span></a>
+<a class="sourceLine" id="cb97-23" data-line-number="23"><span class="co">##    NWBIR74 BIR79 SID79 NWBIR79                       geometry</span></a>
+<a class="sourceLine" id="cb97-24" data-line-number="24"><span class="co">## 1       10  1364     0      19 MULTIPOLYGON (((-81.47276 3...</span></a>
+<a class="sourceLine" id="cb97-25" data-line-number="25"><span class="co">## 2       10   542     3      12 MULTIPOLYGON (((-81.23989 3...</span></a>
+<a class="sourceLine" id="cb97-26" data-line-number="26"><span class="co">## 3      208  3616     6     260 MULTIPOLYGON (((-80.45634 3...</span></a>
+<a class="sourceLine" id="cb97-27" data-line-number="27"><span class="co">## 4      123   830     2     145 MULTIPOLYGON (((-76.00897 3...</span></a>
+<a class="sourceLine" id="cb97-28" data-line-number="28"><span class="co">## 5     1066  1606     3    1197 MULTIPOLYGON (((-77.21767 3...</span></a>
+<a class="sourceLine" id="cb97-29" data-line-number="29"><span class="co">## 6      954  1838     5    1237 MULTIPOLYGON (((-76.74506 3...</span></a>
+<a class="sourceLine" id="cb97-30" data-line-number="30"><span class="co">## 7      115   350     2     139 MULTIPOLYGON (((-76.00897 3...</span></a>
+<a class="sourceLine" id="cb97-31" data-line-number="31"><span class="co">## 8      254   594     2     371 MULTIPOLYGON (((-76.56251 3...</span></a>
+<a class="sourceLine" id="cb97-32" data-line-number="32"><span class="co">## 9      748  1190     2     844 MULTIPOLYGON (((-78.30876 3...</span></a>
+<a class="sourceLine" id="cb97-33" data-line-number="33"><span class="co">## 10     160  2038     5     176 MULTIPOLYGON (((-80.02567 3...</span></a></code></pre></div>
+<p>Ces données contiennent des informations sur les morts subites de nourissons dans des villes de Caroline du Nord. On remarque que l’objet <code>nc</code> est au format <code>sf</code> et <code>data.frame</code>. On peut donc l’utiliser comme un <code>data.frame</code> classique. Le format <code>sf</code> permet l’ajout d’une colonne particulière (<code>geometry</code>) qui délimitera les villes à l’aide de polygones. Une fois l’objet obtenu au format <strong>sf</strong>, il est facile de visualiser la carte avec un <strong>plot</strong> classique</p>
+<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb98-1" data-line-number="1"><span class="op">&gt;</span><span class="st"> </span><span class="kw">plot</span>(<span class="kw">st_geometry</span>(nc))</a></code></pre></div>
+<p><img src="TUTO_VISU_files/figure-html/unnamed-chunk-79-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>ou en utilisant le verbe <code>geom_sf</code> si on veut faire du <code>ggplot</code></p>
+<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb99-1" data-line-number="1"><span class="op">&gt;</span><span class="st"> </span><span class="kw">ggplot</span>(nc)<span class="op">+</span><span class="kw">geom_sf</span>()</a></code></pre></div>
+<p><img src="TUTO_VISU_files/figure-html/unnamed-chunk-80-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Il devient dès lors facile de colorier des villes et d’ajouter leurs noms :</p>
+<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb100-1" data-line-number="1"><span class="op">&gt;</span><span class="st"> </span><span class="kw">ggplot</span>(nc[<span class="dv">1</span><span class="op">:</span><span class="dv">3</span>,]) <span class="op">+</span></a>
+<a class="sourceLine" id="cb100-2" data-line-number="2"><span class="op">+</span><span class="st">    </span><span class="kw">geom_sf</span>(<span class="kw">aes</span>(<span class="dt">fill =</span> AREA)) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb100-3" data-line-number="3"><span class="op">+</span><span class="st">    </span><span class="kw">geom_sf_label</span>(<span class="kw">aes</span>(<span class="dt">label =</span> NAME))</a></code></pre></div>
+<p><img src="TUTO_VISU_files/figure-html/unnamed-chunk-81-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>La colonne <code>geometry</code> de <code>nc</code> est au format <code>MULTIPOLYGON</code>, elle permettra donc de délimiter les frontières des villes. Si maintenant on souhaite représenter une ville à l’aide d’un point défini par sa latitude et longitude, il va falloir modifier le format de cette colonne <code>geometry</code>. On peut le faire de la manière suivante :</p>
+<ol style="list-style-type: decimal">
+<li>On récupère les latitudes et longitudes de chaque ville :</li>
+</ol>
+<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb101-1" data-line-number="1"><span class="op">&gt;</span><span class="st"> </span>coord.ville.nc &lt;-<span class="st"> </span><span class="kw">mygeocode</span>(<span class="kw">paste</span>(<span class="kw">as.character</span>(nc<span class="op">$</span>NAME),<span class="st">&quot;NC&quot;</span>))</a>
+<a class="sourceLine" id="cb101-2" data-line-number="2"><span class="op">&gt;</span><span class="st"> </span>coord.ville.nc &lt;-<span class="st"> </span><span class="kw">as.data.frame</span>(coord.ville.nc)</a>
+<a class="sourceLine" id="cb101-3" data-line-number="3"><span class="op">&gt;</span><span class="st"> </span><span class="kw">names</span>(coord.ville.nc) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;lon&quot;</span>,<span class="st">&quot;lat&quot;</span>)</a></code></pre></div>
+<ol start="2" style="list-style-type: decimal">
+<li>On met ces coordonnées au format <code>MULTIPOINT</code></li>
+</ol>
+<div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb102-1" data-line-number="1"><span class="op">&gt;</span><span class="st"> </span>coord.ville1.nc &lt;-<span class="st"> </span>coord.ville.nc <span class="op">%&gt;%</span><span class="st">  </span></a>
+<a class="sourceLine" id="cb102-2" data-line-number="2"><span class="op">+</span><span class="st">   </span><span class="kw">filter</span>(lon<span class="op">&lt;=-</span><span class="dv">77</span> <span class="op">&amp;</span><span class="st"> </span>lon<span class="op">&gt;=-</span><span class="dv">85</span> <span class="op">&amp;</span><span class="st"> </span>lat<span class="op">&gt;=</span><span class="dv">33</span> <span class="op">&amp;</span><span class="st"> </span>lat<span class="op">&lt;=</span><span class="dv">37</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb102-3" data-line-number="3"><span class="op">+</span><span class="st">   </span><span class="kw">as.matrix</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">st_multipoint</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">st_geometry</span>()</a>
+<a class="sourceLine" id="cb102-4" data-line-number="4"><span class="op">&gt;</span><span class="st"> </span>coord.ville1.nc &lt;-<span class="st"> </span>coord.ville.nc <span class="op">%&gt;%</span><span class="st">  </span></a>
+<a class="sourceLine" id="cb102-5" data-line-number="5"><span class="op">+</span><span class="st">   </span><span class="kw">filter</span>(lon<span class="op">&lt;=-</span><span class="dv">77</span> <span class="op">&amp;</span><span class="st"> </span>lon<span class="op">&gt;=-</span><span class="dv">85</span> <span class="op">&amp;</span><span class="st"> </span>lat<span class="op">&gt;=</span><span class="dv">33</span> <span class="op">&amp;</span><span class="st"> </span>lat<span class="op">&lt;=</span><span class="dv">37</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb102-6" data-line-number="6"><span class="op">+</span><span class="st">   </span><span class="kw">as.matrix</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">st_multipoint</span>()  <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">st_geometry</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">st_cast</span>(<span class="dt">to=</span><span class="st">&quot;POINT&quot;</span>)</a>
+<a class="sourceLine" id="cb102-7" data-line-number="7"><span class="op">&gt;</span><span class="st"> </span>coord.ville1.nc</a>
+<a class="sourceLine" id="cb102-8" data-line-number="8"><span class="co">## Geometry set for 79 features </span></a>
+<a class="sourceLine" id="cb102-9" data-line-number="9"><span class="co">## geometry type:  POINT</span></a>
+<a class="sourceLine" id="cb102-10" data-line-number="10"><span class="co">## dimension:      XY</span></a>
+<a class="sourceLine" id="cb102-11" data-line-number="11"><span class="co">## bbox:           xmin: -84.08862 ymin: 33.93323 xmax: -77.01151 ymax: 36.503</span></a>
+<a class="sourceLine" id="cb102-12" data-line-number="12"><span class="co">## CRS:            NA</span></a>
+<a class="sourceLine" id="cb102-13" data-line-number="13"><span class="co">## First 5 geometries:</span></a></code></pre></div>
+<ol start="3" style="list-style-type: decimal">
+<li>On indique que ces coordonnées sont des latitudes et longitude et on ajoute la colonne aux données initiales</li>
+</ol>
+<div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb103-1" data-line-number="1"><span class="op">&gt;</span><span class="st"> </span><span class="kw">st_crs</span>(coord.ville1.nc) &lt;-<span class="st"> </span><span class="dv">4326</span> </a></code></pre></div>
+<ol start="4" style="list-style-type: decimal">
+<li>On peut enfin représenter la carte avec les frontières et les points :</li>
+</ol>
+<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb104-1" data-line-number="1"><span class="op">&gt;</span><span class="st"> </span><span class="kw">ggplot</span>(nc)<span class="op">+</span><span class="kw">geom_sf</span>()<span class="op">+</span><span class="kw">geom_sf</span>(<span class="dt">data=</span>coord.ville1.nc)</a></code></pre></div>
+<p><img src="TUTO_VISU_files/figure-html/unnamed-chunk-85-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Le package <code>sf</code> possède également des fonctions très utiles pour traiter des données cartographiques, on peut citer par exemple :</p>
+<ul>
+<li><code>st_distance</code> qui permet de calculer des distances entre coordonnées ;</li>
+<li><code>st_centroid</code> pour calculer le centre d’une région.</li>
+</ul>
+<p>On peut ainsi représenter les centres des villes délimitées par les polygones des données <code>nc</code> avec</p>
+<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb105-1" data-line-number="1"><span class="op">&gt;</span><span class="st"> </span>nc2 &lt;-<span class="st"> </span>nc <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">centre=</span><span class="kw">st_centroid</span>(nc)<span class="op">$</span>geometry)</a>
+<a class="sourceLine" id="cb105-2" data-line-number="2"><span class="op">&gt;</span><span class="st"> </span><span class="kw">ggplot</span>(nc2)<span class="op">+</span><span class="kw">geom_sf</span>()<span class="op">+</span><span class="kw">geom_sf</span>(<span class="kw">aes</span>(<span class="dt">geometry=</span>centre))</a></code></pre></div>
+<p><img src="TUTO_VISU_files/figure-html/unnamed-chunk-86-1.png" width="672" style="display: block; margin: auto;" /></p>
+
+<div class="exercise">
+<span id="exr:exo-carto-sf1" class="exercise"><strong>Exercice 2.2  (Première carte avec sf)  </strong></span>
+</div>
+
+<p>Nous nous servons de la carte GEOFLAR proposée par l’Institut Géographique National pour récupérer un fond de carte contenant les frontières des départements français. Cette carte est disponible sur le site <a href="http:%20//professionnels.ign.fr/">http: //professionnels.ign.fr/</a> au format <strong>shapefile</strong>, elle se trouve dans l’archive <strong>dpt.zip</strong>. Il faut décompresser pour reproduire la carte. Grâce au package <code>sf</code>, cette carte, contenue dans la série de fichiers departement du répertoire <strong>dpt</strong>, peut être importée dans un objet R :</p>
+<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb106-1" data-line-number="1"><span class="op">&gt;</span><span class="st"> </span>dpt &lt;-<span class="st"> </span><span class="kw">read_sf</span>(<span class="st">&quot;dpt&quot;</span>)</a>
+<a class="sourceLine" id="cb106-2" data-line-number="2"><span class="op">&gt;</span><span class="st"> </span><span class="kw">ggplot</span>(dpt) <span class="op">+</span><span class="st"> </span><span class="kw">geom_sf</span>()</a></code></pre></div>
+<p><img src="TUTO_VISU_files/figure-html/unnamed-chunk-87-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Refaire la carte de l’exercice <a href="cartographie.html#exr:exo-carto-ggmap">2.1</a> sur ce fond de carte.</p>
+<div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb107-1" data-line-number="1"><span class="op">&gt;</span><span class="st"> </span>coord.ville1 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(df1[,<span class="dv">14</span><span class="op">:</span><span class="dv">15</span>]) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb107-2" data-line-number="2"><span class="op">+</span><span class="st">   </span><span class="kw">as.matrix</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">st_multipoint</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">st_geometry</span>()</a>
+<a class="sourceLine" id="cb107-3" data-line-number="3"><span class="op">&gt;</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb107-4" data-line-number="4"><span class="er">&gt;</span><span class="st"> </span>coord.ville2 &lt;-<span class="st"> </span><span class="kw">st_cast</span>(coord.ville1, <span class="dt">to =</span> <span class="st">&quot;POINT&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb108-1" data-line-number="1"><span class="op">&gt;</span><span class="st"> </span>coord.ville1</a>
+<a class="sourceLine" id="cb108-2" data-line-number="2"><span class="co">## Geometry set for 1 feature </span></a>
+<a class="sourceLine" id="cb108-3" data-line-number="3"><span class="co">## geometry type:  MULTIPOINT</span></a>
+<a class="sourceLine" id="cb108-4" data-line-number="4"><span class="co">## dimension:      XY</span></a>
+<a class="sourceLine" id="cb108-5" data-line-number="5"><span class="co">## bbox:           xmin: -4.486009 ymin: 42.69853 xmax: 7.750713 ymax: 50.63657</span></a>
+<a class="sourceLine" id="cb108-6" data-line-number="6"><span class="co">## CRS:            NA</span></a>
+<a class="sourceLine" id="cb108-7" data-line-number="7"><span class="op">&gt;</span><span class="st"> </span>coord.ville2</a>
+<a class="sourceLine" id="cb108-8" data-line-number="8"><span class="co">## Geometry set for 30 features </span></a>
+<a class="sourceLine" id="cb108-9" data-line-number="9"><span class="co">## geometry type:  POINT</span></a>
+<a class="sourceLine" id="cb108-10" data-line-number="10"><span class="co">## dimension:      XY</span></a>
+<a class="sourceLine" id="cb108-11" data-line-number="11"><span class="co">## bbox:           xmin: -4.486009 ymin: 42.69853 xmax: 7.750713 ymax: 50.63657</span></a>
+<a class="sourceLine" id="cb108-12" data-line-number="12"><span class="co">## CRS:            NA</span></a>
+<a class="sourceLine" id="cb108-13" data-line-number="13"><span class="co">## First 5 geometries:</span></a></code></pre></div>
+<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb109-1" data-line-number="1"><span class="op">&gt;</span><span class="st"> </span><span class="kw">st_geometry</span>(df1) &lt;-<span class="st"> </span>coord.ville2</a>
+<a class="sourceLine" id="cb109-2" data-line-number="2"><span class="op">&gt;</span><span class="st"> </span><span class="kw">st_crs</span>(df1) &lt;-<span class="st"> </span><span class="dv">4326</span></a>
+<a class="sourceLine" id="cb109-3" data-line-number="3"><span class="op">&gt;</span><span class="st"> </span><span class="kw">ggplot</span>(dpt)<span class="op">+</span><span class="kw">geom_sf</span>(<span class="dt">fill=</span><span class="st">&quot;white&quot;</span>)<span class="op">+</span></a>
+<a class="sourceLine" id="cb109-4" data-line-number="4"><span class="op">+</span><span class="st">   </span><span class="kw">geom_sf</span>(<span class="dt">data=</span>df1,<span class="kw">aes</span>(<span class="dt">size=</span><span class="st">`</span><span class="dt">2014</span><span class="st">`</span>),<span class="dt">color=</span><span class="st">&quot;red&quot;</span>)<span class="op">+</span><span class="kw">theme_void</span>()</a></code></pre></div>
+<p><img src="TUTO_VISU_files/figure-html/unnamed-chunk-90-1.png" width="672" style="display: block; margin: auto;" /></p>
+
+<div class="exercise">
+<span id="exr:exo-carto-sf-tc" class="exercise"><strong>Exercice 2.3  (Visualisation de taux de chômage avec sf)  </strong></span>
+</div>
+
+<p>Nous souhaitons visualiser graphiquement les différences de taux de chômage par département entre deux années. Pour cela, nous disposons de chaque taux mesuré aux premiers trimestres des années 2006 et 2011 (variables TCHOMB1T06, TCHOMB1T11) qui se trouvent dans le jeu de données <strong>tauxchomage.csv</strong></p>
+<ol style="list-style-type: decimal">
+<li>Importer le jeu de données.</li>
+</ol>
+<div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb110-1" data-line-number="1"><span class="op">&gt;</span><span class="st"> </span>chomage &lt;-<span class="st"> </span><span class="kw">read_delim</span>(<span class="st">&quot;tauxchomage.csv&quot;</span>,<span class="dt">delim=</span><span class="st">&quot;;&quot;</span>)</a></code></pre></div>
+<ol start="2" style="list-style-type: decimal">
+<li>Faire la jointure de cette table avec celle des départements. On pourra utiliser <strong>inner_join</strong>.</li>
+</ol>
+<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb111-1" data-line-number="1"><span class="op">&gt;</span><span class="st"> </span>dpt &lt;-<span class="st"> </span><span class="kw">read_sf</span>(<span class="st">&quot;dpt&quot;</span>)</a>
+<a class="sourceLine" id="cb111-2" data-line-number="2"><span class="op">&gt;</span><span class="st"> </span>dpt2 &lt;-<span class="st"> </span><span class="kw">inner_join</span>(dpt,chomage,<span class="dt">by=</span><span class="st">&quot;CODE_DEPT&quot;</span>)</a></code></pre></div>
+<ol start="3" style="list-style-type: decimal">
+<li>Comparer les taux de chomage en 2006 et 2011.</li>
+</ol>
+<div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb112-1" data-line-number="1"><span class="op">&gt;</span><span class="st"> </span>dpt3 &lt;-<span class="st"> </span>dpt2 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(<span class="dt">A2006=</span>TCHOMB1T06,<span class="dt">A2011=</span>TCHOMB1T11,geometry) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb112-2" data-line-number="2"><span class="op">+</span><span class="st">   </span><span class="kw">gather</span>(<span class="st">&quot;Annee&quot;</span>,<span class="st">&quot;TxChomage&quot;</span>,<span class="op">-</span>geometry)</a></code></pre></div>
+<div class="sourceCode" id="cb113"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb113-1" data-line-number="1"><span class="op">&gt;</span><span class="st"> </span><span class="kw">ggplot</span>(dpt3) <span class="op">+</span><span class="st"> </span><span class="kw">aes</span>(<span class="dt">fill =</span> TxChomage)<span class="op">+</span><span class="kw">geom_sf</span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb113-2" data-line-number="2"><span class="op">+</span><span class="st">   </span><span class="kw">facet_wrap</span>(<span class="op">~</span>Annee, <span class="dt">nrow =</span> <span class="dv">1</span>)<span class="op">+</span></a>
+<a class="sourceLine" id="cb113-3" data-line-number="3"><span class="op">+</span><span class="st">   </span><span class="kw">scale_fill_gradient</span>(<span class="dt">low=</span><span class="st">&quot;white&quot;</span>,<span class="dt">high=</span><span class="st">&quot;brown&quot;</span>)<span class="op">+</span><span class="kw">theme_bw</span>()</a></code></pre></div>
+<p><img src="TUTO_VISU_files/figure-html/unnamed-chunk-94-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div id="challenge-1-carte-des-températures-avec-ggmap" class="section level3">
+<h3><span class="header-section-number">2.2.1</span> Challenge 1 : carte des températures avec ggmap</h3>
+<p>On souhaite ici faire une carte permettant de visualiser les température en France à un moment donné. Les données se trouvent sur le site des <a href="https://donneespubliques.meteofrance.fr/?fond=produit&amp;id_produit=90&amp;id_rubrique=32">données publiques de meteo france</a>. On peut notamment récupérer les températures observées dans certaines stations en france ainsi que la géolocalisation de ces stations.</p>
+<ol style="list-style-type: decimal">
+<li>Importer les 2 bases nécessaires. On pourra les lire directment sur le site. Convertir les degrés Kelvin en degrés Celsius et faire la jointure de ces bases.</li>
+</ol>
+<div class="sourceCode" id="cb114"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb114-1" data-line-number="1"><span class="op">&gt;</span><span class="st"> </span>donnees &lt;-<span class="st"> </span><span class="kw">read_delim</span>(<span class="st">&quot;https://donneespubliques.meteofrance.fr/donnees_libres/Txt/Synop/synop.2020052415.csv&quot;</span>,<span class="dt">delim=</span><span class="st">&quot;;&quot;</span>,<span class="dt">col_types =</span> <span class="kw">cols</span>(<span class="dt">t=</span><span class="kw">col_double</span>()))</a>
+<a class="sourceLine" id="cb114-2" data-line-number="2"><span class="op">&gt;</span><span class="st"> </span>station &lt;-<span class="st"> </span><span class="kw">read_delim</span>(<span class="st">&quot;https://donneespubliques.meteofrance.fr/donnees_libres/Txt/Synop/postesSynop.csv&quot;</span>,<span class="dt">delim=</span><span class="st">&quot;;&quot;</span>)</a>
+<a class="sourceLine" id="cb114-3" data-line-number="3"><span class="op">&gt;</span><span class="st"> </span>donnees<span class="op">$</span>t &lt;-<span class="st"> </span>donnees<span class="op">$</span>t<span class="fl">-273.15</span> <span class="co">#on passe en degrés celcius</span></a>
+<a class="sourceLine" id="cb114-4" data-line-number="4"><span class="op">&gt;</span><span class="st"> </span>temp &lt;-<span class="st"> </span>donnees <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(numer_sta,t)</a>
+<a class="sourceLine" id="cb114-5" data-line-number="5"><span class="op">&gt;</span><span class="st"> </span><span class="kw">names</span>(temp)[<span class="dv">1</span>] &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;ID&quot;</span>)</a>
+<a class="sourceLine" id="cb114-6" data-line-number="6"><span class="op">&gt;</span><span class="st"> </span>D &lt;-<span class="st"> </span><span class="kw">inner_join</span>(temp, station, <span class="dt">by =</span> <span class="kw">c</span>(<span class="st">&quot;ID&quot;</span>))</a></code></pre></div>
+<ol start="2" style="list-style-type: decimal">
+<li>Eliminer les station d’outre mer (on pourra conserver uniquement les stations qui ont une longitude entre -20 et 25). On appellera ce tableau <strong>station1</strong>. Visualiser les stations sur la carte contenant les frontières des départements français.</li>
+</ol>
+<div class="sourceCode" id="cb115"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb115-1" data-line-number="1"><span class="op">&gt;</span><span class="st"> </span>station1 &lt;-<span class="st"> </span>D <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(Longitude<span class="op">&lt;</span><span class="dv">25</span> <span class="op">&amp;</span><span class="st"> </span>Longitude<span class="op">&gt;-</span><span class="dv">20</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">na.omit</span>()</a>
+<a class="sourceLine" id="cb115-2" data-line-number="2"><span class="op">&gt;</span><span class="st"> </span>station4326 &lt;-<span class="st"> </span><span class="kw">st_multipoint</span>(<span class="kw">as.matrix</span>(station1[,<span class="dv">5</span><span class="op">:</span><span class="dv">4</span>])) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">st_geometry</span>()</a>
+<a class="sourceLine" id="cb115-3" data-line-number="3"><span class="op">&gt;</span><span class="st"> </span><span class="kw">st_crs</span>(station4326) &lt;-<span class="st"> </span><span class="dv">4326</span></a>
+<a class="sourceLine" id="cb115-4" data-line-number="4"><span class="op">&gt;</span><span class="st"> </span><span class="kw">ggplot</span>(dpt) <span class="op">+</span><span class="st"> </span><span class="kw">geom_sf</span>()<span class="op">+</span><span class="kw">geom_sf</span>(<span class="dt">data=</span>station4326)</a></code></pre></div>
+<p><img src="TUTO_VISU_files/figure-html/unnamed-chunk-96-1.png" width="672" style="display: block; margin: auto;" /></p>
+<ol start="3" style="list-style-type: decimal">
+<li>Créer un dataframe au format <strong>sf</strong> qui contient les températures des stations ainsi que leurs coordonnées dans la colonne <strong>geometry</strong>. On pourra commencer avec</li>
+</ol>
+<div class="sourceCode" id="cb116"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb116-1" data-line-number="1"><span class="op">&gt;</span><span class="st"> </span>station2 &lt;-<span class="st"> </span>station1 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(Longitude,Latitude) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb116-2" data-line-number="2"><span class="op">+</span><span class="st">   </span><span class="kw">as.matrix</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">st_multipoint</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">st_geometry</span>()</a>
+<a class="sourceLine" id="cb116-3" data-line-number="3"><span class="op">&gt;</span><span class="st"> </span><span class="kw">st_crs</span>(station2) &lt;-<span class="st"> </span><span class="dv">4326</span></a>
+<a class="sourceLine" id="cb116-4" data-line-number="4"><span class="op">&gt;</span><span class="st"> </span>station2 &lt;-<span class="st"> </span><span class="kw">st_cast</span>(station2, <span class="dt">to =</span> <span class="st">&quot;POINT&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb117"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb117-1" data-line-number="1"><span class="op">&gt;</span><span class="st"> </span>df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">temp=</span>station1<span class="op">$</span>t)</a>
+<a class="sourceLine" id="cb117-2" data-line-number="2"><span class="op">&gt;</span><span class="st"> </span><span class="kw">st_geometry</span>(df) &lt;-<span class="st"> </span>station2</a></code></pre></div>
+<ol start="4" style="list-style-type: decimal">
+<li>Représenter les stations sur une carte de france. On pourra mettre un point de couleur différente en fonction de la température.</li>
+</ol>
+<div class="sourceCode" id="cb118"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb118-1" data-line-number="1"><span class="op">&gt;</span><span class="st"> </span><span class="kw">ggplot</span>(dpt) <span class="op">+</span><span class="st"> </span><span class="kw">geom_sf</span>(<span class="dt">fill=</span><span class="st">&quot;white&quot;</span>)<span class="op">+</span></a>
+<a class="sourceLine" id="cb118-2" data-line-number="2"><span class="op">+</span><span class="st">   </span><span class="kw">geom_sf</span>(<span class="dt">data=</span>df,<span class="kw">aes</span>(<span class="dt">color=</span>temp),<span class="dt">size=</span><span class="dv">2</span>)<span class="op">+</span></a>
+<a class="sourceLine" id="cb118-3" data-line-number="3"><span class="op">+</span><span class="st">   </span><span class="kw">scale_color_continuous</span>(<span class="dt">low=</span><span class="st">&quot;yellow&quot;</span>,<span class="dt">high=</span><span class="st">&quot;red&quot;</span>)</a></code></pre></div>
+<p><img src="TUTO_VISU_files/figure-html/unnamed-chunk-99-1.png" width="672" style="display: block; margin: auto;" /></p>
+<ol start="5" style="list-style-type: decimal">
+<li>On obtient les cordonnées des centroïdes des départements à l’aide de</li>
+</ol>
+<div class="sourceCode" id="cb119"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb119-1" data-line-number="1"><span class="op">&gt;</span><span class="st"> </span>centro &lt;-<span class="st"> </span><span class="kw">st_centroid</span>(dpt<span class="op">$</span>geometry) </a>
+<a class="sourceLine" id="cb119-2" data-line-number="2"><span class="op">&gt;</span><span class="st"> </span>centro &lt;-<span class="st"> </span><span class="kw">st_transform</span>(centro,<span class="dt">crs=</span><span class="dv">4326</span>)</a></code></pre></div>
+<p>On déduit les distances entre ces centroïdes et les stations avec (<strong>df</strong> étant la table <strong>sf</strong> obtenue à la question 3).</p>
+<div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb120-1" data-line-number="1"><span class="op">&gt;</span><span class="st"> </span>DD &lt;-<span class="st"> </span><span class="kw">st_distance</span>(df,centro)</a></code></pre></div>
+<p>Prédire la température de chaque département à l’aide de la règle du 1 plus proche voisin.</p>
+<div class="sourceCode" id="cb121"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb121-1" data-line-number="1"><span class="op">&gt;</span><span class="st"> </span>NN &lt;-<span class="st"> </span><span class="kw">apply</span>(DD,<span class="dv">2</span>,order)[<span class="dv">1</span>,]</a>
+<a class="sourceLine" id="cb121-2" data-line-number="2"><span class="op">&gt;</span><span class="st"> </span>t_prev &lt;-<span class="st"> </span>station1[NN,<span class="dv">2</span>]</a></code></pre></div>
+<ol start="6" style="list-style-type: decimal">
+<li>Colorier les départements en fonction de la température prédite dans le département. On pourra faire varier le dégradé de couleur du jaune (pour les faibles températures) au rouge (pour les fortes).</li>
+</ol>
+<div class="sourceCode" id="cb122"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb122-1" data-line-number="1"><span class="op">&gt;</span><span class="st"> </span>dpt1 &lt;-<span class="st"> </span>dpt <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">t_prev=</span><span class="kw">as.matrix</span>(t_prev))</a>
+<a class="sourceLine" id="cb122-2" data-line-number="2"><span class="op">&gt;</span><span class="st"> </span><span class="kw">ggplot</span>(dpt1) <span class="op">+</span><span class="st"> </span><span class="kw">geom_sf</span>(<span class="kw">aes</span>(<span class="dt">fill=</span>t_prev)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb122-3" data-line-number="3"><span class="op">+</span><span class="st">   </span><span class="kw">scale_fill_continuous</span>(<span class="dt">low=</span><span class="st">&quot;yellow&quot;</span>,<span class="dt">high=</span><span class="st">&quot;red&quot;</span>)<span class="op">+</span><span class="kw">theme_void</span>()</a></code></pre></div>
+<p><img src="TUTO_VISU_files/figure-html/unnamed-chunk-103-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+</div>
 </div>
             </section>
 
@@ -209,7 +486,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         </div>
       </div>
 <a href="ggplot2.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="cartes-interactives-avec-leaflet.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -225,9 +502,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
-"github": false,
+"github": true,
 "facebook": true,
-"twitter": true,
+"twitter": false,
 "linkedin": false,
 "weibo": false,
 "instapaper": false,

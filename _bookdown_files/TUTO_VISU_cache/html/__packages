@@ -12,3 +12,6 @@ forcats
 gridExtra
 ggstance
 leaflet
+ggmap
+jsonlite
+sf
