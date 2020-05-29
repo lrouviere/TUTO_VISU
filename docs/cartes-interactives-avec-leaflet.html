@@ -24,7 +24,7 @@
 <meta name="author" content="Laurent Rouvière" />
 
 
-<meta name="date" content="2020-05-28" />
+<meta name="date" content="2020-05-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -62,6 +62,8 @@
 <script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
 <link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
 <script src="libs/leaflet-binding-2.0.3/leaflet.js"></script>
+<script src="libs/leaflet-providers-1.9.0/leaflet-providers_1.9.0.js"></script>
+<script src="libs/leaflet-providers-plugin-2.0.3/leaflet-providers-plugin.js"></script>
 
 
 <style type="text/css">
@@ -140,7 +142,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Visualisation avec R, L/ Rouvière</a></li>
+<li><a href="./">Visualisation avec R, L. Rouvière</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Présentation</a></li>
@@ -166,7 +168,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.2.1" data-path="cartographie.html"><a href="cartographie.html#challenge-1-carte-des-températures-avec-ggmap"><i class="fa fa-check"></i><b>2.2.1</b> Challenge 1 : carte des températures avec ggmap</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="cartes-interactives-avec-leaflet.html"><a href="cartes-interactives-avec-leaflet.html"><i class="fa fa-check"></i><b>3</b> Cartes interactives avec <strong>leaflet</strong></a></li>
+<li class="chapter" data-level="3" data-path="cartes-interactives-avec-leaflet.html"><a href="cartes-interactives-avec-leaflet.html"><i class="fa fa-check"></i><b>3</b> Cartes interactives avec leaflet</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -189,46 +191,65 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="cartes-interactives-avec-leaflet" class="section level1">
-<h1><span class="header-section-number">Chapitre 3</span> Cartes interactives avec <strong>leaflet</strong></h1>
-<!---
+<h1><span class="header-section-number">Chapitre 3</span> Cartes interactives avec leaflet</h1>
+<p><code>Leaflet</code> est un package permettant de faire de la <em>cartographie ineractive</em>. On pourra consulter un descriptif synthétique <a href="https://rstudio.github.io/leaflet/">ici</a>. Le principe est similaire à ce qui a été présenté précédemment : les cates sont construites à partie de couches qui se superposent. Un fond de carte s’obtient avec les fonctions <code>leaflet</code> et <code>addTiles</code></p>
+<div class="sourceCode" id="cb122"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb122-1" data-line-number="1"><span class="op">&gt;</span><span class="st"> </span><span class="kw">library</span>(leaflet)</a>
+<a class="sourceLine" id="cb122-2" data-line-number="2"><span class="op">&gt;</span><span class="st"> </span><span class="kw">leaflet</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">addTiles</span>()</a></code></pre></div>
+<div id="htmlwidget-dff02d2cfe2bb41c440e" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-dff02d2cfe2bb41c440e">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]}]},"evals":[],"jsHooks":[]}</script>
+<p>On dispose de plusieurs styles de fonds de cartes (quelques exemples <a href="http://leaflet-extras.github.io/leaflet-providers/preview/">ici</a>) :</p>
+<div class="sourceCode" id="cb123"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb123-1" data-line-number="1"><span class="op">&gt;</span><span class="st"> </span>Paris &lt;-<span class="st"> </span><span class="kw">mygeocode</span>(<span class="st">&quot;paris&quot;</span>)</a>
+<a class="sourceLine" id="cb123-2" data-line-number="2"><span class="op">&gt;</span><span class="st"> </span>m2 &lt;-<span class="st"> </span><span class="kw">leaflet</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">setView</span>(<span class="dt">lng =</span> Paris[<span class="dv">1</span>], <span class="dt">lat =</span> Paris[<span class="dv">2</span>], <span class="dt">zoom =</span> <span class="dv">12</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb123-3" data-line-number="3"><span class="op">+</span><span class="st">   </span><span class="kw">addTiles</span>()</a>
+<a class="sourceLine" id="cb123-4" data-line-number="4"><span class="op">&gt;</span><span class="st"> </span>m2 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">addProviderTiles</span>(<span class="st">&quot;Stamen.Toner&quot;</span>)</a></code></pre></div>
+<div id="htmlwidget-e2bd7f2a3c6897a20546" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e2bd7f2a3c6897a20546">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"setView":[[48.8566969,2.3514616],12,[]],"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addProviderTiles","args":["Stamen.Toner",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]}]},"evals":[],"jsHooks":[]}</script>
+<div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb124-1" data-line-number="1"><span class="op">&gt;</span><span class="st"> </span>m2 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">addProviderTiles</span>(<span class="st">&quot;Wikimedia&quot;</span>)</a></code></pre></div>
+<div id="htmlwidget-f662fdd12bc698a7f986" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-f662fdd12bc698a7f986">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"setView":[[48.8566969,2.3514616],12,[]],"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addProviderTiles","args":["Wikimedia",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]}]},"evals":[],"jsHooks":[]}</script>
+<div class="sourceCode" id="cb125"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb125-1" data-line-number="1"><span class="op">&gt;</span><span class="st"> </span>m2 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">addProviderTiles</span>(<span class="st">&quot;Esri.NatGeoWorldMap&quot;</span>)</a></code></pre></div>
+<div id="htmlwidget-58db1d6ebcc009efc4a9" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-58db1d6ebcc009efc4a9">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"setView":[[48.8566969,2.3514616],12,[]],"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addProviderTiles","args":["Esri.NatGeoWorldMap",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]}]},"evals":[],"jsHooks":[]}</script>
+<div class="sourceCode" id="cb126"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb126-1" data-line-number="1"><span class="op">&gt;</span><span class="st"> </span>m2 <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb126-2" data-line-number="2"><span class="op">+</span><span class="st">   </span><span class="kw">addProviderTiles</span>(<span class="st">&quot;Stamen.Watercolor&quot;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb126-3" data-line-number="3"><span class="op">+</span><span class="st">   </span><span class="kw">addProviderTiles</span>(<span class="st">&quot;Stamen.TonerHybrid&quot;</span>)</a></code></pre></div>
+<div id="htmlwidget-5dcd42f946ed7817d6e7" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-5dcd42f946ed7817d6e7">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"setView":[[48.8566969,2.3514616],12,[]],"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addProviderTiles","args":["Stamen.Watercolor",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addProviderTiles","args":["Stamen.TonerHybrid",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]}]},"evals":[],"jsHooks":[]}</script>
+<p>Il est fréquemment utile de repérer des lieux sur une carte à l’aide de symboles. On pourra effectuer cela à l’aide des fonctions <code>addMarkers</code> et <code>addCircles</code>…</p>
+<div class="sourceCode" id="cb127"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb127-1" data-line-number="1"><span class="op">&gt;</span><span class="st"> </span><span class="kw">data</span>(quakes)</a>
+<a class="sourceLine" id="cb127-2" data-line-number="2"><span class="op">&gt;</span><span class="st"> </span><span class="kw">leaflet</span>(<span class="dt">data =</span> quakes[<span class="dv">1</span><span class="op">:</span><span class="dv">20</span>,]) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">addTiles</span>() <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb127-3" data-line-number="3"><span class="op">+</span><span class="st">   </span><span class="kw">addMarkers</span>(<span class="op">~</span>long, <span class="op">~</span>lat, <span class="dt">popup =</span> <span class="op">~</span><span class="kw">as.character</span>(mag))</a></code></pre></div>
+<div id="htmlwidget-2357dc009d8f8c8cdefb" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2357dc009d8f8c8cdefb">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[[-20.42,-20.62,-26,-17.97,-20.42,-19.68,-11.7,-28.11,-28.74,-17.47,-21.44,-12.26,-18.54,-21,-20.7,-15.94,-13.64,-17.83,-23.5,-22.63],[181.62,181.03,184.1,181.66,181.96,184.31,166.1,181.93,181.74,179.59,180.69,167,182.11,181.66,169.92,184.95,165.96,181.5,179.78,180.31],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["4.8","4.2","5.4","4.1","4","4","4.8","4.4","4.7","4.3","4.4","4.6","4.4","4.4","6.1","4.3","6","4.5","4.4","4.4"],null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-28.74,-11.7],"lng":[165.96,184.95]}},"evals":[],"jsHooks":[]}</script>
+<p>Le caractère interactif de la carte permet d’ajouter de l’information lorsqu’on clique sur un marker (grâce à l’option <code>popup</code>). On peut également ajouter des <strong>popups</strong> qui contiennent plus d’information, voire des liens vers des sites web :</p>
+<div class="sourceCode" id="cb128"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb128-1" data-line-number="1"><span class="op">&gt;</span><span class="st"> </span>content &lt;-<span class="st"> </span><span class="kw">paste</span>(<span class="dt">sep =</span> <span class="st">&quot;&lt;br/&gt;&quot;</span>,</a>
+<a class="sourceLine" id="cb128-2" data-line-number="2"><span class="op">+</span><span class="st">   &quot;&lt;b&gt;&lt;a href=&#39;http://www.samurainoodle.com&#39;&gt;Samurai Noodle&lt;/a&gt;&lt;/b&gt;&quot;</span>,</a>
+<a class="sourceLine" id="cb128-3" data-line-number="3"><span class="op">+</span><span class="st">   &quot;606 5th Ave. S&quot;</span>,</a>
+<a class="sourceLine" id="cb128-4" data-line-number="4"><span class="op">+</span><span class="st">   &quot;Seattle, WA 98138&quot;</span></a>
+<a class="sourceLine" id="cb128-5" data-line-number="5"><span class="op">+</span><span class="st"> </span>)</a>
+<a class="sourceLine" id="cb128-6" data-line-number="6"><span class="op">&gt;</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb128-7" data-line-number="7"><span class="er">&gt;</span><span class="st"> </span><span class="kw">leaflet</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">addTiles</span>(<span class="dt">urlTemplate =</span> <span class="st">&quot;http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png&quot;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb128-8" data-line-number="8"><span class="op">+</span><span class="st">   </span><span class="kw">addPopups</span>(<span class="op">-</span><span class="fl">122.327298</span>, <span class="fl">47.597131</span>, content,</a>
+<a class="sourceLine" id="cb128-9" data-line-number="9"><span class="op">+</span><span class="st">     </span><span class="dt">options =</span> <span class="kw">popupOptions</span>(<span class="dt">closeButton =</span> <span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb128-10" data-line-number="10"><span class="op">+</span><span class="st">   </span>)</a></code></pre></div>
+<div id="htmlwidget-40548f741f5bb1db3c8f" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-40548f741f5bb1db3c8f">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false}]},{"method":"addPopups","args":[47.597131,-122.327298,"<b><a href='http://www.samurainoodle.com'>Samurai Noodle<\/a><\/b><br/>606 5th Ave. S<br/>Seattle, WA 98138",null,null,{"maxWidth":300,"minWidth":50,"autoPan":true,"keepInView":false,"closeButton":false,"className":""}]}],"limits":{"lat":[47.597131,47.597131],"lng":[-122.327298,-122.327298]}},"evals":[],"jsHooks":[]}</script>
 
+<div class="exercise">
+<span id="exr:exo-carto-popup-leaflet" class="exercise"><strong>Exercice 3.1  (Popup avec leaflet)  </strong></span>
+</div>
 
-
-```r
-> library(leaflet)
-> m <- leaflet()
-> m <- addTiles(m)
-> m
-```
-
-<div id="htmlwidget-a3b8f4cf89d0b33de5fc" style="width:672px;height:480px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-a3b8f4cf89d0b33de5fc">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]}]},"evals":[],"jsHooks":[]}</script>
-
-
-
-```r
-> leaflet() %>% addTiles() %>%
-+   addMarkers(
-+     lng=-118.456554, lat=34.078039,
-+     label='This is a label') 
-```
-
-<div id="htmlwidget-76b15417738c38c7bed7" style="width:672px;height:480px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-76b15417738c38c7bed7">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[34.078039,-118.456554,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,"This is a label",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[34.078039,34.078039],"lng":[-118.456554,-118.456554]}},"evals":[],"jsHooks":[]}</script>
-
-
-
-```r
-> data(quakes)
-> leaflet(data = quakes[1:20,]) %>% addTiles() %>%
-+   addMarkers(~long, ~lat, popup = ~as.character(mag))
-```
-
-<div id="htmlwidget-874a6b832dae70649860" style="width:672px;height:480px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-874a6b832dae70649860">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[[-20.42,-20.62,-26,-17.97,-20.42,-19.68,-11.7,-28.11,-28.74,-17.47,-21.44,-12.26,-18.54,-21,-20.7,-15.94,-13.64,-17.83,-23.5,-22.63],[181.62,181.03,184.1,181.66,181.96,184.31,166.1,181.93,181.74,179.59,180.69,167,182.11,181.66,169.92,184.95,165.96,181.5,179.78,180.31],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["4.8","4.2","5.4","4.1","4","4","4.8","4.4","4.7","4.3","4.4","4.6","4.4","4.4","6.1","4.3","6","4.5","4.4","4.4"],null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-28.74,-11.7],"lng":[165.96,184.95]}},"evals":[],"jsHooks":[]}</script>
-
-
---->
+<p>Placer un <strong>popup</strong> localisant l’Université Rennes 2 (Campus Villejean). On ajoutera un lien renvoyant sur le site de l’Université.</p>
+<div class="sourceCode" id="cb129"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb129-1" data-line-number="1"><span class="op">&gt;</span><span class="st"> </span>R2 &lt;-<span class="st"> </span><span class="kw">mygeocode</span>(<span class="st">&quot;Universite Rennes 2 Villejean&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">as_tibble</span>()</a>
+<a class="sourceLine" id="cb129-2" data-line-number="2"><span class="op">&gt;</span><span class="st"> </span>info &lt;-<span class="st"> </span><span class="kw">paste</span>(<span class="dt">sep =</span> <span class="st">&quot;&lt;br/&gt;&quot;</span>,</a>
+<a class="sourceLine" id="cb129-3" data-line-number="3"><span class="op">+</span><span class="st">   &quot;&lt;b&gt;&lt;a href=&#39;https://www.univ-rennes2.fr&#39;&gt;Universite Rennes 2&lt;/a&gt;&lt;/b&gt;&quot;</span>,</a>
+<a class="sourceLine" id="cb129-4" data-line-number="4"><span class="op">+</span><span class="st">   &quot;Campus Villejean&quot;</span>)</a>
+<a class="sourceLine" id="cb129-5" data-line-number="5"><span class="op">&gt;</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb129-6" data-line-number="6"><span class="er">&gt;</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb129-7" data-line-number="7"><span class="er">&gt;</span><span class="st"> </span><span class="kw">leaflet</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">addTiles</span>() <span class="op">%&gt;%</span><span class="st">  </span></a>
+<a class="sourceLine" id="cb129-8" data-line-number="8"><span class="op">+</span><span class="st">   </span><span class="kw">addPopups</span>(R2[<span class="dv">1</span>]<span class="op">$</span>lon, R2[<span class="dv">2</span>]<span class="op">$</span>lat, info,<span class="dt">options =</span> <span class="kw">popupOptions</span>(<span class="dt">closeButton =</span> <span class="ot">FALSE</span>))</a></code></pre></div>
+<div id="htmlwidget-d202f3b90eae970600c3" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-d202f3b90eae970600c3">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addPopups","args":[48.1193099,-1.7045009,"<b><a href='https://www.univ-rennes2.fr'>Universite Rennes 2<\/a><\/b><br/>Campus Villejean",null,null,{"maxWidth":300,"minWidth":50,"autoPan":true,"keepInView":false,"closeButton":false,"className":""}]}],"limits":{"lat":[48.1193099,48.1193099],"lng":[-1.7045009,-1.7045009]}},"evals":[],"jsHooks":[]}</script>
 
 </div>
             </section>
