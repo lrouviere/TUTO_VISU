@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.10.19)  30 MAY 2020 12:39
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.10.19)  30 MAY 2020 13:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1078,21 +1078,21 @@ LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 \tf@toc=\write5
 \openout5 = `TUTO_VISU.toc'.
 
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-3-1.png Graphic file (type bmp
-)
-<TUTO_VISU_files/figure-latex/unnamed-chunk-3-1.png>
 [1
 
 ]
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 172.
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-5-1.pdf Graphic file (type pdf
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 170.
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-4-1.pdf Graphic file (type pdf
 )
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-5-1.pdf>
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-4-1.pdf>
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-4-2.pdf Graphic file (type pdf
+)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-4-2.pdf>
 [2]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-5-2.pdf Graphic file (type pdf
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-6-1.pdf Graphic file (type pdf
 )
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-5-2.pdf>
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-6-1.pdf>
 [3]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-7-1.pdf Graphic file (type pdf
 )
@@ -1104,85 +1104,85 @@ File: TUTO_VISU_files/figure-latex/unnamed-chunk-8-1.pdf Graphic file (type pdf
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-9-1.pdf Graphic file (type pdf
 )
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-9-1.pdf>
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-9-2.pdf Graphic file (type pdf
+)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-9-2.pdf>
+[5]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-9-3.pdf Graphic file (type pdf
+)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-9-3.pdf>
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-10-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-10-1.pdf>
-[5]
+[6]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-10-2.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-10-2.pdf>
+[7]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-10-3.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-10-3.pdf>
-[6]
+[8]
+File: TUTO_VISU_files/figure-latex/test-a-1.pdf Graphic file (type pdf)
+<use TUTO_VISU_files/figure-latex/test-a-1.pdf>
+[9]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-11-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-11-1.pdf>
-[7]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-11-2.pdf Graphic file (type pd
-f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-11-2.pdf>
-[8]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-11-3.pdf Graphic file (type pd
-f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-11-3.pdf>
-[9]
-File: TUTO_VISU_files/figure-latex/test-a-1.pdf Graphic file (type pdf)
-<use TUTO_VISU_files/figure-latex/test-a-1.pdf>
 [10]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-12-1.pdf Graphic file (type pd
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-17-1.pdf Graphic file (type pd
 f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-12-1.pdf>
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-17-1.pdf>
 [11]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-18-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-18-1.pdf>
 [12]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-19-1.pdf Graphic file (type pd
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-20-1.pdf Graphic file (type pd
 f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-19-1.pdf>
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-20-1.pdf>
 [13]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-21-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-21-1.pdf>
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-21-2.pdf Graphic file (type pd
+f)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-21-2.pdf>
 [14]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-21-3.pdf Graphic file (type pd
+f)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-21-3.pdf>
+[15]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-22-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-22-1.pdf>
+[16]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-22-2.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-22-2.pdf>
-[15]
+[17]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-22-3.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-22-3.pdf>
-[16]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-23-1.pdf Graphic file (type pd
+[18] [19]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-25-1.pdf Graphic file (type pd
 f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-23-1.pdf>
-[17]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-23-2.pdf Graphic file (type pd
-f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-23-2.pdf>
-[18]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-23-3.pdf Graphic file (type pd
-f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-23-3.pdf>
-[19] [20]
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-25-1.pdf>
+[20]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-26-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-26-1.pdf>
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-26-2.pdf Graphic file (type pd
+f)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-26-2.pdf>
 [21]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-26-3.pdf Graphic file (type pd
+f)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-26-3.pdf>
+[22]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-27-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-27-1.pdf>
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-27-2.pdf Graphic file (type pd
-f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-27-2.pdf>
-[22]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-27-3.pdf Graphic file (type pd
-f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-27-3.pdf>
 [23]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-28-1.pdf Graphic file (type pd
 f)
@@ -1191,29 +1191,29 @@ f)
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-29-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-29-1.pdf>
-[25]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-30-1.pdf Graphic file (type pd
+[25] [26]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-31-1.pdf Graphic file (type pd
 f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-30-1.pdf>
-[26] [27]
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-31-1.pdf>
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-32-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-32-1.pdf>
+[27]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-32-2.pdf Graphic file (type pd
+f)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-32-2.pdf>
+[28]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-32-3.pdf Graphic file (type pd
+f)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-32-3.pdf>
+[29]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-32-4.pdf Graphic file (type pd
+f)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-32-4.pdf>
+[30]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-33-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-33-1.pdf>
-[28]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-33-2.pdf Graphic file (type pd
-f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-33-2.pdf>
-[29]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-33-3.pdf Graphic file (type pd
-f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-33-3.pdf>
-[30]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-33-4.pdf Graphic file (type pd
-f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-33-4.pdf>
 [31]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-34-1.pdf Graphic file (type pd
 f)
@@ -1243,65 +1243,65 @@ File: TUTO_VISU_files/figure-latex/unnamed-chunk-40-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-40-1.pdf>
 [38]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-40-2.pdf Graphic file (type pd
+f)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-40-2.pdf>
+[39]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-41-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-41-1.pdf>
-[39]
+[40]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-41-2.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-41-2.pdf>
-[40]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-42-1.pdf Graphic file (type pd
-f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-42-1.pdf>
 [41]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-42-2.pdf Graphic file (type pd
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-43-1.pdf Graphic file (type pd
 f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-42-2.pdf>
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-43-1.pdf>
 [42]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-43-2.pdf Graphic file (type pd
+f)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-43-2.pdf>
+[43]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-43-3.pdf Graphic file (type pd
+f)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-43-3.pdf>
+[44]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-44-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-44-1.pdf>
-[43]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-44-2.pdf Graphic file (type pd
-f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-44-2.pdf>
-[44]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-44-3.pdf Graphic file (type pd
-f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-44-3.pdf>
 [45]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-45-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-45-1.pdf>
 [46]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-45-2.pdf Graphic file (type pd
+f)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-45-2.pdf>
+[47]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-45-3.pdf Graphic file (type pd
+f)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-45-3.pdf>
+[48]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-45-4.pdf Graphic file (type pd
+f)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-45-4.pdf>
+[49]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-46-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-46-1.pdf>
-[47]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-46-2.pdf Graphic file (type pd
-f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-46-2.pdf>
-[48]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-46-3.pdf Graphic file (type pd
-f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-46-3.pdf>
-[49]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-46-4.pdf Graphic file (type pd
-f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-46-4.pdf>
 [50]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-47-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-47-1.pdf>
 [51]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-47-2.pdf Graphic file (type pd
+f)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-47-2.pdf>
+[52]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-48-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-48-1.pdf>
-[52]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-48-2.pdf Graphic file (type pd
-f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-48-2.pdf>
 [53]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-49-1.pdf Graphic file (type pd
 f)
@@ -1310,17 +1310,17 @@ f)
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-50-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-50-1.pdf>
-[55]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-51-1.pdf Graphic file (type pd
+[55] [56]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-52-1.pdf Graphic file (type pd
 f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-51-1.pdf>
-[56] [57]
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-52-1.pdf>
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-52-2.pdf Graphic file (type pd
+f)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-52-2.pdf>
+[57]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-53-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-53-1.pdf>
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-53-2.pdf Graphic file (type pd
-f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-53-2.pdf>
 [58]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-54-1.pdf Graphic file (type pd
 f)
@@ -1330,21 +1330,21 @@ File: TUTO_VISU_files/figure-latex/unnamed-chunk-55-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-55-1.pdf>
 [60]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-55-2.pdf Graphic file (type pd
+f)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-55-2.pdf>
+[61]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-56-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-56-1.pdf>
-[61]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-56-2.pdf Graphic file (type pd
-f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-56-2.pdf>
 [62]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-57-1.pdf Graphic file (type pd
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-59-1.pdf Graphic file (type pd
 f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-57-1.pdf>
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-59-1.pdf>
 [63]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-60-1.pdf Graphic file (type pd
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-61-1.pdf Graphic file (type pd
 f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-60-1.pdf>
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-61-1.pdf>
 [64]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-62-1.pdf Graphic file (type pd
 f)
@@ -1354,28 +1354,28 @@ File: TUTO_VISU_files/figure-latex/unnamed-chunk-63-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-63-1.pdf>
 [66]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-64-1.pdf Graphic file (type pd
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-63-2.pdf Graphic file (type pd
 f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-64-1.pdf>
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-63-2.pdf>
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-63-3.pdf Graphic file (type pd
+f)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-63-3.pdf>
 [67]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-64-2.pdf Graphic file (type pd
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-65-1.pdf Graphic file (type pd
 f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-64-2.pdf>
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-64-3.pdf Graphic file (type pd
-f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-64-3.pdf>
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-65-1.pdf>
 [68]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-66-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-66-1.pdf>
-[69]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-67-1.pdf Graphic file (type pd
+[69] [70]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-70-1.pdf Graphic file (type pd
 f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-67-1.pdf>
-[70] [71]
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-70-1.pdf>
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-71-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-71-1.pdf>
+[71]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-72-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-72-1.pdf>
@@ -1383,82 +1383,82 @@ f)
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-73-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-73-1.pdf>
-[73]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-74-1.pdf Graphic file (type pd
+[73] [74]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-76-1.pdf Graphic file (type pd
 f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-74-1.pdf>
-[74] [75]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-77-1.pdf Graphic file (type pd
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-76-1.pdf>
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-78-1.pdf Graphic file (type pd
 f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-77-1.pdf>
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-79-1.pdf Graphic file (type pd
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-78-1.pdf>
+[75]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-78-2.pdf Graphic file (type pd
 f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-79-1.pdf>
-[76]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-79-2.pdf Graphic file (type pd
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-78-2.pdf>
+[76] [77]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-81-1.pdf Graphic file (type pd
 f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-79-2.pdf>
-[77] [78]
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-81-1.pdf>
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-82-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-82-1.pdf>
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-83-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-83-1.pdf>
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-84-1.pdf Graphic file (type pd
+[78]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-89-1.pdf Graphic file (type pd
 f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-84-1.pdf>
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-89-1.pdf>
 [79]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-90-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-90-1.pdf>
-[80]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-91-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-91-1.pdf>
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-92-1.pdf Graphic file (type pd
+[80]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-94-1.pdf Graphic file (type pd
 f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-92-1.pdf>
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-94-1.pdf>
 [81]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-95-1.pdf Graphic file (type pd
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-98-1.pdf Graphic file (type pd
 f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-95-1.pdf>
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-98-1.pdf>
 [82]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-99-1.pdf Graphic file (type pd
-f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-99-1.pdf>
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-102-1.pdf Graphic file (type p
+df)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-102-1.pdf>
 [83]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-103-1.pdf Graphic file (type p
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-105-1.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-103-1.pdf>
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-105-1.pdf>
 [84]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-106-1.pdf Graphic file (type p
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-109-1.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-106-1.pdf>
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-109-1.pdf>
 [85]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-110-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-110-1.pdf>
 [86]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-111-1.pdf Graphic file (type p
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-112-1.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-111-1.pdf>
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-112-1.pdf>
 [87]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-112-2.pdf Graphic file (type p
+df)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-112-2.pdf>
+[88]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-112-3.pdf Graphic file (type p
+df)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-112-3.pdf>
+[89]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-112-4.pdf Graphic file (type p
+df)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-112-4.pdf>
+[90]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-113-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-113-1.pdf>
-[88]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-113-2.pdf Graphic file (type p
-df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-113-2.pdf>
-[89]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-113-3.pdf Graphic file (type p
-df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-113-3.pdf>
-[90]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-113-4.pdf Graphic file (type p
-df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-113-4.pdf>
 [91]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-114-1.pdf Graphic file (type p
 df)
@@ -1467,74 +1467,74 @@ df)
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-115-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-115-1.pdf>
-[93]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-116-1.pdf Graphic file (type p
+[93] [94]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-120-1.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-116-1.pdf>
-[94] [95]
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-120-1.pdf>
+
+Underfull \vbox (badness 1803) detected at line 2350
+ []
+
+[95]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-121-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-121-1.pdf>
-
-Underfull \vbox (badness 1803) detected at line 2352
- []
-
-[96]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-122-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-122-1.pdf>
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-123-1.pdf Graphic file (type p
+[96]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-124-1.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-123-1.pdf>
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-124-1.pdf>
 [97]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-125-1.pdf Graphic file (type p
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-124-2.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-125-1.pdf>
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-124-2.pdf>
 [98]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-125-2.pdf Graphic file (type p
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-126-1.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-125-2.pdf>
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-126-1.pdf>
 [99]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-126-2.pdf Graphic file (type p
+df)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-126-2.pdf>
+[100]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-127-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-127-1.pdf>
-[100]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-127-2.pdf Graphic file (type p
-df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-127-2.pdf>
 [101]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-128-1.pdf Graphic file (type p
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-129-1.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-128-1.pdf>
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-129-1.pdf>
 [102]
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <12> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 2525.
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-130-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-130-1.pdf>
 [103]
-LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <12> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 2527.
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-131-1.pdf Graphic file (type p
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-130-2.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-131-1.pdf>
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-130-2.pdf>
 [104]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-131-2.pdf Graphic file (type p
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-130-3.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-131-2.pdf>
-[105]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-131-3.pdf Graphic file (type p
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-130-3.pdf>
+[105] [106]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-132-1.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-131-3.pdf>
-[106] [107]
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-132-1.pdf>
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-133-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-133-1.pdf>
+[107]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-133-2.pdf Graphic file (type p
+df)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-133-2.pdf>
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-134-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-134-1.pdf>
 [108]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-134-2.pdf Graphic file (type p
-df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-134-2.pdf>
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-135-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-135-1.pdf>
@@ -1555,52 +1555,49 @@ File: TUTO_VISU_files/figure-latex/unnamed-chunk-139-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-139-1.pdf>
 [113]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-140-1.pdf Graphic file (type p
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-139-2.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-140-1.pdf>
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-139-2.pdf>
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-139-3.pdf Graphic file (type p
+df)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-139-3.pdf>
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-139-4.pdf Graphic file (type p
+df)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-139-4.pdf>
 [114]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-140-2.pdf Graphic file (type p
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-142-1.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-140-2.pdf>
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-140-3.pdf Graphic file (type p
-df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-140-3.pdf>
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-140-4.pdf Graphic file (type p
-df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-140-4.pdf>
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-142-1.pdf>
 [115]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-143-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-143-1.pdf>
-[116]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-144-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-144-1.pdf>
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-145-1.pdf Graphic file (type p
+[116]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-146-1.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-145-1.pdf>
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-146-1.pdf>
 [117]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-147-1.pdf Graphic file (type p
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-148-1.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-147-1.pdf>
-[118]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-149-1.pdf Graphic file (type p
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-148-1.pdf>
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-150-1.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-149-1.pdf>
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-151-1.pdf Graphic file (type p
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-150-1.pdf>
+[118] [119]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-157-1.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-151-1.pdf>
-[119] [120]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-158-1.png Graphic file (type b
-mp)
-<TUTO_VISU_files/figure-latex/unnamed-chunk-158-1.png>
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-157-1.pdf>
+[120]
 No file TUTO_VISU.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2999.
-[121]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2999.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2997.
+[121] [122]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2997.
 (./TUTO_VISU.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 2999.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2999.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 2997.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2997.
 
 Package rerunfilecheck Info: File `TUTO_VISU.out' has not changed.
 (rerunfilecheck)             Checksum: 08A7C8EE0EF346A2339F938B89184AE7.
@@ -1609,12 +1606,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 27765 strings out of 492956
- 514327 string characters out of 6133501
- 715166 words of memory out of 5000000
- 31386 multiletter control sequences out of 15000+600000
+ 27757 strings out of 492956
+ 514133 string characters out of 6133501
+ 715165 words of memory out of 5000000
+ 31383 multiletter control sequences out of 15000+600000
  538667 words of font info for 76 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  59i,6n,116p,1028b,557s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on TUTO_VISU.pdf (121 pages).
+Output written on TUTO_VISU.pdf (122 pages).
