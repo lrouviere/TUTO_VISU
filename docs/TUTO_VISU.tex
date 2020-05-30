@@ -1,7 +1,7 @@
 \PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
 \PassOptionsToPackage{hyphens}{url}
 %
-\documentclass[]{book}
+\documentclass[]{article}
 \usepackage{lmodern}
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
@@ -34,6 +34,7 @@
             pdfborder={0 0 0},
             breaklinks=true}
 \urlstyle{same}  % don't use monospace font for urls
+\usepackage[margin=1in]{geometry}
 \usepackage{color}
 \usepackage{fancyvrb}
 \newcommand{\VerbBar}{|}
@@ -111,20 +112,20 @@
 
 \title{Tutoriel : visualisation avec R}
 \author{Laurent Rouvière}
-\date{2020-05-29}
+\date{2020-05-30}
 
 \usepackage{amsthm}
-\newtheorem{theorem}{Theorem}[chapter]
-\newtheorem{lemma}{Lemma}[chapter]
-\newtheorem{corollary}{Corollary}[chapter]
-\newtheorem{proposition}{Proposition}[chapter]
-\newtheorem{conjecture}{Conjecture}[chapter]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{conjecture}{Conjecture}[section]
 \theoremstyle{definition}
-\newtheorem{definition}{Definition}[chapter]
+\newtheorem{definition}{Definition}[section]
 \theoremstyle{definition}
-\newtheorem{example}{Example}[chapter]
+\newtheorem{example}{Example}[section]
 \theoremstyle{definition}
-\newtheorem{exercise}{Exercice}[chapter]
+\newtheorem{exercise}{Exercice}[section]
 \theoremstyle{remark}
 \newtheorem*{remark}{Remark}
 \newtheorem*{solution}{Solution}
@@ -133,12 +134,12 @@
 \maketitle
 
 {
-\setcounter{tocdepth}{1}
+\setcounter{tocdepth}{2}
 \tableofcontents
 }
 \hypertarget{Presentation}{%
-\chapter*{Présentation}\label{Presentation}}
-\addcontentsline{toc}{chapter}{Présentation}
+\section*{Présentation}\label{Presentation}}
+\addcontentsline{toc}{section}{Présentation}
 
 Ce tutoriel présente quelques outils \textbf{R} pour la \textbf{visualisation de données}. Il nécessite des connaissance de base en \textbf{R} et en programmation et se structure en 3 parties :
 
@@ -155,12 +156,14 @@ Ce tutoriel présente quelques outils \textbf{R} pour la \textbf{visualisation d
 On pourra trouver des transparents associés à ce tutoriel ainsi que les données utilisés à l'adresse suivante \url{https://lrouviere.github.io/VISU/}.
 
 \hypertarget{ggplot2}{%
-\chapter{Visualisation avec ggplot2}\label{ggplot2}}
+\section{Visualisation avec ggplot2}\label{ggplot2}}
 
 Il est souvent nécessaire d'utiliser des techniques de visualisation à toutes les étapes d'une étude statistique. Un des avantages de \textbf{R} est qu'il est relativement simple de mettre en oeuvre tout les types de graphes généralement utilisés. Dans cette fiche, nous présentons tout d'abord les fonctions classiques qui permettent de tracer des figures. Nous proposons ensuite une introduction aux graphes \textbf{ggplot} qui sont de plus en plus utilisés pour faire de la visualisation.
 
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-3-1} \end{center}
+
 \hypertarget{fonctions-graphiques-conventionnelles}{%
-\section{Fonctions graphiques conventionnelles}\label{fonctions-graphiques-conventionnelles}}
+\subsection{Fonctions graphiques conventionnelles}\label{fonctions-graphiques-conventionnelles}}
 
 Pour commencer il est intéressant d'examiner quelques exemples de représentations graphiques construits avec \textbf{R}. On peut les obtenir à l'aide de la fonction \textbf{demo}.
 
@@ -171,7 +174,7 @@ Pour commencer il est intéressant d'examiner quelques exemples de représentati
 \end{Shaded}
 
 \hypertarget{la-fonction-plot}{%
-\subsection{\texorpdfstring{La fonction \textbf{plot}}{La fonction plot}}\label{la-fonction-plot}}
+\subsubsection{\texorpdfstring{La fonction \textbf{plot}}{La fonction plot}}\label{la-fonction-plot}}
 
 C'est une \textbf{fonction générique} que l'on peut utiliser pour représenter différents types de données. L'utilisation standard consiste à visualiser une variable \emph{y} en fonction d'une variable \emph{x}. On peut par exemple obtenir le graphe de la fonction \(x\mapsto \sin(2\pi x)\) sur \([0,1]\), à l'aide de
 
@@ -183,7 +186,7 @@ C'est une \textbf{fonction générique} que l'on peut utiliser pour représenter
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-4-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-5-1} \end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -191,7 +194,7 @@ C'est une \textbf{fonction générique} que l'on peut utiliser pour représenter
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-4-2} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-5-2} \end{center}
 
 Nous proposons des exemples de représentations de variables quantitatives et qualitatives à l'aide du jeu de données \textbf{ozone.txt} que l'on importe avec
 
@@ -231,7 +234,7 @@ On visualise tout d'abord 2 variables quantitatives à l'aide d'un nuage de poin
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-6-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-7-1} \end{center}
 
 Comme les deux variables appartiennent au même jeu de données, on peut obtenir la même représentation à l'aide d'une sytaxe plus claire qui ajoutent automatiquement les noms des variables sur les axes :
 
@@ -241,7 +244,7 @@ Comme les deux variables appartiennent au même jeu de données, on peut obtenir
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-7-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-8-1} \end{center}
 
 Une autre façon de faire (moins naturelle) :
 
@@ -251,7 +254,7 @@ Une autre façon de faire (moins naturelle) :
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-8-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-9-1} \end{center}
 
 Il existe des fonctions spécifiques pour chaque type de graphs, par exemple \textbf{histogram}, \textbf{barplot} et \textbf{boxplot} :
 
@@ -261,7 +264,7 @@ Il existe des fonctions spécifiques pour chaque type de graphs, par exemple \te
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-9-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-10-1} \end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -269,7 +272,7 @@ Il existe des fonctions spécifiques pour chaque type de graphs, par exemple \te
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-9-2} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-10-2} \end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -277,10 +280,10 @@ Il existe des fonctions spécifiques pour chaque type de graphs, par exemple \te
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-9-3} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-10-3} \end{center}
 
 \hypertarget{graphes-interactifs-avec-ramcharts}{%
-\subsection{Graphes interactifs avec rAmCharts}\label{graphes-interactifs-avec-ramcharts}}
+\subsubsection{Graphes interactifs avec rAmCharts}\label{graphes-interactifs-avec-ramcharts}}
 
 On peut utiliser ce package pour obtenir des graphes dynamiques. L'utilisation est relativement simple, il suffit d'ajouter le prefixe \textbf{am} devant le nom de la fonction :
 
@@ -291,7 +294,7 @@ On peut utiliser ce package pour obtenir des graphes dynamiques. L'utilisation e
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-10-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-11-1} \end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -299,7 +302,7 @@ On peut utiliser ce package pour obtenir des graphes dynamiques. L'utilisation e
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-10-2} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-11-2} \end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -307,7 +310,7 @@ On peut utiliser ce package pour obtenir des graphes dynamiques. L'utilisation e
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-10-3} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-11-3} \end{center}
 
 \BeginKnitrBlock{exercise}[Premier graphe]
 \protect\hypertarget{exr:exo1}{}{\label{exr:exo1} \iffalse (Premier graphe) \fi{} }
@@ -361,7 +364,7 @@ On peut utiliser ce package pour obtenir des graphes dynamiques. L'utilisation e
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-11-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-12-1} \end{center}
 
 \BeginKnitrBlock{exercise}[Tâches solaires]
 \protect\hypertarget{exr:exo3}{}{\label{exr:exo3} \iffalse (Tâches solaires) \fi{} }
@@ -445,7 +448,7 @@ On peut utiliser ce package pour obtenir des graphes dynamiques. L'utilisation e
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-17-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-18-1} \end{center}
 
 \BeginKnitrBlock{exercise}[Layout]
 \protect\hypertarget{exr:exo4}{}{\label{exr:exo4} \iffalse (Layout) \fi{} }On reprend le jeu de données sur l'ozone. A l'aide de la fonction \textbf{layout} séparer la fenêtre graphique en deux lignes avec
@@ -469,15 +472,15 @@ On peut utiliser ce package pour obtenir des graphes dynamiques. L'utilisation e
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-18-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-19-1} \end{center}
 
 \hypertarget{la-grammaire-ggplot2}{%
-\section{\texorpdfstring{La grammaire \textbf{ggplot2}}{La grammaire ggplot2}}\label{la-grammaire-ggplot2}}
+\subsection{\texorpdfstring{La grammaire \textbf{ggplot2}}{La grammaire ggplot2}}\label{la-grammaire-ggplot2}}
 
 Ce package propose de définir des graphes sur \textbf{R} en utilisant une \textbf{grammaire des graphiques} (tout comme \textbf{dplyr} pour manipuler les données). On peut trouver de la documentation sur ce package aux url \url{http://ggplot2.org} et \url{https://ggplot2-book.org}.
 
 \hypertarget{premiers-graphes-ggplot2}{%
-\subsection{\texorpdfstring{Premiers graphes \texttt{ggplot2}}{Premiers graphes ggplot2}}\label{premiers-graphes-ggplot2}}
+\subsubsection{\texorpdfstring{Premiers graphes \texttt{ggplot2}}{Premiers graphes ggplot2}}\label{premiers-graphes-ggplot2}}
 
 Nous considérons un sous échantillon du jeu de données \textbf{diamonds} du package \textbf{ggplot2} (qui se trouve dans le \textbf{tidyverse}).
 
@@ -547,7 +550,7 @@ On peut obtenir le nuage de points \textbf{carat vs price} avec la fonction \tex
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-20-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-21-1} \end{center}
 
 Avec \textbf{ggplot}, on va faire
 
@@ -557,7 +560,7 @@ Avec \textbf{ggplot}, on va faire
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-21-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-22-1} \end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -565,7 +568,7 @@ Avec \textbf{ggplot}, on va faire
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-21-2} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-22-2} \end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -573,7 +576,7 @@ Avec \textbf{ggplot}, on va faire
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-21-3} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-22-3} \end{center}
 
 \BeginKnitrBlock{exercise}[Permiers graphes ggplot]
 \protect\hypertarget{exr:exoggplot1}{}{\label{exr:exoggplot1} \iffalse (Permiers graphes ggplot) \fi{} }
@@ -596,7 +599,7 @@ Avec \textbf{ggplot}, on va faire
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-22-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-23-1} \end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -604,7 +607,7 @@ Avec \textbf{ggplot}, on va faire
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-22-2} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-23-2} \end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -612,7 +615,7 @@ Avec \textbf{ggplot}, on va faire
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-22-3} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-23-3} \end{center}
 
 La syntaxe \textbf{ggplot} se construit à partir d'éléments indépendants qui définissent la grammaire de \textbf{ggplot}. Les principaux verbes sont :
 
@@ -633,7 +636,7 @@ La syntaxe \textbf{ggplot} se construit à partir d'éléments indépendants qui
 Tous ces éléments sont reliés avec le symbole \textbf{+}.
 
 \hypertarget{data-et-aesthetics}{%
-\subsection{Data et aesthetics}\label{data-et-aesthetics}}
+\subsubsection{Data et aesthetics}\label{data-et-aesthetics}}
 
 Ces deux verbes sont à utiliser pour tous les graphes \textbf{ggplot}. Le verbe \textbf{ggplot} servira à définir le jeu de données que l'on souhaite utiliser. Si le code est bien fait, nous n'aurons plus à utiliser le nom du jeu de données par la suite pour construire le graphe. Le verbe \texttt{aes} est quant à lui utile pour sépcifier le nom des variables que l'on souhaite visualiser. Par exemple, pour le nuage de points \textbf{price vs carat} la syntaxe devra débuter par
 
@@ -652,7 +655,7 @@ Les variables peuvent également être utilisées pour colorier des points ou de
 \end{Shaded}
 
 \hypertarget{geometrics}{%
-\subsection{\texorpdfstring{\texttt{Geometrics}}{Geometrics}}\label{geometrics}}
+\subsubsection{\texorpdfstring{\texttt{Geometrics}}{Geometrics}}\label{geometrics}}
 
 Ce verbe décrira le type de représentation souhaitée. Pour un nuage de points, on utilisera par exemple \textbf{geom\_point} :
 
@@ -662,7 +665,7 @@ Ce verbe décrira le type de représentation souhaitée. Pour un nuage de points
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-25-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-26-1} \end{center}
 
 On observe que \textbf{ggplot} ajoute la légende automatiquement. Voici les principaux exemples de \textbf{geometrics} :
 
@@ -715,7 +718,7 @@ Tous & & color, size, group\tabularnewline
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-26-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-27-1} \end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -723,7 +726,7 @@ Tous & & color, size, group\tabularnewline
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-26-2} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-27-2} \end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -731,10 +734,10 @@ Tous & & color, size, group\tabularnewline
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-26-3} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-27-3} \end{center}
 
 \hypertarget{statistics}{%
-\subsection{\texorpdfstring{\texttt{Statistics}}{Statistics}}\label{statistics}}
+\subsubsection{\texorpdfstring{\texttt{Statistics}}{Statistics}}\label{statistics}}
 
 Certains graphes nécessitent des calculs d'indicateurs statistiques pour être tracé. C'est par exemple le cas pour le diagamme en barres et l'histogramme où il faut calculer des hauteurs des barres. Les transformations simples peuvent se faire rapidement, on peut par exemple tracer la fonction \textbf{sinus} avec
 
@@ -745,7 +748,7 @@ Certains graphes nécessitent des calculs d'indicateurs statistiques pour être 
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-27-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-28-1} \end{center}
 
 La transformation est spécifiée dans la fonction \texttt{aes}. Pour des transformations plus complexes, nous devons utiliser des \textbf{statistics}. Une fonction \textbf{stat} permet de définir des nouvelles variables à partir du jeu de données initial, il est ensuite possible de représenter ces nouvelles variables.
 Par exemple, la fonction \textbf{stat\_bin}, qui est utilisée par défaut pour construire des histogrammes, produit les variables suivantes :
@@ -768,7 +771,7 @@ Par défaut \emph{geom\_histogram} fait appel à cette fonction \texttt{stat\_bi
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-28-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-29-1} \end{center}
 
 Si on souhaite une autre variable issue de \texttt{stat\_bin}, comme par exemple la densité, il faudra utiliser
 
@@ -778,7 +781,7 @@ Si on souhaite une autre variable issue de \texttt{stat\_bin}, comme par exemple
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-29-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-30-1} \end{center}
 
 Il est possible d'utiliser les fonctions \textbf{stat\_} à la place des \textbf{geom\_} pour certaines représentations. Chaque fonction \textbf{stat\_} possède par défaut un \textbf{geom\_} et réciproquement. On peut par exemple obtenir le même graphe que précédemment avec
 
@@ -826,7 +829,7 @@ Représenter cette distribution de probabilité avec un diagramme en barres.
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-31-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-32-1} \end{center}
 
 \BeginKnitrBlock{exercise}[Lissage]
 \protect\hypertarget{exr:exo-stat2}{}{\label{exr:exo-stat2} \iffalse (Lissage) \fi{} }
@@ -847,7 +850,7 @@ Représenter cette distribution de probabilité avec un diagramme en barres.
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-32-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-33-1} \end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -855,7 +858,7 @@ Représenter cette distribution de probabilité avec un diagramme en barres.
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-32-2} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-33-2} \end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -863,7 +866,7 @@ Représenter cette distribution de probabilité avec un diagramme en barres.
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-32-3} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-33-3} \end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -871,10 +874,10 @@ Représenter cette distribution de probabilité avec un diagramme en barres.
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-32-4} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-33-4} \end{center}
 
 \hypertarget{scales}{%
-\subsection{\texorpdfstring{\texttt{Scales}}{Scales}}\label{scales}}
+\subsubsection{\texorpdfstring{\texttt{Scales}}{Scales}}\label{scales}}
 
 Les échelles (\textbf{scales}) controlent tout un tas d'options telles que des changements de couleurs, d'échelles ou de limites d'axes, de symboles, etc\ldots{} L'utilisation n'est pas simple et nécessite de la pratique. On utilise généralement ce verbe à la dernière étape de construction du graphe. La syntaxe est définie comme suit :
 
@@ -898,7 +901,7 @@ Par exemple,
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-33-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-34-1} \end{center}
 
 Voici quelques exemples des principales échelles :
 
@@ -942,7 +945,7 @@ Nous présentons quelques exemples d'utilisation des échelles :
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-34-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-35-1} \end{center}
 
 On change la couleur en utilisant la palette \textbf{Purples} :
 
@@ -952,7 +955,7 @@ On change la couleur en utilisant la palette \textbf{Purples} :
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-35-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-36-1} \end{center}
 
 \begin{itemize}
 \tightlist
@@ -967,7 +970,7 @@ On change la couleur en utilisant la palette \textbf{Purples} :
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-36-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-37-1} \end{center}
 
 On change le gradient de couleur
 
@@ -977,7 +980,7 @@ On change le gradient de couleur
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-37-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-38-1} \end{center}
 
 \begin{itemize}
 \tightlist
@@ -993,10 +996,10 @@ On change le gradient de couleur
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-38-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-39-1} \end{center}
 
 \hypertarget{group-et-facets}{%
-\subsection{\texorpdfstring{\texttt{Group\ et\ facets}}{Group et facets}}\label{group-et-facets}}
+\subsubsection{\texorpdfstring{\texttt{Group\ et\ facets}}{Group et facets}}\label{group-et-facets}}
 
 \textbf{ggplot} permet de faire des représentations pour des groupes d'individus. On procède généralement de deux façons différentes :
 
@@ -1017,7 +1020,7 @@ Représentons ici (sur le même graphe) le lisseur \textbf{price vs carat} pour 
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-39-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-40-1} \end{center}
 
 Pour obtenir cette représentation sur plusieurs fenêtres, on utilise
 
@@ -1028,7 +1031,7 @@ Pour obtenir cette représentation sur plusieurs fenêtres, on utilise
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-40-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-41-1} \end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1037,7 +1040,7 @@ Pour obtenir cette représentation sur plusieurs fenêtres, on utilise
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-40-2} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-41-2} \end{center}
 
 \emph{facet\_grid} et \emph{facet\_wrap} font des choses proches mais divisent la fenêtre de façon différente :
 
@@ -1048,7 +1051,7 @@ Pour obtenir cette représentation sur plusieurs fenêtres, on utilise
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-41-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-42-1} \end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1057,10 +1060,10 @@ Pour obtenir cette représentation sur plusieurs fenêtres, on utilise
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-41-2} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-42-2} \end{center}
 
 \hypertarget{compluxe9ments}{%
-\section{Compléments}\label{compluxe9ments}}
+\subsection{Compléments}\label{compluxe9ments}}
 
 La syntaxe \textbf{ggplot} est définie selon le schéma :
 
@@ -1078,7 +1081,7 @@ Elle est très flexible, on peut par exemple spécifier les variables de \texttt
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-43-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-44-1} \end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1086,7 +1089,7 @@ Elle est très flexible, on peut par exemple spécifier les variables de \texttt
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-43-2} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-44-2} \end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1094,7 +1097,7 @@ Elle est très flexible, on peut par exemple spécifier les variables de \texttt
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-43-3} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-44-3} \end{center}
 
 Ceci peut se révéler très utile lorsqu'on utilise des \textbf{aes} différents dans les \textbf{geom\_}.
 
@@ -1112,7 +1115,7 @@ On peut aussi construire un graphe à l'aide de différents jeux de données :
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-44-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-45-1} \end{center}
 
 Il existe d'autres fonctions \textbf{ggplot} :
 
@@ -1133,7 +1136,7 @@ Il existe d'autres fonctions \textbf{ggplot} :
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-45-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-46-1} \end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1141,7 +1144,7 @@ Il existe d'autres fonctions \textbf{ggplot} :
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-45-2} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-46-2} \end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1149,7 +1152,7 @@ Il existe d'autres fonctions \textbf{ggplot} :
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-45-3} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-46-3} \end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1157,12 +1160,12 @@ Il existe d'autres fonctions \textbf{ggplot} :
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-45-4} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-46-4} \end{center}
 
 D'autres thèmes sont disponibles dans le package \textbf{ggtheme}. On pourra également parler de la fonction \texttt{set\_theme} qui permet de préciser modifier le thème par défaut pour un document \textbf{Markdown}.
 
 \hypertarget{quelques-exercices-suppluxe9mentaires}{%
-\section{Quelques exercices supplémentaires}\label{quelques-exercices-suppluxe9mentaires}}
+\subsection{Quelques exercices supplémentaires}\label{quelques-exercices-suppluxe9mentaires}}
 
 \BeginKnitrBlock{exercise}[Fonctions cosinus et sinus]
 \protect\hypertarget{exr:exo-cos-sin}{}{\label{exr:exo-cos-sin} \iffalse (Fonctions cosinus et sinus) \fi{} }
@@ -1187,7 +1190,7 @@ D'autres thèmes sont disponibles dans le package \textbf{ggtheme}. On pourra é
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-46-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-47-1} \end{center}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1205,7 +1208,7 @@ D'autres thèmes sont disponibles dans le package \textbf{ggtheme}. On pourra é
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-47-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-48-1} \end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1215,7 +1218,7 @@ D'autres thèmes sont disponibles dans le package \textbf{ggtheme}. On pourra é
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-47-2} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-48-2} \end{center}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1239,7 +1242,7 @@ D'autres thèmes sont disponibles dans le package \textbf{ggtheme}. On pourra é
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-48-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-49-1} \end{center}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1255,7 +1258,7 @@ D'autres thèmes sont disponibles dans le package \textbf{ggtheme}. On pourra é
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-49-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-50-1} \end{center}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1274,7 +1277,7 @@ D'autres thèmes sont disponibles dans le package \textbf{ggtheme}. On pourra é
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-50-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-51-1} \end{center}
 
 \BeginKnitrBlock{exercise}[Différents graphes]
 \protect\hypertarget{exr:exo-mtcars}{}{\label{exr:exo-mtcars} \iffalse (Différents graphes) \fi{} }
@@ -1323,7 +1326,7 @@ On considère les données \textbf{mtcars}
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-52-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-53-1} \end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1331,7 +1334,7 @@ On considère les données \textbf{mtcars}
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-52-2} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-53-2} \end{center}
 
 2.Tracer l'histogramme de la densité.
 
@@ -1341,7 +1344,7 @@ On considère les données \textbf{mtcars}
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-53-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-54-1} \end{center}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1357,7 +1360,7 @@ On considère les données \textbf{mtcars}
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-54-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-55-1} \end{center}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1373,7 +1376,7 @@ On considère les données \textbf{mtcars}
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-55-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-56-1} \end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1381,7 +1384,7 @@ On considère les données \textbf{mtcars}
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-55-2} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-56-2} \end{center}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1398,7 +1401,7 @@ On considère les données \textbf{mtcars}
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-56-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-57-1} \end{center}
 
 \BeginKnitrBlock{exercise}[Résidus pour régression simple]
 \protect\hypertarget{exr:ggplot-reg-simple}{}{\label{exr:ggplot-reg-simple} \iffalse (Résidus pour régression simple) \fi{} }
@@ -1444,7 +1447,7 @@ On le fait d'abord ``à la main'' en calculant l'équation de la droite de régr
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-59-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-60-1} \end{center}
 
 On peut avoir le tracé directement avec \texttt{geom\_smooth}.
 
@@ -1454,7 +1457,7 @@ On peut avoir le tracé directement avec \texttt{geom\_smooth}.
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-61-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-62-1} \end{center}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1471,7 +1474,7 @@ On peut avoir le tracé directement avec \texttt{geom\_smooth}.
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-62-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-63-1} \end{center}
 
 \BeginKnitrBlock{exercise}[Challenge]
 \protect\hypertarget{exr:ggplot-challenge}{}{\label{exr:ggplot-challenge} \iffalse (Challenge) \fi{} }
@@ -1488,11 +1491,11 @@ On considère les données \textbf{diamonds}.
   Tracer les graphes suivants (utiliser \texttt{coord\_flip} pour le second).
 \end{enumerate}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-63-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-64-1} \end{center}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-63-2} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-64-2} \end{center}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-63-3} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-64-3} \end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1522,7 +1525,7 @@ On considère les données \textbf{diamonds}.
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-65-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-66-1} \end{center}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1532,7 +1535,7 @@ On considère les données \textbf{diamonds}.
   En déduire le graphe suivant (on utilisera le package \textbf{ggstance}).
 \end{enumerate}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-66-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-67-1} \end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1552,7 +1555,7 @@ On considère les données \textbf{diamonds}.
 \end{Shaded}
 
 \hypertarget{faire-des-cartes-avec-r}{%
-\chapter{Faire des cartes avec R}\label{faire-des-cartes-avec-r}}
+\section{Faire des cartes avec R}\label{faire-des-cartes-avec-r}}
 
 De nombreuses données comportent des informations de géolocalisation. Il est alors naturel d'utiliser des cartes pour les visualiser. On peut généralement si'ntéresser à deux types de cartes :
 
@@ -1567,7 +1570,7 @@ De nombreuses données comportent des informations de géolocalisation. Il est a
 De nombreux packages \textbf{R} permettent de d'obtenir des cartes. Dans cette partie, on s'interessera aux packages \texttt{ggmap} et \texttt{sf} pour les cartes statiques et \texttt{leaflet} pour les cartes interactives.
 
 \hypertarget{le-package-ggmap}{%
-\section{Le package ggmap}\label{le-package-ggmap}}
+\subsection{Le package ggmap}\label{le-package-ggmap}}
 
 Nous montrons dans cette section comment récupérer des fonds de carte et ajouter quelques informations à l'aide de \texttt{ggmap}. Pour plus de détails sur ce package, on pourra consulter \href{https://journal.r-project.org/archive/2013-1/kahle-wickham.pdf}{cet article} pour plus de détails.
 
@@ -1582,7 +1585,7 @@ Nous montrons dans cette section comment récupérer des fonds de carte et ajout
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-70-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-71-1} \end{center}
 
 Pour l'Europe on fait
 
@@ -1593,7 +1596,7 @@ Pour l'Europe on fait
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-71-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-72-1} \end{center}
 
 On peut également changer le fond de carte
 
@@ -1603,7 +1606,7 @@ On peut également changer le fond de carte
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-72-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-73-1} \end{center}
 
 Pour la france, on aura
 
@@ -1614,7 +1617,7 @@ Pour la france, on aura
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-73-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-74-1} \end{center}
 
 La fonction \texttt{geocode} de \texttt{ggmap}qui permettait de récupérer des latitudes et longitudes nécessite désormais une \textbf{API}, ce qui contraint son utilisation. Nous proposons d'utiliser la fonction suivante :
 
@@ -1681,7 +1684,7 @@ Cette fonction permet de récupérer les latitudes et longitudes de lieux à sp�
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-76-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-77-1} \end{center}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1691,9 +1694,9 @@ Cette fonction permet de récupérer les latitudes et longitudes de lieux à sp�
   Le fichier \textbf{villes\_fr.csv} contient les populations des 30 plus grandes villes de france. Représenter à l'aide d'un point les 30 plus grandes villes de france. On fera varier la taille du point en fonction de la population en 2014.
 \end{enumerate}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-78-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-79-1} \end{center}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-78-2} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-79-2} \end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1708,7 +1711,7 @@ Cette fonction permet de récupérer les latitudes et longitudes de lieux à sp�
 \end{Shaded}
 
 \hypertarget{cartes-avec-contours-le-format-shapefile}{%
-\section{Cartes avec contours, le format shapefile}\label{cartes-avec-contours-le-format-shapefile}}
+\subsection{Cartes avec contours, le format shapefile}\label{cartes-avec-contours-le-format-shapefile}}
 
 \texttt{ggmap} permet de récupérer facilement des fonds de cartes et de placer des points dessus avec la syntaxe \texttt{ggplot}. Cependant, de nombreuses fonctions de ca package nécessitent une API et il est difficile de définir des contours (frontières de pays, départements ou régions) avec \texttt{ggmap}. Nous proposons ici de présenter brièvement le package \textbf{sf} qui va nous permettre de créer des cartes ``avancées'', en gérant les contours à l'aide d'objets particuliers mais aussi en prenant en compte différents systèmes de coordonnées. En effet, la terre n'est pas plate\ldots{} mais une carte est souvent visualisée en 2D, il faut par conséquent réaliser des projections pour représenter des lieux définis par une coordonnée (comme la latitue et la longitude) sur une carte 2D. Ces projections sont généralement gérées par les packages qui permettent de faire de la cartographie comme \textbf{sf}.On pourra trouver de la documentation sur ce package aux url suivantes :
 
@@ -1768,7 +1771,7 @@ Ces données contiennent des informations sur les morts subites de nourissons da
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-81-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-82-1} \end{center}
 
 ou en utilisant le verbe \texttt{geom\_sf} si on veut faire du \texttt{ggplot}
 
@@ -1778,7 +1781,7 @@ ou en utilisant le verbe \texttt{geom\_sf} si on veut faire du \texttt{ggplot}
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-82-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-83-1} \end{center}
 
 Il devient dès lors facile de colorier des villes et d'ajouter leurs noms :
 
@@ -1790,7 +1793,7 @@ Il devient dès lors facile de colorier des villes et d'ajouter leurs noms :
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-83-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-84-1} \end{center}
 
 La colonne \texttt{geometry} de \texttt{nc} est au format \texttt{MULTIPOLYGON}, elle permettra donc de délimiter les frontières des villes. Si maintenant on souhaite représenter une ville à l'aide d'un point défini par sa latitude et longitude, il va falloir modifier le format de cette colonne \texttt{geometry}. On peut le faire de la manière suivante :
 
@@ -1863,7 +1866,7 @@ La colonne \texttt{geometry} de \texttt{nc} est au format \texttt{MULTIPOLYGON},
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-89-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-90-1} \end{center}
 
 Le package \texttt{sf} possède également des fonctions très utiles pour traiter des données cartographiques, on peut citer par exemple :
 
@@ -1884,7 +1887,7 @@ On peut ainsi représenter les centres des villes délimitées par les polygones
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-90-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-91-1} \end{center}
 
 \BeginKnitrBlock{exercise}[Première carte avec sf]
 \protect\hypertarget{exr:exo-carto-sf1}{}{\label{exr:exo-carto-sf1} \iffalse (Première carte avec sf) \fi{} }
@@ -1899,7 +1902,7 @@ Nous nous servons de la carte GEOFLAR proposée par l'Institut Géographique Nat
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-91-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-92-1} \end{center}
 
 Refaire la carte de l'exercice \ref{exr:exo-carto-ggmap} sur ce fond de carte.
 
@@ -1939,7 +1942,7 @@ Refaire la carte de l'exercice \ref{exr:exo-carto-ggmap} sur ce fond de carte.
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-94-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-95-1} \end{center}
 
 \BeginKnitrBlock{exercise}[Visualisation de taux de chômage avec sf]
 \protect\hypertarget{exr:exo-carto-sf-tc}{}{\label{exr:exo-carto-sf-tc} \iffalse (Visualisation de taux de chômage avec sf) \fi{} }
@@ -1998,10 +2001,10 @@ Nous souhaitons visualiser graphiquement les différences de taux de chômage pa
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-98-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-99-1} \end{center}
 
 \hypertarget{challenge1}{%
-\subsection{Challenge 1 : carte des températures avec ggmap}\label{challenge1}}
+\subsubsection{Challenge 1 : carte des températures avec ggmap}\label{challenge1}}
 
 On souhaite ici faire une carte permettant de visualiser les température en France à un moment donné. Les données se trouvent sur le site des \href{https://donneespubliques.meteofrance.fr/?fond=produit\&id_produit=90\&id_rubrique=32}{données publiques de meteo france}. On peut notamment récupérer les températures observées dans certaines stations en france ainsi que la géolocalisation de ces stations.
 
@@ -2040,7 +2043,7 @@ On souhaite ici faire une carte permettant de visualiser les température en Fra
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-102-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-103-1} \end{center}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -2082,7 +2085,7 @@ On souhaite ici faire une carte permettant de visualiser les température en Fra
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-105-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-106-1} \end{center}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -2132,10 +2135,10 @@ Prédire la température de chaque département à l'aide de la règle du 1 plus
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-109-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-110-1} \end{center}
 
 \hypertarget{cartes-interactives-avec-leaflet}{%
-\section{Cartes interactives avec leaflet}\label{cartes-interactives-avec-leaflet}}
+\subsection{Cartes interactives avec leaflet}\label{cartes-interactives-avec-leaflet}}
 
 \texttt{Leaflet} est un package permettant de faire de la \emph{cartographie ineractive}. On pourra consulter un descriptif synthétique \href{https://rstudio.github.io/leaflet/}{ici}. Le principe est similaire à ce qui a été présenté précédemment : les cates sont construites à partie de couches qui se superposent. Un fond de carte s'obtient avec les fonctions \texttt{leaflet} et \texttt{addTiles}
 
@@ -2146,7 +2149,7 @@ Prédire la température de chaque département à l'aide de la règle du 1 plus
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-110-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-111-1} \end{center}
 
 On dispose de plusieurs styles de fonds de cartes (quelques exemples \href{http://leaflet-extras.github.io/leaflet-providers/preview/}{ici}) :
 
@@ -2159,7 +2162,7 @@ On dispose de plusieurs styles de fonds de cartes (quelques exemples \href{http:
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-112-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-113-1} \end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2167,7 +2170,7 @@ On dispose de plusieurs styles de fonds de cartes (quelques exemples \href{http:
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-112-2} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-113-2} \end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2175,7 +2178,7 @@ On dispose de plusieurs styles de fonds de cartes (quelques exemples \href{http:
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-112-3} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-113-3} \end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2185,7 +2188,7 @@ On dispose de plusieurs styles de fonds de cartes (quelques exemples \href{http:
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-112-4} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-113-4} \end{center}
 
 Il est fréquemment utile de repérer des lieux sur une carte à l'aide de symboles. On pourra effectuer cela à l'aide des fonctions \texttt{addMarkers} et \texttt{addCircles}\ldots{}
 
@@ -2197,7 +2200,7 @@ Il est fréquemment utile de repérer des lieux sur une carte à l'aide de symbo
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-113-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-114-1} \end{center}
 
 Le caractère interactif de la carte permet d'ajouter de l'information lorsqu'on clique sur un marker (grâce à l'option \texttt{popup}). On peut également ajouter des \textbf{popups} qui contiennent plus d'information, voire des liens vers des sites web :
 
@@ -2216,7 +2219,7 @@ Le caractère interactif de la carte permet d'ajouter de l'information lorsqu'on
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-114-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-115-1} \end{center}
 
 \BeginKnitrBlock{exercise}[Popup avec leaflet]
 \protect\hypertarget{exr:exo-carto-popup-leaflet}{}{\label{exr:exo-carto-popup-leaflet} \iffalse (Popup avec leaflet) \fi{} }
@@ -2237,10 +2240,10 @@ Placer un \textbf{popup} localisant l'Université Rennes 2 (Campus Villejean). O
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-115-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-116-1} \end{center}
 
 \hypertarget{challenge-2-visualisation-des-stations-velib-uxe0-paris}{%
-\subsection{Challenge 2 : Visualisation des stations velib à Paris}\label{challenge-2-visualisation-des-stations-velib-uxe0-paris}}
+\subsubsection{Challenge 2 : Visualisation des stations velib à Paris}\label{challenge-2-visualisation-des-stations-velib-uxe0-paris}}
 
 Plusieurs villes dans le monde ont accepté de mettre en ligne les données sur l'occupation des stations velib. Ces données sont facilement accessibles et mises à jour en temps réel. On dispose généralement de la taille et la localisation des stations, la proportion de vélos disponibles\ldots{}
 Il est possible de requêter (entre autres) :
@@ -2317,7 +2320,7 @@ Nous avons de l'information sur la disponibilité, le remplissage\ldots{} de sta
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-120-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-121-1} \end{center}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -2348,7 +2351,7 @@ Nous avons de l'information sur la disponibilité, le remplissage\ldots{} de sta
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-121-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-122-1} \end{center}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -2372,7 +2375,7 @@ Nous avons de l'information sur la disponibilité, le remplissage\ldots{} de sta
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-122-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-123-1} \end{center}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -2406,7 +2409,7 @@ Nous avons de l'information sur la disponibilité, le remplissage\ldots{} de sta
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-124-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-125-1} \end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2425,7 +2428,7 @@ Nous avons de l'information sur la disponibilité, le remplissage\ldots{} de sta
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-124-2} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-125-2} \end{center}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -2463,7 +2466,7 @@ La fonction devra par exemple renvoyer
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-126-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-127-1} \end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2471,10 +2474,10 @@ La fonction devra par exemple renvoyer
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-126-2} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-127-2} \end{center}
 
 \hypertarget{carte-des-tempuxe9ratures-avec-leaflet}{%
-\subsection{Carte des températures avec leaflet}\label{carte-des-tempuxe9ratures-avec-leaflet}}
+\subsubsection{Carte des températures avec leaflet}\label{carte-des-tempuxe9ratures-avec-leaflet}}
 
 \BeginKnitrBlock{exercise}[Challenge]
 \protect\hypertarget{exr:ggplot-challenge}{}{\label{exr:ggplot-challenge} \iffalse (Challenge) \fi{} }
@@ -2497,7 +2500,7 @@ Refaire la carte des températures du premier challenge (voir section \ref{chall
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-127-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-128-1} \end{center}
 
 ou avec une autre palette de couleur
 
@@ -2513,15 +2516,15 @@ ou avec une autre palette de couleur
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-129-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-130-1} \end{center}
 
 \hypertarget{quelques-outils-de-visualisation-interactive---compluxe9ments-shiny}{%
-\chapter{Quelques outils de visualisation interactive - Compléments shiny}\label{quelques-outils-de-visualisation-interactive---compluxe9ments-shiny}}
+\section{Quelques outils de visualisation interactive - Compléments shiny}\label{quelques-outils-de-visualisation-interactive---compluxe9ments-shiny}}
 
 Tout comme \textbf{leaflet} pour les cartes, il existe de nombreux outils \textbf{R} dédiés à la visualisation interactive. Nous en présentons quelques uns dans cette partie.
 
 \hypertarget{repruxe9sentations-classiques-avec-ramcharts-et-plotly}{%
-\section{\texorpdfstring{Représentations classiques avec \texttt{rAmCharts} et \texttt{plotly}}{Représentations classiques avec rAmCharts et plotly}}\label{repruxe9sentations-classiques-avec-ramcharts-et-plotly}}
+\subsection{\texorpdfstring{Représentations classiques avec \texttt{rAmCharts} et \texttt{plotly}}{Représentations classiques avec rAmCharts et plotly}}\label{repruxe9sentations-classiques-avec-ramcharts-et-plotly}}
 
 Le package \href{https://datastorm-open.github.io/introduction_ramcharts/}{rAmCharts} est très utile pour donner un carcatère interactif à des représentations graphiques standards (nuages de points, séries temporelles, histogrammes\ldots{}). Ce package a été fait dans l'esprit d'utiliser les fonctions graphiques de \textbf{R} en utilisant le préfixe \textbf{am}. La syntaxe est très proche de celle des fonctions graphiques standards. On a par exemple :
 
@@ -2532,7 +2535,7 @@ Le package \href{https://datastorm-open.github.io/introduction_ramcharts/}{rAmCh
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-130-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-131-1} \end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2541,7 +2544,7 @@ Le package \href{https://datastorm-open.github.io/introduction_ramcharts/}{rAmCh
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-130-2} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-131-2} \end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2549,7 +2552,7 @@ Le package \href{https://datastorm-open.github.io/introduction_ramcharts/}{rAmCh
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-130-3} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-131-3} \end{center}
 
 \href{https://plot.ly/r/}{plotly} permet de faire des choses semblables avec avec une syntaxe spécifique. Les commandes \textbf{plotly} se décomposent essentiellement en 3 parties :
 
@@ -2590,7 +2593,7 @@ On effectue maintenant le tracé
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-132-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-133-1} \end{center}
 
 Contrairement à \textbf{ggplot}, \textbf{plotly} permet de faire de la 3D. Par exemple
 
@@ -2600,7 +2603,7 @@ Contrairement à \textbf{ggplot}, \textbf{plotly} permet de faire de la 3D. Par 
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-133-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-134-1} \end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2608,7 +2611,7 @@ Contrairement à \textbf{ggplot}, \textbf{plotly} permet de faire de la 3D. Par 
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-133-2} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-134-2} \end{center}
 
 Il est possible de convertir des graphes \textbf{ggplot} au format \textbf{plotly} avec la fonction \texttt{ggplotly} :
 
@@ -2619,7 +2622,7 @@ Il est possible de convertir des graphes \textbf{ggplot} au format \textbf{plotl
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-134-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-135-1} \end{center}
 
 \BeginKnitrBlock{exercise}[Graphes basiques avec `rAmCharts` et `plotly`]
 \protect\hypertarget{exr:exo-amchart-plotly}{}{\label{exr:exo-amchart-plotly} \iffalse (Graphes basiques avec \texttt{rAmCharts} et \texttt{plotly}) \fi{} }
@@ -2640,7 +2643,7 @@ Pour le jeu de données \textbf{iris} on effectuera les graphes suivants en \tex
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-135-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-136-1} \end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2649,7 +2652,7 @@ Pour le jeu de données \textbf{iris} on effectuera les graphes suivants en \tex
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-136-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-137-1} \end{center}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -2665,7 +2668,7 @@ Pour le jeu de données \textbf{iris} on effectuera les graphes suivants en \tex
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-137-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-138-1} \end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2673,23 +2676,24 @@ Pour le jeu de données \textbf{iris} on effectuera les graphes suivants en \tex
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-138-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-139-1} \end{center}
 
 \hypertarget{graphes-pour-visualiser-des-ruxe9seaux-avec-visnetwork}{%
-\section{Graphes pour visualiser des réseaux avec visNetwork}\label{graphes-pour-visualiser-des-ruxe9seaux-avec-visnetwork}}
+\subsection{Graphes pour visualiser des réseaux avec visNetwork}\label{graphes-pour-visualiser-des-ruxe9seaux-avec-visnetwork}}
 
 De nombreuses données peuvent être visualisées à l'aide d'un graphe, notamment lorsqu'il s'agit de représenter des connexions entre individus. Un individu est alors représentés par un noeud et les individus connectés sont reliés par des arrêtes. Le package \href{http://kateto.net/networks-r-igraph}{igraph} propose une visualisation statique d'un réseau. Pour donner un caractère dynamique à cetype de représentation, on pourra utiliser le package \href{https://datastorm-open.github.io/visNetwork/interaction.html}{visNetwork}. Une représentation standard \textbf{visNetwork} s'effectue en spécifiant les noeuds et connections d'un graphe, par exemple :
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\OperatorTok{>}\StringTok{ }\NormalTok{nodes <-}\StringTok{ }\KeywordTok{data.frame}\NormalTok{(}\DataTypeTok{id =} \DecValTok{1}\OperatorTok{:}\DecValTok{15}\NormalTok{, }\DataTypeTok{label =} \KeywordTok{paste}\NormalTok{(}\StringTok{"Id"}\NormalTok{, }\DecValTok{1}\OperatorTok{:}\DecValTok{15}\NormalTok{),}\DataTypeTok{group=}\KeywordTok{sample}\NormalTok{(LETTERS[}\DecValTok{1}\OperatorTok{:}\DecValTok{3}\NormalTok{], }\DecValTok{15}\NormalTok{, }\DataTypeTok{replace =} \OtherTok{TRUE}\NormalTok{))}
+\OperatorTok{>}\StringTok{ }\NormalTok{nodes <-}\StringTok{ }\KeywordTok{data.frame}\NormalTok{(}\DataTypeTok{id =} \DecValTok{1}\OperatorTok{:}\DecValTok{15}\NormalTok{, }\DataTypeTok{label =} \KeywordTok{paste}\NormalTok{(}\StringTok{"Id"}\NormalTok{, }\DecValTok{1}\OperatorTok{:}\DecValTok{15}\NormalTok{),}
+\OperatorTok{+}\StringTok{                     }\DataTypeTok{group=}\KeywordTok{sample}\NormalTok{(LETTERS[}\DecValTok{1}\OperatorTok{:}\DecValTok{3}\NormalTok{], }\DecValTok{15}\NormalTok{, }\DataTypeTok{replace =} \OtherTok{TRUE}\NormalTok{))}
 \OperatorTok{>}\StringTok{ }\NormalTok{edges <-}\StringTok{ }\KeywordTok{data.frame}\NormalTok{(}\DataTypeTok{from =} \KeywordTok{trunc}\NormalTok{(}\KeywordTok{runif}\NormalTok{(}\DecValTok{15}\NormalTok{)}\OperatorTok{*}\NormalTok{(}\DecValTok{15-1}\NormalTok{))}\OperatorTok{+}\DecValTok{1}\NormalTok{,}\DataTypeTok{to =} \KeywordTok{trunc}\NormalTok{(}\KeywordTok{runif}\NormalTok{(}\DecValTok{15}\NormalTok{)}\OperatorTok{*}\NormalTok{(}\DecValTok{15-1}\NormalTok{))}\OperatorTok{+}\DecValTok{1}\NormalTok{)}
 \OperatorTok{>}\StringTok{ }\KeywordTok{library}\NormalTok{(visNetwork)}
 \OperatorTok{>}\StringTok{ }\KeywordTok{visNetwork}\NormalTok{(nodes,edges)}
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-139-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-140-1} \end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2697,7 +2701,7 @@ De nombreuses données peuvent être visualisées à l'aide d'un graphe, notamme
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-139-2} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-140-2} \end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2705,7 +2709,7 @@ De nombreuses données peuvent être visualisées à l'aide d'un graphe, notamme
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-139-3} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-140-3} \end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2713,7 +2717,7 @@ De nombreuses données peuvent être visualisées à l'aide d'un graphe, notamme
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-139-4} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-140-4} \end{center}
 
 \BeginKnitrBlock{exercise}[Interactions entre media]
 \protect\hypertarget{exr:graphe}{}{\label{exr:graphe} \iffalse (Interactions entre media) \fi{} }
@@ -2762,7 +2766,7 @@ et on peut le visualiser en faisant un \texttt{plot} de cet objet
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-142-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-143-1} \end{center}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -2778,7 +2782,7 @@ et on peut le visualiser en faisant un \texttt{plot} de cet objet
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-143-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-144-1} \end{center}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -2795,7 +2799,7 @@ et on peut le visualiser en faisant un \texttt{plot} de cet objet
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-144-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-145-1} \end{center}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -2816,7 +2820,7 @@ Il suffit de donner le nom \texttt{group} à la variable \textbf{type.label}.
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-146-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-147-1} \end{center}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -2836,10 +2840,10 @@ Il suffit de donner le nom \textbf{value} à la variable weight.
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-148-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-149-1} \end{center}
 
 \hypertarget{dashboard}{%
-\section{Dashboard}\label{dashboard}}
+\subsection{Dashboard}\label{dashboard}}
 
 Un tableau de bord permet de visualiser ``facilement'' et ``rapidement'' divers graphes et/ou résumés statistiques en lien avec une problématique donnée. Sur \textbf{R} le package \texttt{flexdashboard} permet de construire de tels tableaux de bord. On trouvera un descriptif précis de ce package à cette url : \url{https://rmarkdown.rstudio.com/flexdashboard/}. On utilisera cette documentation pour faire l'exercice suivant.
 
@@ -2883,7 +2887,7 @@ On considère le jeu de données \texttt{ozone.txt}. Le problème est d'explique
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-150-1} \end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-151-1} \end{center}
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -2986,13 +2990,7 @@ Pour les variables choisies, on affichera dans ce nouvel onglet les coefficients
 
 Le tableau de bord finalisé pourra ressembler à
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\OperatorTok{>}\StringTok{ }\NormalTok{knitr}\OperatorTok{::}\KeywordTok{include_app}\NormalTok{(}\StringTok{'https://lrouviere.shinyapps.io/dashboard/'}\NormalTok{, }\DataTypeTok{height =} \StringTok{'600px'}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{center}\href{https://lrouviere.shinyapps.io/dashboard/}{\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-156-1} }\end{center}
+\begin{center}\includegraphics{TUTO_VISU_files/figure-latex/unnamed-chunk-158-1} \end{center}
 
 Il est disponible à l'url \url{https://lrouviere.shinyapps.io/dashboard/}
 

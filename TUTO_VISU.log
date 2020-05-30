@@ -1,24 +1,23 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.10.19)  29 MAY 2020 21:28
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.10.19)  30 MAY 2020 12:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **TUTO_VISU.tex
 (./TUTO_VISU.tex
 LaTeX2e <2018-04-01> patch level 5
-(/usr/local/texlive/2018/texmf-dist/tex/latex/base/book.cls
-Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
-(/usr/local/texlive/2018/texmf-dist/tex/latex/base/bk10.clo
-File: bk10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count80
-\c@chapter=\count81
-\c@section=\count82
-\c@subsection=\count83
-\c@subsubsection=\count84
-\c@paragraph=\count85
-\c@subparagraph=\count86
-\c@figure=\count87
-\c@table=\count88
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
@@ -81,13 +80,13 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count89
+\inf@bad=\count88
 LaTeX Info: Redefining \frac on input line 213.
-\uproot@=\count90
-\leftroot@=\count91
+\uproot@=\count89
+\leftroot@=\count90
 LaTeX Info: Redefining \overline on input line 375.
-\classnum@=\count92
-\DOTSCASE@=\count93
+\classnum@=\count91
+\DOTSCASE@=\count92
 LaTeX Info: Redefining \ldots on input line 472.
 LaTeX Info: Redefining \dots on input line 475.
 LaTeX Info: Redefining \cdots on input line 596.
@@ -96,15 +95,15 @@ LaTeX Info: Redefining \cdots on input line 596.
 \big@size=\dimen105
 LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
-\macc@depth=\count94
-\c@MaxMatrixCols=\count95
+\macc@depth=\count93
+\c@MaxMatrixCols=\count94
 \dotsspace@=\muskip10
-\c@parentequation=\count96
-\dspbrk@lvl=\count97
+\c@parentequation=\count95
+\dspbrk@lvl=\count96
 \tag@help=\toks16
-\row@=\count98
-\column@=\count99
-\maxfields@=\count100
+\row@=\count97
+\column@=\count98
+\maxfields@=\count99
 \andhelp@=\toks17
 \eqnshift@=\dimen106
 \alignsep@=\dimen107
@@ -137,17 +136,17 @@ Already applied: [0000/00/00] Old fixltx2e package on input line 53.
 Package: expl3 2018-10-17 L3 programming layer (loader) 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/l3kernel/expl3-code.tex
 Package: expl3 2018-10-17 L3 programming layer (code)
-\c_max_int=\count101
-\l_tmpa_int=\count102
-\l_tmpb_int=\count103
-\g_tmpa_int=\count104
-\g_tmpb_int=\count105
-\g__kernel_prg_map_int=\count106
-\c_log_iow=\count107
-\l_iow_line_count_int=\count108
-\l__iow_line_target_int=\count109
-\l__iow_one_indent_int=\count110
-\l__iow_indent_int=\count111
+\c_max_int=\count100
+\l_tmpa_int=\count101
+\l_tmpb_int=\count102
+\g_tmpa_int=\count103
+\g_tmpb_int=\count104
+\g__kernel_prg_map_int=\count105
+\c_log_iow=\count106
+\l_iow_line_count_int=\count107
+\l__iow_line_target_int=\count108
+\l__iow_one_indent_int=\count109
+\l__iow_indent_int=\count110
 \c_zero_dim=\dimen112
 \c_max_dim=\dimen113
 \l_tmpa_dim=\dimen114
@@ -166,75 +165,75 @@ Package: expl3 2018-10-17 L3 programming layer (code)
 \l_tmpb_muskip=\muskip14
 \g_tmpa_muskip=\muskip15
 \g_tmpb_muskip=\muskip16
-\l_keys_choice_int=\count112
-\l__intarray_loop_int=\count113
+\l_keys_choice_int=\count111
+\l__intarray_loop_int=\count112
 \c__intarray_sp_dim=\dimen118
-\g__intarray_font_int=\count114
-\c__fp_leading_shift_int=\count115
-\c__fp_middle_shift_int=\count116
-\c__fp_trailing_shift_int=\count117
-\c__fp_big_leading_shift_int=\count118
-\c__fp_big_middle_shift_int=\count119
-\c__fp_big_trailing_shift_int=\count120
-\c__fp_Bigg_leading_shift_int=\count121
-\c__fp_Bigg_middle_shift_int=\count122
-\c__fp_Bigg_trailing_shift_int=\count123
-\g__fp_array_int=\count124
-\l__fp_array_loop_int=\count125
-\l__sort_length_int=\count126
-\l__sort_min_int=\count127
-\l__sort_top_int=\count128
-\l__sort_max_int=\count129
-\l__sort_true_max_int=\count130
-\l__sort_block_int=\count131
-\l__sort_begin_int=\count132
-\l__sort_end_int=\count133
-\l__sort_A_int=\count134
-\l__sort_B_int=\count135
-\l__sort_C_int=\count136
-\l__tl_analysis_normal_int=\count137
-\l__tl_analysis_index_int=\count138
-\l__tl_analysis_nesting_int=\count139
-\l__tl_analysis_type_int=\count140
-\l__regex_internal_a_int=\count141
-\l__regex_internal_b_int=\count142
-\l__regex_internal_c_int=\count143
-\l__regex_balance_int=\count144
-\l__regex_group_level_int=\count145
-\l__regex_mode_int=\count146
-\c__regex_cs_in_class_mode_int=\count147
-\c__regex_cs_mode_int=\count148
-\l__regex_catcodes_int=\count149
-\l__regex_default_catcodes_int=\count150
-\c__regex_catcode_L_int=\count151
-\c__regex_catcode_O_int=\count152
-\c__regex_catcode_A_int=\count153
-\c__regex_all_catcodes_int=\count154
-\l__regex_show_lines_int=\count155
-\l__regex_min_state_int=\count156
-\l__regex_max_state_int=\count157
-\l__regex_left_state_int=\count158
-\l__regex_right_state_int=\count159
-\l__regex_capturing_group_int=\count160
-\l__regex_min_pos_int=\count161
-\l__regex_max_pos_int=\count162
-\l__regex_curr_pos_int=\count163
-\l__regex_start_pos_int=\count164
-\l__regex_success_pos_int=\count165
-\l__regex_curr_char_int=\count166
-\l__regex_curr_catcode_int=\count167
-\l__regex_last_char_int=\count168
-\l__regex_case_changed_char_int=\count169
-\l__regex_curr_state_int=\count170
-\l__regex_step_int=\count171
-\l__regex_min_active_int=\count172
-\l__regex_max_active_int=\count173
-\l__regex_replacement_csnames_int=\count174
-\l__regex_match_count_int=\count175
-\l__regex_min_submatch_int=\count176
-\l__regex_submatch_int=\count177
-\l__regex_zeroth_submatch_int=\count178
-\g__regex_trace_regex_int=\count179
+\g__intarray_font_int=\count113
+\c__fp_leading_shift_int=\count114
+\c__fp_middle_shift_int=\count115
+\c__fp_trailing_shift_int=\count116
+\c__fp_big_leading_shift_int=\count117
+\c__fp_big_middle_shift_int=\count118
+\c__fp_big_trailing_shift_int=\count119
+\c__fp_Bigg_leading_shift_int=\count120
+\c__fp_Bigg_middle_shift_int=\count121
+\c__fp_Bigg_trailing_shift_int=\count122
+\g__fp_array_int=\count123
+\l__fp_array_loop_int=\count124
+\l__sort_length_int=\count125
+\l__sort_min_int=\count126
+\l__sort_top_int=\count127
+\l__sort_max_int=\count128
+\l__sort_true_max_int=\count129
+\l__sort_block_int=\count130
+\l__sort_begin_int=\count131
+\l__sort_end_int=\count132
+\l__sort_A_int=\count133
+\l__sort_B_int=\count134
+\l__sort_C_int=\count135
+\l__tl_analysis_normal_int=\count136
+\l__tl_analysis_index_int=\count137
+\l__tl_analysis_nesting_int=\count138
+\l__tl_analysis_type_int=\count139
+\l__regex_internal_a_int=\count140
+\l__regex_internal_b_int=\count141
+\l__regex_internal_c_int=\count142
+\l__regex_balance_int=\count143
+\l__regex_group_level_int=\count144
+\l__regex_mode_int=\count145
+\c__regex_cs_in_class_mode_int=\count146
+\c__regex_cs_mode_int=\count147
+\l__regex_catcodes_int=\count148
+\l__regex_default_catcodes_int=\count149
+\c__regex_catcode_L_int=\count150
+\c__regex_catcode_O_int=\count151
+\c__regex_catcode_A_int=\count152
+\c__regex_all_catcodes_int=\count153
+\l__regex_show_lines_int=\count154
+\l__regex_min_state_int=\count155
+\l__regex_max_state_int=\count156
+\l__regex_left_state_int=\count157
+\l__regex_right_state_int=\count158
+\l__regex_capturing_group_int=\count159
+\l__regex_min_pos_int=\count160
+\l__regex_max_pos_int=\count161
+\l__regex_curr_pos_int=\count162
+\l__regex_start_pos_int=\count163
+\l__regex_success_pos_int=\count164
+\l__regex_curr_char_int=\count165
+\l__regex_curr_catcode_int=\count166
+\l__regex_last_char_int=\count167
+\l__regex_case_changed_char_int=\count168
+\l__regex_curr_state_int=\count169
+\l__regex_step_int=\count170
+\l__regex_min_active_int=\count171
+\l__regex_max_active_int=\count172
+\l__regex_replacement_csnames_int=\count173
+\l__regex_match_count_int=\count174
+\l__regex_min_submatch_int=\count175
+\l__regex_submatch_int=\count176
+\l__regex_zeroth_submatch_int=\count177
+\g__regex_trace_regex_int=\count178
 \c_empty_box=\box28
 \l_tmpa_box=\box29
 \l_tmpb_box=\box30
@@ -278,8 +277,8 @@ Package: expl3 2018-10-17 L3 programming layer (code)
 \l__coffin_scaled_width_dim=\dimen143
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/l3kernel/l3xdvipdfmx.def
 File: l3xdvidpfmx.def 2018-10-17 v L3 Experimental driver: xdvipdfmx
-\g__driver_image_int=\count180
-\g__driver_pdf_object_int=\count181
+\g__driver_image_int=\count179
+\g__driver_pdf_object_int=\count180
 ))
 Package: unicode-math 2018/07/29 vv0.8m Unicode maths in XeLaTeX and LuaLaTeX
 
@@ -289,11 +288,11 @@ Package: unicode-math-xetex 2018/07/29 vv0.8m Unicode maths in XeLaTeX and LuaL
 aTeX
 (/usr/local/texlive/2018/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2018-10-17 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count182
-\g__xparse_grabber_int=\count183
-\l__xparse_m_args_int=\count184
-\l__xparse_mandatory_args_int=\count185
-\l__xparse_v_nesting_int=\count186
+\l__xparse_current_arg_int=\count181
+\g__xparse_grabber_int=\count182
+\l__xparse_m_args_int=\count183
+\l__xparse_mandatory_args_int=\count184
+\l__xparse_v_nesting_int=\count185
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.st
 y
 Package: l3keys2e 2018-10-17 LaTeX2e option processing using LaTeX3 keys
@@ -302,14 +301,14 @@ Package: fontspec 2018/07/30 vv2.6h Font selection for XeLaTeX and LuaLaTeX
 (/usr/local/texlive/2018/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
 Package: fontspec-xetex 2018/07/30 vv2.6h Font selection for XeLaTeX and LuaLaT
 eX
-\l__fontspec_script_int=\count187
-\l__fontspec_language_int=\count188
-\l__fontspec_strnum_int=\count189
-\l__fontspec_tmp_int=\count190
-\l__fontspec_em_int=\count191
-\l__fontspec_emdef_int=\count192
-\l__fontspec_strong_int=\count193
-\l__fontspec_strongdef_int=\count194
+\l__fontspec_script_int=\count186
+\l__fontspec_language_int=\count187
+\l__fontspec_strnum_int=\count188
+\l__fontspec_tmp_int=\count189
+\l__fontspec_em_int=\count190
+\l__fontspec_emdef_int=\count191
+\l__fontspec_strong_int=\count192
+\l__fontspec_strongdef_int=\count193
 \l__fontspec_tmpa_dim=\dimen144
 \l__fontspec_tmpb_dim=\dimen145
 \l__fontspec_tmpc_dim=\dimen146
@@ -333,9 +332,9 @@ Package: fix-cm 2015/01/14 v1.1t fixes to LaTeX
 (/usr/local/texlive/2018/texmf-dist/tex/latex/base/ts1enc.def
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 ))
-\g__um_fam_int=\count195
-\g__um_fonts_used_int=\count196
-\l__um_primecount_int=\count197
+\g__um_fam_int=\count194
+\g__um_fonts_used_int=\count195
+\l__um_primecount_int=\count196
 \g__um_primekern_muskip=\muskip17
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/unicode-math/unicode-math-table.t
@@ -437,11 +436,11 @@ Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks20
 )
 \MT@toks=\toks21
-\MT@count=\count198
+\MT@count=\count197
 LaTeX Info: Redefining \textls on input line 793.
 \MT@outer@kern=\dimen147
 LaTeX Info: Redefining \textmicrotypecontext on input line 1339.
-\MT@listname@count=\count199
+\MT@listname@count=\count198
 (/usr/local/texlive/2018/texmf-dist/tex/latex/microtype/microtype-xetex.def
 File: microtype-xetex.def 2018/01/14 v2.7a Definitions specific to xetex (RS)
 LaTeX Info: Redefining \lsstyle on input line 256.
@@ -467,7 +466,7 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 ))) (/usr/local/texlive/2018/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2018/08/19 v2.5f e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count266
+\etb@tempcnta=\count199
 )) (/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2018/09/30 v6.88a Hypertext links for LaTeX
 (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
@@ -511,12 +510,12 @@ Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
 Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 )
 \@linkdim=\dimen148
-\Hy@linkcounter=\count267
-\Hy@pagecounter=\count268
+\Hy@linkcounter=\count266
+\Hy@pagecounter=\count267
 (/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2018/09/30 v6.88a Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count269
+\Hy@SavedSpaceFactor=\count268
 (/usr/local/texlive/2018/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
@@ -531,14 +530,14 @@ Package hyperref Info: Plain pages OFF on input line 4550.
 Package hyperref Info: Backreferencing OFF on input line 4555.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4788.
-\c@Hy@tempcnt=\count270
+\c@Hy@tempcnt=\count269
 (/usr/local/texlive/2018/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5141.
 \XeTeXLinkMargin=\dimen149
-\Fld@menulength=\count271
+\Fld@menulength=\count270
 \Field@Width=\dimen150
 \Fld@charsize=\dimen151
 Package hyperref Info: Hyper figures OFF on input line 6396.
@@ -550,9 +549,9 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6421.
 Package hyperref Info: PDF/A mode OFF on input line 6426.
 LaTeX Info: Redefining \ref on input line 6466.
 LaTeX Info: Redefining \pageref on input line 6470.
-\Hy@abspage=\count272
-\c@Item=\count273
-\c@Hfootnote=\count274
+\Hy@abspage=\count271
+\c@Item=\count272
+\c@Hfootnote=\count273
 )
 Package hyperref Info: Driver (autodetected): hxetex.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/hxetex.def
@@ -562,10 +561,10 @@ Package: stringenc 2016/05/16 v1.11 Convert strings between diff. encodings (HO
 )
 )
 \pdfm@box=\box43
-\c@Hy@AnnotLevel=\count275
-\HyField@AnnotCount=\count276
-\Fld@listcount=\count277
-\c@bookmark@seq@number=\count278
+\c@Hy@AnnotLevel=\count274
+\HyField@AnnotCount=\count275
+\Fld@listcount=\count276
+\c@bookmark@seq@number=\count277
 (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
@@ -574,7 +573,21 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 \Hy@SectionHShift=\skip52
 )
 Package hyperref Info: Option `breaklinks' set `true' on input line 35.
-(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/color.sty
+(/usr/local/texlive/2018/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2018/04/16 v5.8 Page Geometry
+\Gm@cnth=\count278
+\Gm@cntv=\count279
+\c@Gm@tempcnt=\count280
+\Gm@bindingoffset=\dimen152
+\Gm@wd@mp=\dimen153
+\Gm@odd@mp=\dimen154
+\Gm@even@mp=\dimen155
+\Gm@layoutwidth=\dimen156
+\Gm@layoutheight=\dimen157
+\Gm@layouthoffset=\dimen158
+\Gm@layoutvoffset=\dimen159
+\Gm@dimlist=\toks22
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
 (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
@@ -587,59 +600,59 @@ Package: fancyvrb 2008/02/07
 
 Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
 <2008/02/07> (tvz)
-\FV@CodeLineNo=\count279
+\FV@CodeLineNo=\count281
 \FV@InFile=\read2
 \FV@TabBox=\box44
-\c@FancyVerbLine=\count280
-\FV@StepNumber=\count281
+\c@FancyVerbLine=\count282
+\FV@StepNumber=\count283
 \FV@OutFile=\write3
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/framed/framed.sty
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \OuterFrameSep=\skip53
-\fb@frw=\dimen152
-\fb@frh=\dimen153
-\FrameRule=\dimen154
-\FrameSep=\dimen155
+\fb@frw=\dimen160
+\fb@frh=\dimen161
+\FrameRule=\dimen162
+\FrameSep=\dimen163
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \LTleft=\skip54
 \LTright=\skip55
 \LTpre=\skip56
 \LTpost=\skip57
-\LTchunksize=\count282
-\LTcapwidth=\dimen156
+\LTchunksize=\count284
+\LTcapwidth=\dimen164
 \LT@head=\box45
 \LT@firsthead=\box46
 \LT@foot=\box47
 \LT@lastfoot=\box48
-\LT@cols=\count283
-\LT@rows=\count284
-\c@LT@tables=\count285
-\c@LT@chunks=\count286
-\LT@p@ftn=\toks22
+\LT@cols=\count285
+\LT@rows=\count286
+\c@LT@tables=\count287
+\c@LT@chunks=\count288
+\LT@p@ftn=\toks23
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2016/04/27 v1.618033 publication quality tables
-\heavyrulewidth=\dimen157
-\lightrulewidth=\dimen158
-\cmidrulewidth=\dimen159
-\belowrulesep=\dimen160
-\belowbottomsep=\dimen161
-\aboverulesep=\dimen162
-\abovetopsep=\dimen163
-\cmidrulesep=\dimen164
-\cmidrulekern=\dimen165
-\defaultaddspace=\dimen166
-\@cmidla=\count287
-\@cmidlb=\count288
-\@aboverulesep=\dimen167
-\@belowrulesep=\dimen168
-\@thisruleclass=\count289
-\@lastruleclass=\count290
-\@thisrulewidth=\dimen169
+\heavyrulewidth=\dimen165
+\lightrulewidth=\dimen166
+\cmidrulewidth=\dimen167
+\belowrulesep=\dimen168
+\belowbottomsep=\dimen169
+\aboverulesep=\dimen170
+\abovetopsep=\dimen171
+\cmidrulesep=\dimen172
+\cmidrulekern=\dimen173
+\defaultaddspace=\dimen174
+\@cmidla=\count289
+\@cmidlb=\count290
+\@aboverulesep=\dimen175
+\@belowrulesep=\dimen176
+\@thisruleclass=\count291
+\@lastruleclass=\count292
+\@thisrulewidth=\dimen177
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/mdwtools/footnote.sty
 Package: footnote 1997/01/28 1.13 Save footnotes around boxes
 \fn@notes=\box49
-\fn@width=\dimen170
+\fn@width=\dimen178
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphics.sty
@@ -651,8 +664,8 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: xetex.def on input line 99.
 )
-\Gin@req@height=\dimen171
-\Gin@req@width=\dimen172
+\Gin@req@height=\dimen179
+\Gin@req@width=\dimen180
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/grffile.sty
 Package: grffile 2017/06/30 v1.18 Extended file name support for graphics (HO)
 Package grffile Info: Option `multidot' is set to `true'.
@@ -664,27 +677,27 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip58
 \bibsep=\skip59
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count291
+\c@NAT@ctr=\count293
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2017/10/31 v2.20.4
-\thm@style=\toks23
-\thm@bodyfont=\toks24
-\thm@headfont=\toks25
-\thm@notefont=\toks26
-\thm@headpunct=\toks27
+\thm@style=\toks24
+\thm@bodyfont=\toks25
+\thm@headfont=\toks26
+\thm@notefont=\toks27
+\thm@headpunct=\toks28
 \thm@preskip=\skip60
 \thm@postskip=\skip61
 \thm@headsep=\skip62
-\dth@everypar=\toks28
+\dth@everypar=\toks29
 )
-\c@theorem=\count292
-\c@lemma=\count293
-\c@corollary=\count294
-\c@proposition=\count295
-\c@conjecture=\count296
-\c@definition=\count297
-\c@example=\count298
-\c@exercise=\count299
+\c@theorem=\count294
+\c@lemma=\count295
+\c@corollary=\count296
+\c@proposition=\count297
+\c@conjecture=\count298
+\c@definition=\count299
+\c@example=\count300
+\c@exercise=\count301
 (./TUTO_VISU.aux
 
 LaTeX Warning: Label `exr:ggplot-challenge' multiply defined.
@@ -692,40 +705,40 @@ LaTeX Warning: Label `exr:ggplot-challenge' multiply defined.
 )
 \openout1 = `TUTO_VISU.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/lmr/m/n --> TU/lmr/m/n on input line 132.
+(Font)                  OT1/lmr/m/n --> TU/lmr/m/n on input line 133.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> TU/lmr/m/it on input line 132.
+(Font)                  OT1/lmr/m/it --> TU/lmr/m/it on input line 133.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> TU/lmr/bx/n on input line 132.
+(Font)                  OT1/lmr/bx/n --> TU/lmr/bx/n on input line 133.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 132.
+(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 133.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> TU/lmss/bx/n on input line 132.
+(Font)                  OT1/lmss/bx/n --> TU/lmss/bx/n on input line 133.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 132.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 133.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/bx/n on input line 132.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/bx/n on input line 133.
 
 Package fontspec Info: latinmodern-math scale = 1.
 
@@ -754,7 +767,7 @@ DFLT;mapping=tex-text;"
 (fontspec)             - 'bold small caps'  (bx/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 132.
+(Font)              scaled to size 10.0pt on input line 133.
 
 Package fontspec Info: latinmodern-math scale = 1.
 
@@ -793,18 +806,18 @@ DFLT;mapping=tex-text;"
 (fontspec)             - 'bold small caps'  (bx/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 132.
+(Font)              scaled to size 10.0pt on input line 133.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 132.
+(Font)              `operators' in the math version `normal' on input line 133.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/lmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input
- line 132.
+ line 133.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 132.
+(Font)              `operators' in the math version `bold' on input line 133.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/lmr/bx/n --> TU/latinmodern-math.otf(1)/bx/n on inp
-ut line 132.
+ut line 133.
 
 Package fontspec Info: latinmodern-math scale = 1.
 
@@ -876,15 +889,15 @@ guage=DFLT;mapping=tex-text;"
 (fontspec)             \fontdimen 21\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 132.
+(Font)              `symbols' in the math version `normal' on input line 133.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
 (Font)                  OMS/lmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on inpu
-t line 132.
+t line 133.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 132.
+(Font)              `symbols' in the math version `bold' on input line 133.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  OMS/lmsy/b/n --> TU/latinmodern-math.otf(2)/bx/n on inp
-ut line 132.
+ut line 133.
 
 Package fontspec Info: latinmodern-math scale = 1.
 
@@ -939,17 +952,17 @@ guage=DFLT;mapping=tex-text;"
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
 (Font)              `largesymbols' in the math version `normal' on input line 1
-32.
+33.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
 (Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/m/n on inpu
-t line 132.
+t line 133.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 132
+(Font)              `largesymbols' in the math version `bold' on input line 133
 .
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/bx/n on inp
-ut line 132.
-LaTeX Info: Redefining \microtypecontext on input line 132.
+ut line 133.
+LaTeX Info: Redefining \microtypecontext on input line 133.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
 Package microtype Info: No adjustment of tracking.
@@ -961,61 +974,90 @@ File: mt-LatinModernRoman.cfg 2013/03/13 v1.0 microtype config. file: Latin Mod
 ern Roman (RS)
 )
 \AtBeginShipoutBox=\box50
-Package hyperref Info: Link coloring OFF on input line 132.
+Package hyperref Info: Link coloring OFF on input line 133.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count300
+\c@section@level=\count302
 )
-LaTeX Info: Redefining \ref on input line 132.
-LaTeX Info: Redefining \pageref on input line 132.
-LaTeX Info: Redefining \nameref on input line 132.
+LaTeX Info: Redefining \ref on input line 133.
+LaTeX Info: Redefining \pageref on input line 133.
+LaTeX Info: Redefining \nameref on input line 133.
 (./TUTO_VISU.out) (./TUTO_VISU.out)
 \@outlinefile=\write4
 \openout4 = `TUTO_VISU.out'.
 
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+*geometry* verbose mode - [ preamble ] result:
+* driver: xetex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=650.43001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 134.
+(Font)              scaled to size 12.0pt on input line 135.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 134.
+(Font)              scaled to size 8.0pt on input line 135.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 134.
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 134.
+(Font)              scaled to size 6.0pt on input line 135.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 135.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 12.00018pt on input line 134.
+(Font)              scaled to size 12.00018pt on input line 135.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 8.00012pt on input line 134.
+(Font)              scaled to size 8.00012pt on input line 135.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 6.00009pt on input line 134.
+(Font)              scaled to size 6.00009pt on input line 135.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 11.99982pt on input line 134.
+(Font)              scaled to size 11.99982pt on input line 135.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.99988pt on input line 134.
+(Font)              scaled to size 7.99988pt on input line 135.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.99991pt on input line 134.
-LaTeX Font Info:    Try loading font information for U+msa on input line 134.
+(Font)              scaled to size 5.99991pt on input line 135.
+LaTeX Font Info:    Try loading font information for U+msa on input line 135.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 134.
+LaTeX Font Info:    Try loading font information for U+msb on input line 135.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-) [1
-
-
-] [2
-
-] (./TUTO_VISU.toc
+) (./TUTO_VISU.toc
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
 (Font)              scaled to size 7.01236pt on input line 3.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
@@ -1036,893 +1078,543 @@ LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 \tf@toc=\write5
 \openout5 = `TUTO_VISU.toc'.
 
-[3] [4
-
-] [5] [6
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-3-1.png Graphic file (type bmp
+)
+<TUTO_VISU_files/figure-latex/unnamed-chunk-3-1.png>
+[1
 
 ]
-Chapter 1.
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 169.
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-4-1.pdf Graphic file (type pdf
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 172.
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-5-1.pdf Graphic file (type pdf
 )
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-4-1.pdf>
-[7]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-4-2.pdf Graphic file (type pdf
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-5-1.pdf>
+[2]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-5-2.pdf Graphic file (type pdf
 )
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-4-2.pdf>
-[8]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-6-1.pdf Graphic file (type pdf
-)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-6-1.pdf>
-[9]
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-5-2.pdf>
+[3]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-7-1.pdf Graphic file (type pdf
 )
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-7-1.pdf>
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-8-1.pdf Graphic file (type pdf
 )
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-8-1.pdf>
-[10]
+[4]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-9-1.pdf Graphic file (type pdf
 )
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-9-1.pdf>
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-9-2.pdf Graphic file (type pdf
-)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-9-2.pdf>
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-9-3.pdf Graphic file (type pdf
-)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-9-3.pdf>
-
-Underfull \vbox (badness 7012) has occurred while \output is active []
-
-[11]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-10-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-10-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[12]
+[5]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-10-2.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-10-2.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[13]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-10-3.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-10-3.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[14]
-File: TUTO_VISU_files/figure-latex/test-a-1.pdf Graphic file (type pdf)
-<use TUTO_VISU_files/figure-latex/test-a-1.pdf>
-
-Underfull \vbox (badness 3815) has occurred while \output is active []
-
-[15]
+[6]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-11-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-11-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[16]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-17-1.pdf Graphic file (type pd
+[7]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-11-2.pdf Graphic file (type pd
 f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-17-1.pdf>
-[17]
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-11-2.pdf>
+[8]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-11-3.pdf Graphic file (type pd
+f)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-11-3.pdf>
+[9]
+File: TUTO_VISU_files/figure-latex/test-a-1.pdf Graphic file (type pdf)
+<use TUTO_VISU_files/figure-latex/test-a-1.pdf>
+[10]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-12-1.pdf Graphic file (type pd
+f)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-12-1.pdf>
+[11]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-18-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-18-1.pdf>
-[18]
-LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <12> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 480.
-[19]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-20-1.pdf Graphic file (type pd
+[12]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-19-1.pdf Graphic file (type pd
 f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-20-1.pdf>
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-19-1.pdf>
+[13]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-21-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-21-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[20]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-21-2.pdf Graphic file (type pd
-f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-21-2.pdf>
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-21-3.pdf Graphic file (type pd
-f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-21-3.pdf>
-
-Underfull \vbox (badness 6725) has occurred while \output is active []
-
-[21]
-Overfull \hbox (48.23001pt too wide) in paragraph at lines 588--590
-[]\TU/lmr/m/n/10 Tracer l’histogramme de la variable \TU/lmr/bx/n/10 carat \TU/
-lmr/m/n/10 avec 10 classes (\TU/lmr/bx/n/10 help(geom_histogram)\TU/lmr/m/n/10 
-). 
- []
-
+[14]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-22-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-22-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[22]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-22-2.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-22-2.pdf>
+[15]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-22-3.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-22-3.pdf>
-[23] [24]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-25-1.pdf Graphic file (type pd
+[16]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-23-1.pdf Graphic file (type pd
 f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-25-1.pdf>
-
-Overfull \hbox (70.56003pt too wide) in alignment at lines 669--674
- [] [] [] 
- []
-
-
-Overfull \hbox (70.56003pt too wide) in alignment at lines 674--678
- [] [] [] 
- []
-
-
-Overfull \hbox (70.56003pt too wide) in alignment at lines 678--695
- [] [] [] 
- []
-
-[25]
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-23-1.pdf>
+[17]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-23-2.pdf Graphic file (type pd
+f)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-23-2.pdf>
+[18]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-23-3.pdf Graphic file (type pd
+f)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-23-3.pdf>
+[19] [20]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-26-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-26-1.pdf>
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-26-2.pdf Graphic file (type pd
-f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-26-2.pdf>
-
-Underfull \vbox (badness 7759) has occurred while \output is active []
-
-[26]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-26-3.pdf Graphic file (type pd
-f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-26-3.pdf>
-
-Underfull \vbox (badness 1769) has occurred while \output is active []
-
-[27]
+[21]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-27-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-27-1.pdf>
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-27-2.pdf Graphic file (type pd
+f)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-27-2.pdf>
+[22]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-27-3.pdf Graphic file (type pd
+f)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-27-3.pdf>
+[23]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-28-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-28-1.pdf>
-[28]
+[24]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-29-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-29-1.pdf>
-[29]
-Overfull \hbox (10.51451pt too wide) detected at line 818
-[][][] [] [][][][] [] [][][][]  [][][] [] [][][][][] [] [][][][]  [][][] [] [][
-][][][][] [] [][][][]  [][][] [] [][][][][][] [] [][][]
- []
-
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-31-1.pdf Graphic file (type pd
+[25]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-30-1.pdf Graphic file (type pd
 f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-31-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[30]
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-30-1.pdf>
+[26] [27]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-32-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-32-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[31]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-32-2.pdf Graphic file (type pd
-f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-32-2.pdf>
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-32-3.pdf Graphic file (type pd
-f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-32-3.pdf>
-[32]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-32-4.pdf Graphic file (type pd
-f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-32-4.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[33]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-33-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-33-1.pdf>
-[34]
+[28]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-33-2.pdf Graphic file (type pd
+f)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-33-2.pdf>
+[29]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-33-3.pdf Graphic file (type pd
+f)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-33-3.pdf>
+[30]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-33-4.pdf Graphic file (type pd
+f)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-33-4.pdf>
+[31]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-34-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-34-1.pdf>
+[32]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-35-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-35-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[35]
+[33]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-36-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-36-1.pdf>
-
-Underfull \vbox (badness 5878) has occurred while \output is active []
-
-[36]
+[34]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-37-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-37-1.pdf>
+[35]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-38-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-38-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[37]
+[36]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-39-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-39-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[38]
+[37]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-40-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-40-1.pdf>
-
-Underfull \vbox (badness 1448) has occurred while \output is active []
-
-[39]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-40-2.pdf Graphic file (type pd
-f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-40-2.pdf>
+[38]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-41-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-41-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[40]
+[39]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-41-2.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-41-2.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+[40]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-42-1.pdf Graphic file (type pd
+f)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-42-1.pdf>
 [41]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-43-1.pdf Graphic file (type pd
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-42-2.pdf Graphic file (type pd
 f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-43-1.pdf>
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-43-2.pdf Graphic file (type pd
-f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-43-2.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-42-2.pdf>
 [42]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-43-3.pdf Graphic file (type pd
-f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-43-3.pdf>
-[43]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-44-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-44-1.pdf>
+[43]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-44-2.pdf Graphic file (type pd
+f)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-44-2.pdf>
+[44]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-44-3.pdf Graphic file (type pd
+f)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-44-3.pdf>
+[45]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-45-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-45-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[44]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-45-2.pdf Graphic file (type pd
-f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-45-2.pdf>
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-45-3.pdf Graphic file (type pd
-f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-45-3.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[45]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-45-4.pdf Graphic file (type pd
-f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-45-4.pdf>
 [46]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-46-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-46-1.pdf>
+[47]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-46-2.pdf Graphic file (type pd
+f)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-46-2.pdf>
+[48]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-46-3.pdf Graphic file (type pd
+f)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-46-3.pdf>
+[49]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-46-4.pdf Graphic file (type pd
+f)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-46-4.pdf>
+[50]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-47-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-47-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[47]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-47-2.pdf Graphic file (type pd
-f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-47-2.pdf>
-[48]
+[51]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-48-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-48-1.pdf>
-
-Underfull \hbox (badness 3907) in paragraph at lines 1249--1250
-[]\TU/lmr/m/n/10 Tracer les deux fonctions sur deux fenêtres graphiques (utilis
-er
- []
-
+[52]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-48-2.pdf Graphic file (type pd
+f)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-48-2.pdf>
+[53]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-49-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-49-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[49]
+[54]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-50-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-50-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[50] [51]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-52-1.pdf Graphic file (type pd
+[55]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-51-1.pdf Graphic file (type pd
 f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-52-1.pdf>
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-52-2.pdf Graphic file (type pd
-f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-52-2.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[52]
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-51-1.pdf>
+[56] [57]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-53-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-53-1.pdf>
-[53]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-53-2.pdf Graphic file (type pd
+f)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-53-2.pdf>
+[58]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-54-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-54-1.pdf>
+[59]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-55-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-55-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[54]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-55-2.pdf Graphic file (type pd
-f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-55-2.pdf>
-[55]
+[60]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-56-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-56-1.pdf>
-[56]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-59-1.pdf Graphic file (type pd
+[61]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-56-2.pdf Graphic file (type pd
 f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-59-1.pdf>
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-61-1.pdf Graphic file (type pd
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-56-2.pdf>
+[62]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-57-1.pdf Graphic file (type pd
 f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-61-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[57]
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-57-1.pdf>
+[63]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-60-1.pdf Graphic file (type pd
+f)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-60-1.pdf>
+[64]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-62-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-62-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[58]
+[65]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-63-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-63-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[59]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-63-2.pdf Graphic file (type pd
+[66]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-64-1.pdf Graphic file (type pd
 f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-63-2.pdf>
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-63-3.pdf Graphic file (type pd
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-64-1.pdf>
+[67]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-64-2.pdf Graphic file (type pd
 f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-63-3.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[60]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-65-1.pdf Graphic file (type pd
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-64-2.pdf>
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-64-3.pdf Graphic file (type pd
 f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-65-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[61]
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-64-3.pdf>
+[68]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-66-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-66-1.pdf>
-
-Overfull \vbox (0.40802pt too high) detected at line 1546
- []
-
-[62] [63] [64
-
-]
-Chapter 2.
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-70-1.pdf Graphic file (type pd
+[69]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-67-1.pdf Graphic file (type pd
 f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-70-1.pdf>
-[65]
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-67-1.pdf>
+[70] [71]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-71-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-71-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[66]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-72-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-72-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[67]
+[72]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-73-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-73-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[68]
-Underfull \vbox (badness 1442) detected at line 1644
- []
-
-[69]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-76-1.pdf Graphic file (type pd
+[73]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-74-1.pdf Graphic file (type pd
 f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-76-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[70]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-78-1.pdf Graphic file (type pd
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-74-1.pdf>
+[74] [75]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-77-1.pdf Graphic file (type pd
 f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-78-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[71]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-78-2.pdf Graphic file (type pd
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-77-1.pdf>
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-79-1.pdf Graphic file (type pd
 f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-78-2.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[72] [73]
-Underfull \hbox (badness 10000) in paragraph at lines 1718--1720
-[][]$[][][][][] [] [] [] [][][][][][][][] [] [][][] [] [][] [] [][][][] [][] []
-[] [][] [][] [][] [][][][][][][][][][] [][] [] [][] [][] [][] [][][][][][][][][
-][][][] [][] [][][][] [][]
- []
-
-[74]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-81-1.pdf Graphic file (type pd
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-79-1.pdf>
+[76]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-79-2.pdf Graphic file (type pd
 f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-81-1.pdf>
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-79-2.pdf>
+[77] [78]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-82-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-82-1.pdf>
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-83-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-83-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[75]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-89-1.pdf Graphic file (type pd
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-84-1.pdf Graphic file (type pd
 f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-89-1.pdf>
-
-Underfull \vbox (badness 2096) has occurred while \output is active []
-
-[76]
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-84-1.pdf>
+[79]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-90-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-90-1.pdf>
-
-Underfull \hbox (badness 1189) in paragraph at lines 1893--1894
-[]\TU/lmr/m/n/10 Nous nous servons de la carte GEOFLAR proposée par l’Institut 
-Géo-
- []
-
+[80]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-91-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-91-1.pdf>
-[77]
-Underfull \vbox (badness 10000) detected at line 1931
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[78]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-94-1.pdf Graphic file (type pd
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-92-1.pdf Graphic file (type pd
 f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-94-1.pdf>
-[79]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-98-1.pdf Graphic file (type pd
-f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-98-1.pdf>
-[80]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-102-1.pdf Graphic file (type p
-df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-102-1.pdf>
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-92-1.pdf>
 [81]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-105-1.pdf Graphic file (type p
-df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-105-1.pdf>
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-95-1.pdf Graphic file (type pd
+f)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-95-1.pdf>
 [82]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-109-1.pdf Graphic file (type p
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-99-1.pdf Graphic file (type pd
+f)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-99-1.pdf>
+[83]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-103-1.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-109-1.pdf>
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-103-1.pdf>
+[84]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-106-1.pdf Graphic file (type p
+df)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-106-1.pdf>
+[85]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-110-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-110-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[83]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-112-1.pdf Graphic file (type p
-df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-112-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[84]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-112-2.pdf Graphic file (type p
-df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-112-2.pdf>
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-112-3.pdf Graphic file (type p
-df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-112-3.pdf>
-
-Underfull \vbox (badness 4792) has occurred while \output is active []
-
-[85]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-112-4.pdf Graphic file (type p
-df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-112-4.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 [86]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-111-1.pdf Graphic file (type p
+df)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-111-1.pdf>
+[87]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-113-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-113-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[87]
+[88]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-113-2.pdf Graphic file (type p
+df)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-113-2.pdf>
+[89]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-113-3.pdf Graphic file (type p
+df)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-113-3.pdf>
+[90]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-113-4.pdf Graphic file (type p
+df)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-113-4.pdf>
+[91]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-114-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-114-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[88]
+[92]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-115-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-115-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[89] [90]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-120-1.pdf Graphic file (type p
+[93]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-116-1.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-120-1.pdf>
-[91]
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-116-1.pdf>
+[94] [95]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-121-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-121-1.pdf>
+
+Underfull \vbox (badness 1803) detected at line 2352
+ []
+
+[96]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-122-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-122-1.pdf>
-
-Underfull \vbox (badness 1132) has occurred while \output is active []
-
-[92]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-124-1.pdf Graphic file (type p
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-123-1.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-124-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[93]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-124-2.pdf Graphic file (type p
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-123-1.pdf>
+[97]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-125-1.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-124-2.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[94]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-126-1.pdf Graphic file (type p
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-125-1.pdf>
+[98]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-125-2.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-126-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[95]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-126-2.pdf Graphic file (type p
-df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-126-2.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[96]
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-125-2.pdf>
+[99]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-127-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-127-1.pdf>
-[97]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-129-1.pdf Graphic file (type p
+[100]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-127-2.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-129-1.pdf>
-[98]
-Chapter 3.
-LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <14.4> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 2524.
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-127-2.pdf>
+[101]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-128-1.pdf Graphic file (type p
+df)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-128-1.pdf>
+[102]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-130-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-130-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[99
-
-]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-130-2.pdf Graphic file (type p
+[103]
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <12> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 2527.
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-131-1.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-130-2.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \hbox (127.85344pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 100 \TU/lmr/m/sl/10 CHAPTER 3.  QUELQUES OUTILS DE VISUALISATION
- INTERACTIVE - COMPLÉMENTS SHINY
- []
-
-[100]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-130-3.pdf Graphic file (type p
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-131-1.pdf>
+[104]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-131-2.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-130-3.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[101]
-Overfull \hbox (127.85344pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 102 \TU/lmr/m/sl/10 CHAPTER 3.  QUELQUES OUTILS DE VISUALISATION
- INTERACTIVE - COMPLÉMENTS SHINY
- []
-
-[102]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-132-1.pdf Graphic file (type p
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-131-2.pdf>
+[105]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-131-3.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-132-1.pdf>
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-131-3.pdf>
+[106] [107]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-133-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-133-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[103]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-133-2.pdf Graphic file (type p
-df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-133-2.pdf>
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-134-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-134-1.pdf>
-
-Underfull \vbox (badness 4416) has occurred while \output is active []
-
-
-Overfull \hbox (127.85344pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 104 \TU/lmr/m/sl/10 CHAPTER 3.  QUELQUES OUTILS DE VISUALISATION
- INTERACTIVE - COMPLÉMENTS SHINY
- []
-
-[104]
+[108]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-134-2.pdf Graphic file (type p
+df)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-134-2.pdf>
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-135-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-135-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[105]
+[109]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-136-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-136-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \hbox (127.85344pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 106 \TU/lmr/m/sl/10 CHAPTER 3.  QUELQUES OUTILS DE VISUALISATION
- INTERACTIVE - COMPLÉMENTS SHINY
- []
-
-[106]
-Underfull \hbox (badness 4886) in paragraph at lines 2659--2660
-[]\TU/lmr/m/n/10 Boxplot permettant de visualiser la distribution de la variabl
-e
- []
-
+[110]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-137-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-137-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[107]
+[111]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-138-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-138-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \hbox (127.85344pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 108 \TU/lmr/m/sl/10 CHAPTER 3.  QUELQUES OUTILS DE VISUALISATION
- INTERACTIVE - COMPLÉMENTS SHINY
- []
-
-[108]
+[112]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-139-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-139-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \hbox (13.07341pt too wide) has occurred while \output is active
-\TU/lmr/m/sl/10 3.2.  GRAPHES POUR VISUALISER DES RÉSEAUX AVEC VISNETWORK \TU/l
-mr/m/n/10 109
- []
-
-[109]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-139-2.pdf Graphic file (type p
+[113]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-140-1.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-139-2.pdf>
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-139-3.pdf Graphic file (type p
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-140-1.pdf>
+[114]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-140-2.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-139-3.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \hbox (127.85344pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 110 \TU/lmr/m/sl/10 CHAPTER 3.  QUELQUES OUTILS DE VISUALISATION
- INTERACTIVE - COMPLÉMENTS SHINY
- []
-
-[110]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-139-4.pdf Graphic file (type p
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-140-2.pdf>
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-140-3.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-139-4.pdf>
-
-Overfull \hbox (13.07341pt too wide) has occurred while \output is active
-\TU/lmr/m/sl/10 3.2.  GRAPHES POUR VISUALISER DES RÉSEAUX AVEC VISNETWORK \TU/l
-mr/m/n/10 111
- []
-
-[111]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-142-1.pdf Graphic file (type p
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-140-3.pdf>
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-140-4.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-142-1.pdf>
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-140-4.pdf>
+[115]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-143-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-143-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \hbox (127.85344pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 112 \TU/lmr/m/sl/10 CHAPTER 3.  QUELQUES OUTILS DE VISUALISATION
- INTERACTIVE - COMPLÉMENTS SHINY
- []
-
-[112]
+[116]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-144-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-144-1.pdf>
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-146-1.pdf Graphic file (type p
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-145-1.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-146-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \hbox (13.07341pt too wide) has occurred while \output is active
-\TU/lmr/m/sl/10 3.2.  GRAPHES POUR VISUALISER DES RÉSEAUX AVEC VISNETWORK \TU/l
-mr/m/n/10 113
- []
-
-[113]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-148-1.pdf Graphic file (type p
-df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-148-1.pdf>
-
-Underfull \hbox (badness 1917) in paragraph at lines 2844--2845
-\TU/lmr/m/n/10 Un tableau de bord permet de visualiser “facilement” et “rapidem
-ent”
- []
-
-
-Overfull \hbox (127.85344pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 114 \TU/lmr/m/sl/10 CHAPTER 3.  QUELQUES OUTILS DE VISUALISATION
- INTERACTIVE - COMPLÉMENTS SHINY
- []
-
-[114]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-150-1.pdf Graphic file (type p
-df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-150-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[115]
-Overfull \hbox (127.85344pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 116 \TU/lmr/m/sl/10 CHAPTER 3.  QUELQUES OUTILS DE VISUALISATION
- INTERACTIVE - COMPLÉMENTS SHINY
- []
-
-[116]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-156-1.pdf Graphic file (type p
-df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-156-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-145-1.pdf>
 [117]
-No file TUTO_VISU.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3001.
-
-Overfull \hbox (127.85344pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 118 \TU/lmr/m/sl/10 CHAPTER 3.  QUELQUES OUTILS DE VISUALISATION
- INTERACTIVE - COMPLÉMENTS SHINY
- []
-
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-147-1.pdf Graphic file (type p
+df)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-147-1.pdf>
 [118]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 3001.
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-149-1.pdf Graphic file (type p
+df)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-149-1.pdf>
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-151-1.pdf Graphic file (type p
+df)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-151-1.pdf>
+[119] [120]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-158-1.png Graphic file (type b
+mp)
+<TUTO_VISU_files/figure-latex/unnamed-chunk-158-1.png>
+No file TUTO_VISU.bbl.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2999.
+[121]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2999.
 (./TUTO_VISU.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 3001.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3001.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 2999.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2999.
 
 Package rerunfilecheck Info: File `TUTO_VISU.out' has not changed.
-(rerunfilecheck)             Checksum: 72A8557B96241B7BFB182A64E3E4C178.
+(rerunfilecheck)             Checksum: 08A7C8EE0EF346A2339F938B89184AE7.
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 27358 strings out of 492956
- 508580 string characters out of 6133501
- 701851 words of memory out of 5000000
- 30977 multiletter control sequences out of 15000+600000
- 538731 words of font info for 84 fonts, out of 8000000 for 9000
+ 27765 strings out of 492956
+ 514327 string characters out of 6133501
+ 715166 words of memory out of 5000000
+ 31386 multiletter control sequences out of 15000+600000
+ 538667 words of font info for 76 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 58i,6n,116p,1028b,557s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 59i,6n,116p,1028b,557s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on TUTO_VISU.pdf (118 pages).
+Output written on TUTO_VISU.pdf (121 pages).
