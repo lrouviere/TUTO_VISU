@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.10.19)  30 MAY 2020 14:03
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.10.19)  1 JUN 2020 17:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -672,32 +672,83 @@ Package grffile Info: Option `multidot' is set to `true'.
 Package grffile Info: Option `extendedchars' is set to `false'.
 Package grffile Info: Option `space' is set to `true'.
 Package grffile Info: \Gin@ii of package `graphicx' fixed on input line 494.
+) (/usr/local/texlive/2018/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2018/10/16 3.26 The Babel package
+(/usr/local/texlive/2018/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2018/10/16 3.26 Babel switching mechanism
+) (/usr/local/texlive/2018/texmf-dist/tex/generic/babel-french/french.ldf
+Language: french 2018/09/14 v3.5c French support from the babel system
+(/usr/local/texlive/2018/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2018/10/16 3.26 Babel common definitions
+\babel@savecnt=\count293
+\U@D=\dimen181
+(/usr/local/texlive/2018/texmf-dist/tex/generic/babel/xebabel.def (/usr/local/t
+exlive/2018/texmf-dist/tex/generic/babel/txtbabel.def))
+\bbl@dirlevel=\count294
+)
+\l@acadian = a dialect from \language\l@french 
+\FB@nonchar=\count295
+Package french.ldf Info: No need for active punctuation characters
+(french.ldf)             with this version of XeTeX!
+(french.ldf)             reported on input line 326.
+\FB@punctthick=\XeTeXcharclass1
+\FB@punctthin=\XeTeXcharclass2
+\FB@punctnul=\XeTeXcharclass3
+\FB@guilo=\XeTeXcharclass4
+\FB@guilf=\XeTeXcharclass5
+\FB@guilnul=\XeTeXcharclass6
+\FBguill@level=\count296
+\FBold@everypar=\toks24
+\FB@Mht=\dimen182
+LaTeX Info: Redefining \degres on input line 770.
+\mc@charclass=\count297
+\mc@charfam=\count298
+\mc@charslot=\count299
+\std@mcc=\count300
+\dec@mcc=\count301
+\c@FBcaption@count=\count302
+\listindentFB=\dimen183
+\descindentFB=\dimen184
+\labelindentFB=\dimen185
+\labelwidthFB=\dimen186
+\leftmarginFB=\dimen187
+\parindentFFN=\dimen188
+\FBfnindent=\dimen189
+)) (/usr/local/texlive/2018/texmf-dist/tex/latex/carlisle/scalefnt.sty)
+Package hyperref Info: Option `colorlinks' set `true' on input line 119.
+(/usr/local/texlive/2018/texmf-dist/tex/latex/sectsty/sectsty.sty
+Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
+les
+
+LaTeX Warning: Command \underbar  has changed.
+               Check if current package is valid.
+
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip58
 \bibsep=\skip59
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count293
+\c@NAT@ctr=\count303
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2017/10/31 v2.20.4
-\thm@style=\toks24
-\thm@bodyfont=\toks25
-\thm@headfont=\toks26
-\thm@notefont=\toks27
-\thm@headpunct=\toks28
+\thm@style=\toks25
+\thm@bodyfont=\toks26
+\thm@headfont=\toks27
+\thm@notefont=\toks28
+\thm@headpunct=\toks29
 \thm@preskip=\skip60
 \thm@postskip=\skip61
 \thm@headsep=\skip62
-\dth@everypar=\toks29
+\dth@everypar=\toks30
 )
-\c@theorem=\count294
-\c@lemma=\count295
-\c@corollary=\count296
-\c@proposition=\count297
-\c@conjecture=\count298
-\c@definition=\count299
-\c@example=\count300
-\c@exercise=\count301
+\c@theorem=\count304
+\c@lemma=\count305
+\c@corollary=\count306
+\c@proposition=\count307
+\c@conjecture=\count308
+\c@definition=\count309
+\c@example=\count310
+\c@exercise=\count311
 (./TUTO_VISU.aux
 
 LaTeX Warning: Label `exr:ggplot-challenge' multiply defined.
@@ -705,40 +756,40 @@ LaTeX Warning: Label `exr:ggplot-challenge' multiply defined.
 )
 \openout1 = `TUTO_VISU.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 156.
+LaTeX Font Info:    ... okay on input line 156.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 156.
+LaTeX Font Info:    ... okay on input line 156.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 156.
+LaTeX Font Info:    ... okay on input line 156.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 156.
+LaTeX Font Info:    ... okay on input line 156.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 156.
+LaTeX Font Info:    ... okay on input line 156.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 156.
+LaTeX Font Info:    ... okay on input line 156.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 156.
+LaTeX Font Info:    ... okay on input line 156.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 156.
+LaTeX Font Info:    ... okay on input line 156.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 156.
+LaTeX Font Info:    ... okay on input line 156.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 156.
+LaTeX Font Info:    ... okay on input line 156.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/lmr/m/n --> TU/lmr/m/n on input line 133.
+(Font)                  OT1/lmr/m/n --> TU/lmr/m/n on input line 156.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> TU/lmr/m/it on input line 133.
+(Font)                  OT1/lmr/m/it --> TU/lmr/m/it on input line 156.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> TU/lmr/bx/n on input line 133.
+(Font)                  OT1/lmr/bx/n --> TU/lmr/bx/n on input line 156.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 133.
+(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 156.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> TU/lmss/bx/n on input line 133.
+(Font)                  OT1/lmss/bx/n --> TU/lmss/bx/n on input line 156.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 133.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 156.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/bx/n on input line 133.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/bx/n on input line 156.
 
 Package fontspec Info: latinmodern-math scale = 1.
 
@@ -767,7 +818,7 @@ DFLT;mapping=tex-text;"
 (fontspec)             - 'bold small caps'  (bx/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 133.
+(Font)              scaled to size 10.0pt on input line 156.
 
 Package fontspec Info: latinmodern-math scale = 1.
 
@@ -806,18 +857,18 @@ DFLT;mapping=tex-text;"
 (fontspec)             - 'bold small caps'  (bx/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 133.
+(Font)              scaled to size 10.0pt on input line 156.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 133.
+(Font)              `operators' in the math version `normal' on input line 156.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/lmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input
- line 133.
+ line 156.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 133.
+(Font)              `operators' in the math version `bold' on input line 156.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/lmr/bx/n --> TU/latinmodern-math.otf(1)/bx/n on inp
-ut line 133.
+ut line 156.
 
 Package fontspec Info: latinmodern-math scale = 1.
 
@@ -889,15 +940,15 @@ guage=DFLT;mapping=tex-text;"
 (fontspec)             \fontdimen 21\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 133.
+(Font)              `symbols' in the math version `normal' on input line 156.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
 (Font)                  OMS/lmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on inpu
-t line 133.
+t line 156.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 133.
+(Font)              `symbols' in the math version `bold' on input line 156.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  OMS/lmsy/b/n --> TU/latinmodern-math.otf(2)/bx/n on inp
-ut line 133.
+ut line 156.
 
 Package fontspec Info: latinmodern-math scale = 1.
 
@@ -952,17 +1003,17 @@ guage=DFLT;mapping=tex-text;"
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
 (Font)              `largesymbols' in the math version `normal' on input line 1
-33.
+56.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
 (Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/m/n on inpu
-t line 133.
+t line 156.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 133
+(Font)              `largesymbols' in the math version `bold' on input line 156
 .
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/bx/n on inp
-ut line 133.
-LaTeX Info: Redefining \microtypecontext on input line 133.
+ut line 156.
+LaTeX Info: Redefining \microtypecontext on input line 156.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
 Package microtype Info: No adjustment of tracking.
@@ -974,17 +1025,17 @@ File: mt-LatinModernRoman.cfg 2013/03/13 v1.0 microtype config. file: Latin Mod
 ern Roman (RS)
 )
 \AtBeginShipoutBox=\box50
-Package hyperref Info: Link coloring OFF on input line 133.
+Package hyperref Info: Link coloring ON on input line 156.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count302
+\c@section@level=\count312
 )
-LaTeX Info: Redefining \ref on input line 133.
-LaTeX Info: Redefining \pageref on input line 133.
-LaTeX Info: Redefining \nameref on input line 133.
+LaTeX Info: Redefining \ref on input line 156.
+LaTeX Info: Redefining \pageref on input line 156.
+LaTeX Info: Redefining \nameref on input line 156.
 (./TUTO_VISU.out) (./TUTO_VISU.out)
 \@outlinefile=\write4
 \openout4 = `TUTO_VISU.out'.
@@ -1023,57 +1074,59 @@ LaTeX Info: Redefining \nameref on input line 133.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+LaTeX Info: Redefining \dots on input line 156.
+LaTeX Info: Redefining \up on input line 156.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 135.
+(Font)              scaled to size 12.0pt on input line 158.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 135.
+(Font)              scaled to size 8.0pt on input line 158.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 135.
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 135.
+(Font)              scaled to size 6.0pt on input line 158.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 158.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 12.00018pt on input line 135.
+(Font)              scaled to size 12.00018pt on input line 158.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 8.00012pt on input line 135.
+(Font)              scaled to size 8.00012pt on input line 158.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 6.00009pt on input line 135.
+(Font)              scaled to size 6.00009pt on input line 158.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 11.99982pt on input line 135.
+(Font)              scaled to size 11.99982pt on input line 158.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.99988pt on input line 135.
+(Font)              scaled to size 7.99988pt on input line 158.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.99991pt on input line 135.
-LaTeX Font Info:    Try loading font information for U+msa on input line 135.
+(Font)              scaled to size 5.99991pt on input line 158.
+LaTeX Font Info:    Try loading font information for U+msa on input line 158.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 135.
+LaTeX Font Info:    Try loading font information for U+msb on input line 158.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 ) (./TUTO_VISU.toc
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 7.01236pt on input line 3.
+(Font)              scaled to size 7.01236pt on input line 4.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 4.98074pt on input line 3.
+(Font)              scaled to size 4.98074pt on input line 4.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.00015pt on input line 3.
+(Font)              scaled to size 10.00015pt on input line 4.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.01247pt on input line 3.
+(Font)              scaled to size 7.01247pt on input line 4.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 4.9808pt on input line 3.
+(Font)              scaled to size 4.9808pt on input line 4.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 9.99985pt on input line 3.
+(Font)              scaled to size 9.99985pt on input line 4.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.01224pt on input line 3.
+(Font)              scaled to size 7.01224pt on input line 4.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 4.98067pt on input line 3.
+(Font)              scaled to size 4.98067pt on input line 4.
 )
 \tf@toc=\write5
 \openout5 = `TUTO_VISU.toc'.
@@ -1082,7 +1135,7 @@ LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 
 ]
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 170.
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 193.
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-4-1.pdf Graphic file (type pdf
 )
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-4-1.pdf>
@@ -1471,10 +1524,6 @@ df)
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-120-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-120-1.pdf>
-
-Underfull \vbox (badness 1803) detected at line 2350
- []
-
 [95]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-121-1.pdf Graphic file (type p
 df)
@@ -1508,109 +1557,125 @@ df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-129-1.pdf>
 [102]
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <12> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 2525.
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-130-1.pdf Graphic file (type p
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 2548.
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-131-1.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-130-1.pdf>
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-131-1.pdf>
 [103]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-130-2.pdf Graphic file (type p
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-131-2.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-130-2.pdf>
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-131-2.pdf>
 [104]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-130-3.pdf Graphic file (type p
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-131-3.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-130-3.pdf>
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-131-3.pdf>
 [105] [106]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-132-1.pdf Graphic file (type p
-df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-132-1.pdf>
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-133-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-133-1.pdf>
+File: surface-plot.pdf Graphic file (type pdf)
+<use surface-plot.pdf>
 [107]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-133-2.pdf Graphic file (type p
-df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-133-2.pdf>
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-134-1.pdf Graphic file (type p
-df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-134-1.pdf>
-[108]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-135-1.pdf Graphic file (type p
-df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-135-1.pdf>
-[109]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-136-1.pdf Graphic file (type p
-df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-136-1.pdf>
-[110]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-137-1.pdf Graphic file (type p
-df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-137-1.pdf>
-[111]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-138-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-138-1.pdf>
-[112]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-139-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-139-1.pdf>
-[113]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-139-2.pdf Graphic file (type p
+[108]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-140-1.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-139-2.pdf>
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-139-3.pdf Graphic file (type p
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-140-1.pdf>
+[109]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-141-1.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-139-3.pdf>
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-139-4.pdf Graphic file (type p
-df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-139-4.pdf>
-[114]
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-141-1.pdf>
+[110]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-142-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-142-1.pdf>
-[115]
+[111]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-143-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-143-1.pdf>
+[112]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-144-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-144-1.pdf>
-[116]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-146-1.pdf Graphic file (type p
+[113]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-144-2.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-146-1.pdf>
-[117]
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-144-2.pdf>
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-144-3.pdf Graphic file (type p
+df)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-144-3.pdf>
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-144-4.pdf Graphic file (type p
+df)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-144-4.pdf>
+[114]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-147-1.pdf Graphic file (type p
+df)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-147-1.pdf>
+[115]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-148-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-148-1.pdf>
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-150-1.pdf Graphic file (type p
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-149-1.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-150-1.pdf>
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-149-1.pdf>
+[116]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-151-1.pdf Graphic file (type p
+df)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-151-1.pdf>
+[117]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-153-1.pdf Graphic file (type p
+df)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-153-1.pdf>
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-155-1.pdf Graphic file (type p
+df)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-155-1.pdf>
 [118] [119]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-157-1.png Graphic file (type b
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-162-1.png Graphic file (type b
 mp)
-<TUTO_VISU_files/figure-latex/unnamed-chunk-157-1.png>
-No file TUTO_VISU.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2997.
+<TUTO_VISU_files/figure-latex/unnamed-chunk-162-1.png>
 [120]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2997.
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-163-1.pdf Graphic file (type p
+df)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-163-1.pdf>
+[121]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-163-2.pdf Graphic file (type p
+df)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-163-2.pdf>
+[122]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-166-1.png Graphic file (type b
+mp)
+<TUTO_VISU_files/figure-latex/unnamed-chunk-166-1.png>
+[123]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-168-1.png Graphic file (type b
+mp)
+<TUTO_VISU_files/figure-latex/unnamed-chunk-168-1.png>
+[124]
+No file TUTO_VISU.bbl.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3097.
+[125]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3097.
 (./TUTO_VISU.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 2997.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2997.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 3097.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3097.
 
 Package rerunfilecheck Info: File `TUTO_VISU.out' has not changed.
-(rerunfilecheck)             Checksum: 08A7C8EE0EF346A2339F938B89184AE7.
+(rerunfilecheck)             Checksum: 6C586F23526FCFA932A801F60F8E4AFA.
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 27761 strings out of 492956
- 514131 string characters out of 6133501
- 715165 words of memory out of 5000000
- 31383 multiletter control sequences out of 15000+600000
- 538667 words of font info for 76 fonts, out of 8000000 for 9000
+ 29032 strings out of 492956
+ 533561 string characters out of 6133501
+ 749689 words of memory out of 5000000
+ 32621 multiletter control sequences out of 15000+600000
+ 538675 words of font info for 77 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 59i,6n,116p,1028b,557s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 59i,7n,116p,1028b,595s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on TUTO_VISU.pdf (120 pages).
+Output written on TUTO_VISU.pdf (125 pages).
