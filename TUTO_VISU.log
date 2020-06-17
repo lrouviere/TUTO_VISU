@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.10.19)  12 JUN 2020 17:16
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.10.19)  17 JUN 2020 17:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -765,40 +765,40 @@ Package: amsthm 2017/10/31 v2.20.4
 (./TUTO_VISU.aux)
 \openout1 = `TUTO_VISU.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 157.
-LaTeX Font Info:    ... okay on input line 157.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 157.
-LaTeX Font Info:    ... okay on input line 157.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 157.
-LaTeX Font Info:    ... okay on input line 157.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 157.
-LaTeX Font Info:    ... okay on input line 157.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 157.
-LaTeX Font Info:    ... okay on input line 157.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 157.
-LaTeX Font Info:    ... okay on input line 157.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 157.
-LaTeX Font Info:    ... okay on input line 157.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 157.
-LaTeX Font Info:    ... okay on input line 157.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 157.
-LaTeX Font Info:    ... okay on input line 157.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 157.
-LaTeX Font Info:    ... okay on input line 157.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 180.
+LaTeX Font Info:    ... okay on input line 180.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 180.
+LaTeX Font Info:    ... okay on input line 180.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 180.
+LaTeX Font Info:    ... okay on input line 180.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 180.
+LaTeX Font Info:    ... okay on input line 180.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 180.
+LaTeX Font Info:    ... okay on input line 180.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 180.
+LaTeX Font Info:    ... okay on input line 180.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 180.
+LaTeX Font Info:    ... okay on input line 180.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 180.
+LaTeX Font Info:    ... okay on input line 180.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 180.
+LaTeX Font Info:    ... okay on input line 180.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 180.
+LaTeX Font Info:    ... okay on input line 180.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/lmr/m/n --> TU/lmr/m/n on input line 157.
+(Font)                  OT1/lmr/m/n --> TU/lmr/m/n on input line 180.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> TU/lmr/m/it on input line 157.
+(Font)                  OT1/lmr/m/it --> TU/lmr/m/it on input line 180.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> TU/lmr/bx/n on input line 157.
+(Font)                  OT1/lmr/bx/n --> TU/lmr/bx/n on input line 180.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 157.
+(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 180.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> TU/lmss/bx/n on input line 157.
+(Font)                  OT1/lmss/bx/n --> TU/lmss/bx/n on input line 180.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 157.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 180.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/bx/n on input line 157.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/bx/n on input line 180.
 
 Package fontspec Info: latinmodern-math scale = 1.
 
@@ -827,7 +827,7 @@ DFLT;"
 (fontspec)             - 'bold small caps'  (bx/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 157.
+(Font)              scaled to size 10.0pt on input line 180.
 
 Package fontspec Info: latinmodern-math scale = 1.
 
@@ -865,18 +865,18 @@ DFLT;"
 (fontspec)             - 'bold small caps'  (bx/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 157.
+(Font)              scaled to size 10.0pt on input line 180.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 157.
+(Font)              `operators' in the math version `normal' on input line 180.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/lmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input
- line 157.
+ line 180.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 157.
+(Font)              `operators' in the math version `bold' on input line 180.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/lmr/bx/n --> TU/latinmodern-math.otf(1)/bx/n on inp
-ut line 157.
+ut line 180.
 
 Package fontspec Info: latinmodern-math scale = 1.
 
@@ -947,15 +947,15 @@ guage=DFLT;"
 (fontspec)             \fontdimen 21\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 157.
+(Font)              `symbols' in the math version `normal' on input line 180.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
 (Font)                  OMS/lmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on inpu
-t line 157.
+t line 180.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 157.
+(Font)              `symbols' in the math version `bold' on input line 180.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  OMS/lmsy/b/n --> TU/latinmodern-math.otf(2)/bx/n on inp
-ut line 157.
+ut line 180.
 
 Package fontspec Info: latinmodern-math scale = 1.
 
@@ -1009,17 +1009,17 @@ guage=DFLT;"
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
 (Font)              `largesymbols' in the math version `normal' on input line 1
-57.
+80.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
 (Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/m/n on inpu
-t line 157.
+t line 180.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 157
+(Font)              `largesymbols' in the math version `bold' on input line 180
 .
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/bx/n on inp
-ut line 157.
-LaTeX Info: Redefining \microtypecontext on input line 157.
+ut line 180.
+LaTeX Info: Redefining \microtypecontext on input line 180.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
 Package microtype Info: No adjustment of tracking.
@@ -1031,7 +1031,7 @@ File: mt-LatinModernRoman.cfg 2013/03/13 v1.0 microtype config. file: Latin Mod
 ern Roman (RS)
 )
 \AtBeginShipoutBox=\box50
-Package hyperref Info: Link coloring ON on input line 157.
+Package hyperref Info: Link coloring ON on input line 180.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
@@ -1039,9 +1039,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count313
 )
-LaTeX Info: Redefining \ref on input line 157.
-LaTeX Info: Redefining \pageref on input line 157.
-LaTeX Info: Redefining \nameref on input line 157.
+LaTeX Info: Redefining \ref on input line 180.
+LaTeX Info: Redefining \pageref on input line 180.
+LaTeX Info: Redefining \nameref on input line 180.
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
@@ -1076,38 +1076,38 @@ LaTeX Info: Redefining \nameref on input line 157.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \dots on input line 157.
-LaTeX Info: Redefining \up on input line 157.
+LaTeX Info: Redefining \dots on input line 180.
+LaTeX Info: Redefining \up on input line 180.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 159.
+(Font)              scaled to size 12.0pt on input line 182.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 159.
+(Font)              scaled to size 8.0pt on input line 182.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 159.
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 159.
+(Font)              scaled to size 6.0pt on input line 182.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 182.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 12.00018pt on input line 159.
+(Font)              scaled to size 12.00018pt on input line 182.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 8.00012pt on input line 159.
+(Font)              scaled to size 8.00012pt on input line 182.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 6.00009pt on input line 159.
+(Font)              scaled to size 6.00009pt on input line 182.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 11.99982pt on input line 159.
+(Font)              scaled to size 11.99982pt on input line 182.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.99988pt on input line 159.
+(Font)              scaled to size 7.99988pt on input line 182.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.99991pt on input line 159.
-LaTeX Font Info:    Try loading font information for U+msa on input line 159.
+(Font)              scaled to size 5.99991pt on input line 182.
+LaTeX Font Info:    Try loading font information for U+msa on input line 182.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 159.
+LaTeX Font Info:    Try loading font information for U+msb on input line 182.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/microtype/mt-msb.cfg
@@ -1137,7 +1137,7 @@ LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 
 ]
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 194.
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 217.
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-4-1.pdf Graphic file (type pdf
 )
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-4-1.pdf>
@@ -1558,7 +1558,7 @@ df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-129-1.pdf>
 [102]
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <12> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 2547.
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 2570.
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-131-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-131-1.pdf>
@@ -1655,21 +1655,22 @@ mp)
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-168-1.png Graphic file (type b
 mp)
 <TUTO_VISU_files/figure-latex/unnamed-chunk-168-1.png>
-No file TUTO_VISU.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3096.
 [124]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 3096.
+No file TUTO_VISU.bbl.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3119.
+[125]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3119.
 (./TUTO_VISU.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 3096.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 3096.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 3119.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 3119.
  ) 
 Here is how much of TeX's memory you used:
- 29664 strings out of 492956
- 541570 string characters out of 6133501
- 760980 words of memory out of 5000000
- 33237 multiletter control sequences out of 15000+600000
+ 29668 strings out of 492956
+ 541604 string characters out of 6133501
+ 761015 words of memory out of 5000000
+ 33241 multiletter control sequences out of 15000+600000
  538675 words of font info for 77 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  59i,7n,116p,1028b,605s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on TUTO_VISU.pdf (124 pages).
+Output written on TUTO_VISU.pdf (125 pages).
