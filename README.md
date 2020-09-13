@@ -1,1 +1,1 @@
-This is a minimal example of a book based on R Markdown and **bookdown** (https://github.com/rstudio/bookdown). Please see the page "Get Started" at https://bookdown.org/home/about/ for how to compile this example.
+Ce tutoriel présente quelques exercices sur le cours "Visualisation des données" que l'on pourra trouver à l'url <https://lrouviere.github.io/TUTO_VISU/> .
