@@ -369,12 +369,12 @@ mygeocode <- function(adresses){
 }
 
 
-## ---- message=FALSE, warning=FALSE,cahe=cache_carto-------
+## ----cache=cache_carto------------------------------------
 mygeocode("the white house")
 mygeocode("Paris")
 mygeocode("Rennes")
 
-## ----echo=cor,eval=cor,cache=cache_carto------------------
+## ----teacher=correct,cache=cache_carto--------------------
 V <- c("Paris","Lyon","Marseille")
 A <- mygeocode(V)
 A <- A %>% as_tibble() %>% mutate(Villes=V)
@@ -390,25 +390,27 @@ ggmap(fond)+geom_point(data=A,aes(x=lon,y=lat),color="red")
 #  coord <- mygeocode(as.character(df$Commune)) %>% as_tibble()
 #  write_csv(coord,path="coord_exo1_ggmap.csv")
 
-## ----echo=FALSE,eval=cor----------------------------------
+## ----teacher=correct--------------------------------------
 df <- read_csv("data/villes_fr.csv")
 df$Commune <- as.character(df$Commune)
-df$Commune[10] <- "Lille"
-coord <- read_csv("coord_exo1_ggmap.csv")
-df1 <- bind_cols(df,coord)
-ggmap(fond)+geom_point(data=df1,aes(x=lon,y=lat),color="red")
-ggmap(fond)+geom_point(data=df1,aes(x=lon,y=lat,size=`2014`),color="red")
 
-## ---- message=FALSE, warning=FALSE,echo=cor,eval=FALSE,cache=cache_carto----
-#  df <- read_csv("villes_fr.csv")
-#  df$Commune <- as.character(df$Commune)
-#  df$Commune[10] <- "Lille"
+## ----teacher=correct--------------------------------------
+df$Commune[10]    
+df$Commune[10] <- "Lille"
+
+## ----echo=correct,eval=FALSE------------------------------
 #  coord <- mygeocode(as.character(df$Commune)) %>% as_tibble()
 #  df1 <- bind_cols(df,coord)
 #  ggmap(fond)+geom_point(data=df1,aes(x=lon,y=lat),color="red")
 #  ggmap(fond)+geom_point(data=df1,aes(x=lon,y=lat,size=`2014`),color="red")
 
-## ----message=FALSE, warning=FALSE-------------------------
+## ----echo=FALSE,eval=correct------------------------------
+coord <- read_csv("coord_exo1_ggmap.csv")
+df1 <- bind_cols(df,coord)
+ggmap(fond)+geom_point(data=df1,aes(x=lon,y=lat),color="red")
+ggmap(fond)+geom_point(data=df1,aes(x=lon,y=lat,size=`2014`),color="red")
+
+## ---------------------------------------------------------
 library(sf)
 nc <- st_read(system.file("shape/nc.shp", package = "sf"), quiet = TRUE)
 class(nc)
@@ -420,7 +422,7 @@ plot(st_geometry(nc))
 ## ---------------------------------------------------------
 ggplot(nc)+geom_sf()
 
-## ----message=FALSE, warning=FALSE-------------------------
+## ---------------------------------------------------------
 ggplot(nc[1:3,]) +
    geom_sf(aes(fill = AREA)) + 
    geom_sf_label(aes(label = NAME))
@@ -463,30 +465,27 @@ ggplot(nc2)+geom_sf()+geom_sf(aes(geometry=centre))
 dpt <- read_sf("data/dpt")
 ggplot(dpt) + geom_sf()
 
-## ----echo=cor,eval=cor------------------------------------
+## ----teacher=correct--------------------------------------
 coord.ville1 <- data.frame(df1[,14:15]) %>% 
   as.matrix() %>% st_multipoint() %>% st_geometry()
-
 coord.ville2 <- st_cast(coord.ville1, to = "POINT")
-
-## ----echo=cor,eval=cor------------------------------------
 coord.ville1
 coord.ville2
 
-## ----echo=cor,eval=cor------------------------------------
+## ----teacher=correct--------------------------------------
 st_geometry(df1) <- coord.ville2
 st_crs(df1) <- 4326
 ggplot(dpt)+geom_sf(fill="white")+
   geom_sf(data=df1,aes(size=`2014`),color="red")+theme_void()
 
-## ----echo=cor,eval=cor------------------------------------
+## ----teacher=correct--------------------------------------
 chomage <- read_delim("data/tauxchomage.csv",delim=";")
 
-## ----echo=cor,eval=cor------------------------------------
+## ----teacher=correct--------------------------------------
 dpt <- read_sf("data/dpt")
 dpt2 <- inner_join(dpt,chomage,by="CODE_DEPT")
 
-## ----echo=cor,eval=cor------------------------------------
+## ----teacher=correct--------------------------------------
 dpt3 <- dpt2 %>% select(A2006=TCHOMB1T06,A2011=TCHOMB1T11,geometry) %>%
   pivot_longer(-geometry,names_to="Annee",values_to="TxChomage") %>% st_as_sf()
 
@@ -495,7 +494,7 @@ dpt3 <- dpt2 %>% select(A2006=TCHOMB1T06,A2011=TCHOMB1T11,geometry) %>%
 #    gather(key="Annee",value="TxChomage",-geometry)
 #  #  pivot_longer(-geometry,names_to="Annee",values_to="TxChomage")
 
-## ----echo=cor,eval=cor------------------------------------
+## ----teacher=correct--------------------------------------
 ggplot(dpt3) + aes(fill = TxChomage)+geom_sf() +
   facet_wrap(~Annee, nrow = 1)+
   scale_fill_gradient(low="white",high="brown")+theme_bw()
@@ -515,7 +514,7 @@ temp <- donnees %>% select(numer_sta,t)
 names(temp)[1] <- c("ID")
 D <- inner_join(temp, station, by = c("ID"))
 
-## ---- echo=cor,eval=FALSE---------------------------------
+## ---- echo=correct,eval=FALSE-----------------------------
 #  donnees <- read_delim("https://donneespubliques.meteofrance.fr/donnees_libres/Txt/Synop/synop.2020052415.csv",delim=";",col_types = cols(t=col_double()))
 #  station <- read_delim("https://donneespubliques.meteofrance.fr/donnees_libres/Txt/Synop/postesSynop.csv",delim=";")
 #  donnees$t <- donnees$t-273.15 #on passe en degrés celcius
@@ -523,42 +522,47 @@ D <- inner_join(temp, station, by = c("ID"))
 #  names(temp)[1] <- c("ID")
 #  D <- inner_join(temp, station, by = c("ID"))
 
-## ---- echo=cor,eval=cor-----------------------------------
+## ---- teacher=correct-------------------------------------
 station1 <- D %>% filter(Longitude<25 & Longitude>-20) %>% na.omit()
 station4326 <- st_multipoint(as.matrix(station1[,5:4])) %>% st_geometry()
 st_crs(station4326) <- 4326
 ggplot(dpt) + geom_sf()+geom_sf(data=station4326)
 
-## ----echo=TRUE,eval=cor-----------------------------------
+## ----echo=TRUE,eval=correct-------------------------------
 station2 <- station1 %>% select(Longitude,Latitude) %>% 
   as.matrix() %>% st_multipoint() %>% st_geometry()
 st_crs(station2) <- 4326
 station2 <- st_cast(station2, to = "POINT")
 
-## ----echo=cor,eval=cor------------------------------------
+## ----teacher=correct--------------------------------------
 df <- data.frame(temp=station1$t)
 st_geometry(df) <- station2
 
-## ----echo=cor,eval=cor------------------------------------
+## ----teacher=correct--------------------------------------
 ggplot(dpt) + geom_sf(fill="white")+
   geom_sf(data=df,aes(color=temp),size=2)+
   scale_color_continuous(low="yellow",high="red")
 
-## ----echo=TRUE,eval=cor-----------------------------------
+## ----echo=TRUE,eval=correct-------------------------------
 centro <- st_centroid(dpt$geometry) 
 centro <- st_transform(centro,crs=4326)
 
-## ----echo=TRUE,eval=cor-----------------------------------
+## ----echo=TRUE,eval=correct-------------------------------
 DD <- st_distance(df,centro)
 
-## ----echo=cor,eval=cor------------------------------------
+## ----teacher=correct--------------------------------------
 NN <- apply(DD,2,order)[1,]
 t_prev <- station1[NN,2]
 
-## ----echo=cor,eval=cor------------------------------------
+## ----teacher=correct--------------------------------------
 dpt1 <- dpt %>% mutate(t_prev=as.matrix(t_prev))
 ggplot(dpt1) + geom_sf(aes(fill=t_prev)) +
   scale_fill_continuous(low="yellow",high="red")+theme_void()
+
+## ----teacher=correct--------------------------------------
+ggplot(dpt1) + geom_sf(aes(fill=t_prev,color=t_prev)) + 
+  scale_fill_continuous(low="yellow",high="red") + 
+  scale_color_continuous(low="yellow",high="red")+theme_void()
 
 ## ----message=FALSE, warning=FALSE-------------------------
 library(leaflet)
@@ -596,7 +600,7 @@ leaflet() %>% addTiles() %>%
     options = popupOptions(closeButton = FALSE)
   )
 
-## ---- echo=cor,eval=cor-----------------------------------
+## ---- teacher=correct-------------------------------------
 R2 <- mygeocode("Universite Rennes 2 Villejean") %>% as_tibble()
 info <- paste(sep = "<br/>",
   "<b><a href='https://www.univ-rennes2.fr'>Universite Rennes 2</a></b>",
@@ -615,17 +619,17 @@ leaflet() %>% addTiles() %>%
 ## ----echo=FALSE,eval=TRUE---------------------------------
 sta.Paris <- read_csv("data/sta.Paris.csv")
 
-## ---- echo=cor,eval=FALSE---------------------------------
+## ---- echo=correct,eval=FALSE-----------------------------
 #  lien <- "https://opendata.paris.fr/explore/dataset/velib-disponibilite-en-temps-reel/
 #  download/?format=csv&timezone=Europe/Berlin&use_labels_for_header=true"
 #  sta.Paris <- read_delim(lien,delim=";")
 
-## ---- echo=cor,eval=TRUE----------------------------------
+## ---- echo=correct,eval=TRUE------------------------------
 sta.Paris1 <- sta.Paris %>% separate(`Coordonnées géographiques`,
                                  into=c("lat","lon"),sep=",") %>% 
   mutate(lat=as.numeric(lat),lon=as.numeric(lon))
 
-## ---- echo=cor,eval=cor-----------------------------------
+## ---- teacher=correct-------------------------------------
 map.velib1 <- leaflet(data = sta.Paris1) %>% 
   addTiles() %>%
   addCircleMarkers(~ lon, ~ lat,radius=3,
@@ -634,7 +638,7 @@ stroke = FALSE, fillOpacity = 0.5,color="red"
 
 map.velib1
 
-## ---- echo=cor,eval=cor-----------------------------------
+## ----teacher=correct--------------------------------------
 map.velib2 <- leaflet(data = sta.Paris1) %>% 
   addTiles() %>% 
   addCircleMarkers(~ lon, ~ lat,radius=3,stroke = FALSE, 
@@ -652,7 +656,7 @@ map.velib2 <- leaflet(data = sta.Paris1) %>%
 
 map.velib2
 
-## ---- echo=cor,eval=cor-----------------------------------
+## ----teacher=correct--------------------------------------
 map.velib3 <- leaflet(data = sta.Paris1) %>% 
   addTiles() %>%
   addCircleMarkers(~ lon, ~ lat,radius=3,stroke = FALSE, 
@@ -669,7 +673,7 @@ ColorPal1 <- colorNumeric(scales::seq_gradient_pal(low = "#132B43", high = "#56B
 ColorPal2 <- colorNumeric(scales::seq_gradient_pal(low = "red", high = "black", 
                                                space = "Lab"), domain = c(0,1))
 
-## ---- echo=cor,eval=cor-----------------------------------
+## ---- teacher=correct-------------------------------------
 map.velib4 <- leaflet(data = sta.Paris1) %>% 
   addTiles() %>%
   addCircleMarkers(~ lon, ~ lat,radius=3,stroke = FALSE, fillOpacity = 0.7,
@@ -693,7 +697,7 @@ map.velib5 <- leaflet(data = sta.Paris1) %>%
 
 map.velib5
 
-## ----echo=cor,eval=TRUE-----------------------------------
+## ----echo=correct,eval=TRUE-------------------------------
 nom.station <- "Jussieu - Fossés Saint-Bernard"
 local.station <- function(nom.station){
   df <- sta.Paris1 %>% filter(`Nom station`==nom.station)
@@ -714,7 +718,7 @@ addMarkers(lng=df$lon,lat=df$lat,
 local.station("Jussieu - Fossés Saint-Bernard")
 local.station("Gare Montparnasse - Arrivée")
 
-## ----echo=cor,eval=cor------------------------------------
+## ----teacher=correct--------------------------------------
 dpt2 <- st_transform(dpt1, crs = 4326)
 dpt2$t_prev <- round(dpt2$t_prev)
 pal <- colorNumeric(scales::seq_gradient_pal(low = "yellow", high = "red",
@@ -726,7 +730,7 @@ m <- leaflet() %>% addTiles() %>%
   addLayersControl(options=layersControlOptions(collapsed = FALSE))
 m
 
-## ----echo=cor,eval=cor------------------------------------
+## ----teacher=correct--------------------------------------
 pal1 <- colorNumeric(palette = c("inferno"),domain = dpt2$t_prev)
 m1 <- leaflet() %>% addTiles() %>% 
   addPolygons(data = dpt2,color=~pal1(t_prev),fillOpacity = 0.6, 
