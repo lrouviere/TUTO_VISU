@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Références | Tutoriel : visualisation avec R</title>
   <meta name="description" content="Références | Tutoriel : visualisation avec R" />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Références | Tutoriel : visualisation avec R" />
   <meta property="og:type" content="book" />
@@ -24,14 +24,14 @@
 <meta name="author" content="Laurent Rouvière" />
 
 
-<meta name="date" content="2020-09-27" />
+<meta name="date" content="2020-12-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="quelques-outils-de-visualisation-interactive-compléments-shiny.html"/>
+<link rel="prev" href="shiny.html"/>
 
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,7 +51,9 @@
 
 
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.2/htmlwidgets.js"></script>
 <script src="libs/amcharts-3.21.13/amcharts.js"></script>
 <script src="libs/ramcharts_base-binding-2.1.13/ramcharts_base.js"></script>
 <script src="libs/amcharts_type_serial-3.20.18/serial.js"></script>
@@ -179,17 +181,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.1" data-path="faire-des-cartes-avec-r.html"><a href="faire-des-cartes-avec-r.html#le-package-ggmap"><i class="fa fa-check"></i><b>2.1</b> Le package ggmap</a></li>
 <li class="chapter" data-level="2.2" data-path="faire-des-cartes-avec-r.html"><a href="faire-des-cartes-avec-r.html#cartes-avec-contours-le-format-shapefile"><i class="fa fa-check"></i><b>2.2</b> Cartes avec contours, le format shapefile</a><ul>
 <li class="chapter" data-level="2.2.1" data-path="faire-des-cartes-avec-r.html"><a href="faire-des-cartes-avec-r.html#challenge1"><i class="fa fa-check"></i><b>2.2.1</b> Challenge 1 : carte des températures avec sf</a></li>
+<li class="chapter" data-level="2.2.2" data-path="faire-des-cartes-avec-r.html"><a href="faire-des-cartes-avec-r.html#trouver-des-cartes-au-format-shapefile"><i class="fa fa-check"></i><b>2.2.2</b> Trouver des cartes au format shapefile</a></li>
 </ul></li>
 <li class="chapter" data-level="2.3" data-path="faire-des-cartes-avec-r.html"><a href="faire-des-cartes-avec-r.html#cartes-interactives-avec-leaflet"><i class="fa fa-check"></i><b>2.3</b> Cartes interactives avec leaflet</a><ul>
 <li class="chapter" data-level="2.3.1" data-path="faire-des-cartes-avec-r.html"><a href="faire-des-cartes-avec-r.html#challenge-2-visualisation-des-stations-velib-à-paris"><i class="fa fa-check"></i><b>2.3.1</b> Challenge 2 : Visualisation des stations velib à Paris</a></li>
 <li class="chapter" data-level="2.3.2" data-path="faire-des-cartes-avec-r.html"><a href="faire-des-cartes-avec-r.html#carte-des-températures-avec-leaflet"><i class="fa fa-check"></i><b>2.3.2</b> Carte des températures avec leaflet</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="quelques-outils-de-visualisation-interactive-compléments-shiny.html"><a href="quelques-outils-de-visualisation-interactive-compléments-shiny.html"><i class="fa fa-check"></i><b>3</b> Quelques outils de visualisation interactive - Compléments shiny</a><ul>
-<li class="chapter" data-level="3.1" data-path="quelques-outils-de-visualisation-interactive-compléments-shiny.html"><a href="quelques-outils-de-visualisation-interactive-compléments-shiny.html#représentations-classiques-avec-ramcharts-et-plotly"><i class="fa fa-check"></i><b>3.1</b> Représentations classiques avec <code>rAmCharts</code> et <code>plotly</code></a></li>
-<li class="chapter" data-level="3.2" data-path="quelques-outils-de-visualisation-interactive-compléments-shiny.html"><a href="quelques-outils-de-visualisation-interactive-compléments-shiny.html#graphes-pour-visualiser-des-réseaux-avec-visnetwork"><i class="fa fa-check"></i><b>3.2</b> Graphes pour visualiser des réseaux avec visNetwork</a></li>
-<li class="chapter" data-level="3.3" data-path="quelques-outils-de-visualisation-interactive-compléments-shiny.html"><a href="quelques-outils-de-visualisation-interactive-compléments-shiny.html#dashboard"><i class="fa fa-check"></i><b>3.3</b> Dashboard</a></li>
-<li class="chapter" data-level="3.4" data-path="quelques-outils-de-visualisation-interactive-compléments-shiny.html"><a href="quelques-outils-de-visualisation-interactive-compléments-shiny.html#compléments-shiny"><i class="fa fa-check"></i><b>3.4</b> Compléments shiny</a></li>
+<li class="chapter" data-level="3" data-path="quelques-outils-de-visualisation-dynamiqueinteractive.html"><a href="quelques-outils-de-visualisation-dynamiqueinteractive.html"><i class="fa fa-check"></i><b>3</b> Quelques outils de visualisation dynamique/interactive</a><ul>
+<li class="chapter" data-level="3.1" data-path="quelques-outils-de-visualisation-dynamiqueinteractive.html"><a href="quelques-outils-de-visualisation-dynamiqueinteractive.html#représentations-classiques-avec-ramcharts-et-plotly"><i class="fa fa-check"></i><b>3.1</b> Représentations classiques avec <code>rAmCharts</code> et <code>plotly</code></a></li>
+<li class="chapter" data-level="3.2" data-path="quelques-outils-de-visualisation-dynamiqueinteractive.html"><a href="quelques-outils-de-visualisation-dynamiqueinteractive.html#graphes-pour-visualiser-des-réseaux-avec-visnetwork"><i class="fa fa-check"></i><b>3.2</b> Graphes pour visualiser des réseaux avec visNetwork</a></li>
+<li class="chapter" data-level="3.3" data-path="quelques-outils-de-visualisation-dynamiqueinteractive.html"><a href="quelques-outils-de-visualisation-dynamiqueinteractive.html#dashboard"><i class="fa fa-check"></i><b>3.3</b> Dashboard</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="shiny.html"><a href="shiny.html"><i class="fa fa-check"></i><b>4</b> Applications web avec Shiny</a><ul>
+<li class="chapter" data-level="4.1" data-path="shiny.html"><a href="shiny.html#une-première-application"><i class="fa fa-check"></i><b>4.1</b> Une première application</a></li>
+<li class="chapter" data-level="4.2" data-path="shiny.html"><a href="shiny.html#input---output"><i class="fa fa-check"></i><b>4.2</b> Input - output</a></li>
+<li class="chapter" data-level="4.3" data-path="shiny.html"><a href="shiny.html#structurer-lapplication"><i class="fa fa-check"></i><b>4.3</b> Structurer l’application</a></li>
+<li class="chapter" data-level="4.4" data-path="shiny.html"><a href="shiny.html#ajout-de-graphes-interactifs"><i class="fa fa-check"></i><b>4.4</b> Ajout de graphes interactifs</a></li>
+<li class="chapter" data-level="4.5" data-path="shiny.html"><a href="shiny.html#reactive-isolation-observe-html"><i class="fa fa-check"></i><b>4.5</b> Reactive, isolation, observe, html, …</a></li>
+<li class="chapter" data-level="4.6" data-path="shiny.html"><a href="shiny.html#exercices-complémentaires"><i class="fa fa-check"></i><b>4.6</b> Exercices complémentaires</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="références.html"><a href="références.html"><i class="fa fa-check"></i>Références</a></li>
 <li class="divider"></li>
@@ -221,7 +231,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="quelques-outils-de-visualisation-interactive-compléments-shiny.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="shiny.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>

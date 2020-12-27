@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.10.19)  27 SEP 2020 12:21
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.10.19)  27 DEC 2020 18:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1360,117 +1360,129 @@ File: TUTO_VISU_files/figure-latex/unnamed-chunk-137-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-137-1.pdf>
 [52]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-139-1.pdf Graphic file (type p
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-138-1.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-139-1.pdf>
-[53]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-139-2.pdf Graphic file (type p
-df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-139-2.pdf>
-[54]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-139-3.pdf Graphic file (type p
-df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-139-3.pdf>
-[55]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-139-4.pdf Graphic file (type p
-df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-139-4.pdf>
-[56]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-140-1.pdf Graphic file (type p
-df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-140-1.pdf>
-[57]
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-138-1.pdf>
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-141-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-141-1.pdf>
-[58] [59]
-Overfull \hbox (18.49498pt too wide) in paragraph at lines 1702--1702
+[53]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-142-1.pdf Graphic file (type p
+df)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-142-1.pdf>
+[54]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-144-1.pdf Graphic file (type p
+df)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-144-1.pdf>
+[55]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-144-2.pdf Graphic file (type p
+df)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-144-2.pdf>
+[56]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-144-3.pdf Graphic file (type p
+df)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-144-3.pdf>
+[57]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-144-4.pdf Graphic file (type p
+df)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-144-4.pdf>
+[58]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-145-1.pdf Graphic file (type p
+df)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-145-1.pdf>
+[59]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-146-1.pdf Graphic file (type p
+df)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-146-1.pdf>
+[60] [61]
+Overfull \hbox (18.49498pt too wide) in paragraph at lines 1771--1771
 []\TU/lmtt/m/n/10 \begin{center}\includegraphics{TUTO_VISU_files/figure-latex/u
-nnamed-chunk-154-1} \end{center}[] 
+nnamed-chunk-159-1} \end{center}[] 
  []
 
 
-Overfull \hbox (18.49498pt too wide) in paragraph at lines 1702--1702
+Overfull \hbox (18.49498pt too wide) in paragraph at lines 1771--1771
 []\TU/lmtt/m/n/10 \begin{center}\includegraphics{TUTO_VISU_files/figure-latex/u
-nnamed-chunk-154-2} \end{center}[] 
+nnamed-chunk-159-2} \end{center}[] 
  []
 
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <12> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 1719.
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-158-1.pdf Graphic file (type p
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 1788.
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-163-1.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-158-1.pdf>
-[60]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-158-2.pdf Graphic file (type p
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-163-1.pdf>
+[62]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-163-2.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-158-2.pdf>
-[61]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-158-3.pdf Graphic file (type p
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-163-2.pdf>
+[63]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-163-3.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-158-3.pdf>
-[62] [63]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-160-1.pdf Graphic file (type p
-df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-160-1.pdf>
-File: surface-plot.pdf Graphic file (type pdf)
-<use surface-plot.pdf>
-[64]
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-163-3.pdf>
+[64] [65]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-165-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-165-1.pdf>
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-166-1.pdf Graphic file (type p
+File: surface-plot.pdf Graphic file (type pdf)
+<use surface-plot.pdf>
+[66]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-170-1.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-166-1.pdf>
-[65]
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-170-1.pdf>
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-171-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-171-1.pdf>
-[66]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-171-2.pdf Graphic file (type p
-df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-171-2.pdf>
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-171-3.pdf Graphic file (type p
-df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-171-3.pdf>
 [67]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-171-4.pdf Graphic file (type p
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-176-1.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-171-4.pdf>
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-176-1.pdf>
+[68]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-176-2.pdf Graphic file (type p
+df)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-176-2.pdf>
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-176-3.pdf Graphic file (type p
+df)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-176-3.pdf>
+[69]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-176-4.pdf Graphic file (type p
+df)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-176-4.pdf>
 
-Underfull \vbox (badness 1354) detected at line 1908
+Underfull \vbox (badness 1354) detected at line 1977
  []
 
-[68]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-174-1.pdf Graphic file (type p
+[70]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-179-1.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-174-1.pdf>
-[69] [70]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-189-1.png Graphic file (type b
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-179-1.pdf>
+[71] [72]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-197-1.png Graphic file (type b
 mp)
-<TUTO_VISU_files/figure-latex/unnamed-chunk-189-1.png>
-[71]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-193-1.png Graphic file (type b
+<TUTO_VISU_files/figure-latex/unnamed-chunk-197-1.png>
+[73] [74] [75] [76]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-210-1.png Graphic file (type b
 mp)
-<TUTO_VISU_files/figure-latex/unnamed-chunk-193-1.png>
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-195-1.png Graphic file (type b
+<TUTO_VISU_files/figure-latex/unnamed-chunk-210-1.png>
+[77]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-212-1.png Graphic file (type b
 mp)
-<TUTO_VISU_files/figure-latex/unnamed-chunk-195-1.png>
-[72]
+<TUTO_VISU_files/figure-latex/unnamed-chunk-212-1.png>
+[78]
 No file TUTO_VISU.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2091.
-[73]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2091.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2440.
+[79]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2440.
 (./TUTO_VISU.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 2091.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 2091.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 2440.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 2440.
  ) 
 Here is how much of TeX's memory you used:
- 29700 strings out of 492956
- 534002 string characters out of 6133501
- 769066 words of memory out of 5000000
- 33329 multiletter control sequences out of 15000+600000
+ 29727 strings out of 492956
+ 534890 string characters out of 6133501
+ 769585 words of memory out of 5000000
+ 33353 multiletter control sequences out of 15000+600000
  538675 words of font info for 77 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 59i,7n,116p,1030b,742s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 59i,7n,116p,1030b,667s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on TUTO_VISU.pdf (73 pages).
+Output written on TUTO_VISU.pdf (79 pages).

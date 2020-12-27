@@ -189,15 +189,15 @@ ggplot(data=diamonds) + geom_density(aes(x=carat,y=..density..)) +  facet_grid(c
 
 ## ----echo=correct,eval=FALSE------------------------------
 #  ggplot(data=diamonds) + geom_boxplot(aes(x=cut,y=carat,fill=cut))
-#  ggplot(data=diamonds) + geom_boxplot(aes(x=cut,y=carat,fill=cut))+coord_flip()
-#  ggplot(data=diamonds) + geom_density(aes(x=carat,y=..density..)) +  facet_grid(cut~.)
+#  ggplot(data=diamonds) + geom_boxplot(aes(x=cut,y=carat,fill=cut)) + coord_flip()
+#  ggplot(data=diamonds) + geom_density(aes(x=carat,y=..density..)) + facet_grid(cut~.)
 
 ## ----echo=correct,eval=TRUE-------------------------------
 Q1 <- diamonds %>% group_by(cut) %>% 
   summarize(q1=quantile(carat,c(0.25)),q2=quantile(carat,c(0.5)),
         q3=quantile(carat,c(0.75)))
-quantildf <- Q1%>% gather(key="alpha",value="quantiles",-cut)
-ggplot(data=diamonds) + geom_density(aes(x=carat,y=..density..))+
+quantildf <- Q1 %>% pivot_longer(-cut,names_to="alpha",values_to="quantiles")
+ggplot(data=diamonds) + geom_density(aes(x=carat,y=..density..)) +
   facet_grid(cut~.) +
   geom_vline(data=quantildf,aes(xintercept=quantiles),col=alpha("black",1/2))
 
@@ -206,7 +206,7 @@ library(ggstance)
 ggplot(data=diamonds) +
   geom_boxploth(data=diamonds,aes(y=-0.5,x=carat,fill=cut)) +
   geom_density(aes(x=carat,y=..density..)) +  facet_grid(cut~.) +
-  geom_vline(data=quantildf,aes(xintercept=quantiles),col=alpha("black",1/2))+
+  geom_vline(data=quantildf,aes(xintercept=quantiles),col=alpha("black",1/2)) +
   ylab("")
 
 ## ----echo=correct,eval=FALSE------------------------------
@@ -214,7 +214,7 @@ ggplot(data=diamonds) +
 #  ggplot(data=diamonds) +
 #    geom_boxploth(data=diamonds,aes(y=-0.5,x=carat,fill=cut)) +
 #    geom_density(aes(x=carat,y=..density..)) +  facet_grid(cut~.) +
-#    geom_vline(data=quantildf,aes(xintercept=quantiles),col=alpha("black",1/2))+
+#    geom_vline(data=quantildf,aes(xintercept=quantiles),col=alpha("black",1/2)) +
 #    ylab("")
 
 ## ----echo=FALSE-------------------------------------------
@@ -324,9 +324,6 @@ names(coord.ville.nc) <- c("lon","lat")
 ## ---------------------------------------------------------
 coord.ville1.nc <- coord.ville.nc %>%  
   filter(lon<=-77 & lon>=-85 & lat>=33 & lat<=37) %>% 
-  as.matrix() %>% st_multipoint() %>% st_geometry()
-coord.ville1.nc <- coord.ville.nc %>%  
-  filter(lon<=-77 & lon>=-85 & lat>=33 & lat<=37) %>% 
   as.matrix() %>% st_multipoint()  %>% st_geometry() %>% st_cast(to="POINT")
 coord.ville1.nc
 
@@ -384,6 +381,31 @@ D <- inner_join(temp, station, by = c("ID"))
 
 ## ----echo=TRUE,eval=correct-------------------------------
 #  DD <- st_distance(df,centro)
+
+## ---------------------------------------------------------
+world <- rnaturalearth::ne_countries(scale = "medium", returnclass = "sf")
+class(world)
+ggplot(data = world) +
+geom_sf(aes(fill = pop_est)) +
+scale_fill_viridis_c(option = "plasma", trans = "sqrt")+theme_void()
+
+## ---------------------------------------------------------
+ggplot(data = world) +
+geom_sf() +
+coord_sf(crs = "+proj=laea +lat_0=52 +lon_0=10 +x_0=4321000 +y_0=3210000 +ellps=GRS80 +units=m +no_defs ")
+
+## ---------------------------------------------------------
+regions <- read_sf("data/regions-20180101-shp/")
+
+## ---------------------------------------------------------
+format(object.size(regions),units="Mb")
+
+## ---------------------------------------------------------
+library(rmapshaper)
+regions1 <- ms_simplify(regions)
+format(object.size(regions1),units="Mb")
+ggplot(regions1)+geom_sf()+
+  coord_sf(xlim = c(-5.5,10),ylim=c(41,51))+theme_void()
 
 ## ----message=FALSE, warning=FALSE-------------------------
 library(leaflet)
@@ -512,7 +534,7 @@ ggplotly(p)
 #  amPlot(Sepal.Length~Sepal.Width,data=iris,col=iris$Species)
 
 ## ----echo=cor,eval=cor------------------------------------
-#  iris %>% plot_ly(x=~Petal.Width,y=~Petal.Length,color=~Species) %>%
+#  iris %>% plot_ly(x=~Sepal.Width,y=~Sepal.Length,color=~Species) %>%
 #    add_markers(type="scatter",mode="markers")
 
 ## ----echo=cor,eval=cor------------------------------------
@@ -545,25 +567,6 @@ V(media)$name <- nodes$media
 ## ---------------------------------------------------------
 plot(media)
 
-## ----echo=cor,eval=cor------------------------------------
-#  media.VN <- toVisNetworkData(media)
-#  visNetwork(nodes=media.VN$nodes,edges=media.VN$edges)
-
-## ----echo=cor,eval=cor------------------------------------
-#  visNetwork(nodes=media.VN$nodes,edges=media.VN$edges) %>%
-#    visOptions(selectedBy = "type.label")
-
-## ----echo=cor,eval=cor------------------------------------
-#  media.VN1 <- media.VN
-#  names(media.VN1$nodes)[3] <- "group"
-#  visNetwork(nodes=media.VN1$nodes,edges=media.VN1$edges) %>%
-#    visOptions(selectedBy = "type.label")
-
-## ----echo=cor,eval=cor------------------------------------
-#  names(media.VN1$edges)[3] <- "value"
-#  visNetwork(nodes=media.VN1$nodes,edges=media.VN1$edges) %>%
-#    visOptions(selectedBy = "type.label",highlightNearest = TRUE)
-
 ## ----echo=FALSE,eval=FALSE,indent='    '------------------
 #  df <- read.table("data/ozone.txt")
 #  gg.nuage <- ggplot(df)+aes(x=T12,y=maxO3)+geom_point()+geom_smooth()
@@ -572,23 +575,6 @@ plot(media)
 #  am.nuage <- amPlot(x=df$T12,y=df$maxO3) %>% amLines(y=p12,type="line")
 #  pl.nuage <- ggplotly(gg.nuage)
 
-## ----echo=cor,eval=cor,indent='        '------------------
-#  df <- read.table("data/ozone.txt")
-#  cc <- cor(df[,1:11])
-#  mat.cor <- corrplot::corrplot(cc)
-
-## ----echo=cor,eval=cor,indent='        '------------------
-#  gg.H <- ggplot(df)+aes(x=maxO3)+geom_histogram(bins = 10)
-#  am.H <- amHist(df$maxO3)
-#  pl.H <- ggplotly(gg.H)
-
-## ----echo=cor,eval=cor,indent='        '------------------
-#  mod <- lm(maxO3~.,data=df)
-#  res <- rstudent(mod)
-#  df1 <- data.frame(maxO3=df$maxO3,r.student=res)
-#  Ggg <- ggplot(df1)+aes(x=maxO3,y=res)+geom_point()+geom_smooth()
-#  Gggp <- ggplotly(Ggg)
-
 ## ----eval=FALSE,indent='        '-------------------------
 #  radioButtons("variable1",
 #                     label="Choisir la variable explicative",
@@ -596,7 +582,22 @@ plot(media)
 #                     selected=list("T9"))
 
 ## ----eval=FALSE,indent='        '-------------------------
-#  runtime: shiny
+#  mod1 <- reactive({
+#    XX <- paste(input$variable1,collapse="+")
+#    form <- paste("maxO3~",XX,sep="") %>% formula()
+#    lm(form,data=df)
+#    })
+#  #Df correspond au jeu de données
+#  renderDataTable({
+#    mod.sum1 <- summary(mod1())$coefficients %>% round(3) %>% as.data.frame()
+#    DT::datatable(mod.sum1,options = list(dom = 't'))
+#  })
+
+## ----eval=FALSE,indent='        '-------------------------
+#  renderPlotly({
+#    (ggplot(df)+aes(x=!!as.name(input$variable1),y=maxO3)+
+#       geom_point()+geom_smooth(method="lm")) %>% ggplotly()
+#  })
 
 ## ----eval=FALSE,indent = '        '-----------------------
 #  checkboxGroupInput("variable",
@@ -604,11 +605,79 @@ plot(media)
 #                     choices=names(df)[-1],
 #                     selected=list("T9"))
 
-## ----name='app_dash_html',screenshot.opts=list(delay = 5, cliprect = 'viewport',zoom=2,vwidth=200,vheight=200),echo=FALSE,eval=!comp_pdf,out.width=760,out.height=750,indent='        '----
+## ----name='app_dash_html',screenshot.opts=list(delay = 5, cliprect = 'viewport',zoom=2,vwidth=200,vheight=200),echo=FALSE,eval=!comp_pdf,out.width=760,out.height=750----
 #  knitr::include_app('https://lrouviere.shinyapps.io/dashboard/', height = '650px')
 
-## ----name='app_dash_pdf',echo=FALSE,eval=comp_pdf,indent='        '----
+## ----name='app_dash_pdf',echo=FALSE,eval=comp_pdf---------
 webshot::webshot("https://lrouviere.shinyapps.io/dashboard/", file="dashboard.png",delay=20,zoom=1)
+
+## ---- echo = TRUE, eval = FALSE---------------------------
+#  selectInput(inputId = "color", label = "Couleur :",
+#              choices = c("Rouge" = "red", "Vert" = "green", "Bleu" = "blue"))
+
+## ---- echo = TRUE, eval = FALSE---------------------------
+#  # ui.R
+#  verbatimTextOutput("...")
+#  
+#  # server.R
+#  output$... <- renderPrint({
+#    summary(...)
+#  })
+
+## ---- echo = TRUE, eval = FALSE---------------------------
+#  # rappel de la structure (ui.R)
+#  navlistPanel(
+#  "Title of the structure",
+#  tabPanel("Title of the tab", ... "(content of the tab)"),
+#  tabPanel("Title of the tab", ... "(content of the tab)")
+#  )
+
+## ---- echo = TRUE, eval = FALSE---------------------------
+#  fluidRow(
+#    column(width = 3, ...), # column 1/4 (3/12)
+#    column(width = 9, ...)  # column 3/4 (9/12)
+#  )
+
+## ---- echo = TRUE, eval = FALSE---------------------------
+#  # rappel de la structure (ui.R)
+#  tabsetPanel(
+#  tabPanel("Title of the tab", ... "(content of the tab)"),
+#  tabPanel("Title of the tab", ... "(content of the tab)")
+#  )
+
+## ---- echo = TRUE, eval = FALSE---------------------------
+#  # server.R
+#  output$distPlot <- renderAmCharts({...})
+#  
+#  # ui.R
+#  amChartsOutput("...")
+
+## ---- echo = TRUE, eval = FALSE---------------------------
+#  # think to add  "session"
+#  shinyServer(function(input, output, session)
+#  
+#  # an id
+#  tabsetPanel(id = "viz",
+#    tabPanel("Histogram", ...
+#  
+#  # and finaly
+#  observeEvent(input$go, {
+#  updateTabsetPanel(session, inputId = "viz", selected = "Histogram")
+#  })
+
+## ---- echo = TRUE, eval = FALSE---------------------------
+#  # Example of reactive
+#  data <- reactive({
+#    ...
+#  })
+#  
+#  output$plot <- renderPlot({
+#    x <- data()
+#    ...
+#  })
+
+## ----echo=TRUE,eval=FALSE---------------------------------
+#  h1("Dataset", style = "color : #0099ff;text-align:center")
 
 ## ----echo=cor,eval=cor------------------------------------
 #  library(bestglm)
