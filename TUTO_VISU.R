@@ -37,45 +37,76 @@ amHist(ozone$maxO3)
 amPlot(ozone,col=c("T9","T12"))
 amBoxplot(maxO3~vent,data=ozone)
 
+## ----teacher=correct--------------------------------------
+x <- seq(0,2*pi,length=1000)
+plot(x,sin(x),type="l")
+
 ## ----echo=correct,eval=FALSE------------------------------
 #  title("Représentation de la fonction sinus")
 
 ## ----echo=FALSE,eval=correct------------------------------
-#  plot(x,sin(x),type="l")
-#  title("Représentation de la fonction sinus")
+plot(x,sin(x),type="l")
+title("Représentation de la fonction sinus")
+
+## ----teacher=correct--------------------------------------
+x <- seq(-4,4,by=0.01)
+plot(x,dnorm(x),type="l")
 
 ## ----echo=correct,eval=FALSE------------------------------
 #  abline(v=0,lty=2)
 
 ## ----echo=FALSE,eval=correct------------------------------
-#  plot(x,dnorm(x),type="l")
-#  abline(v=0,lty=2)
+plot(x,dnorm(x),type="l")
+abline(v=0,lty=2)
 
 ## ----echo=correct,eval=FALSE------------------------------
 #  lines(x,dt(x,5),col=2)
 #  lines(x,dt(x,30),col=3)
 
 ## ----echo=FALSE,eval=correct------------------------------
-#  plot(x,dnorm(x),type="l")
-#  abline(v=0,lty=2)
-#  lines(x,dt(x,5),col=2)
-#  lines(x,dt(x,30),col=3)
+plot(x,dnorm(x),type="l")
+abline(v=0,lty=2)
+lines(x,dt(x,5),col=2)
+lines(x,dt(x,30),col=3)
 
 ## ----echo=correct,eval=FALSE------------------------------
 #  legend("topleft",legend=c("Normal","Student(5)","Student(30)"),
 #     col=1:3,lty=1)
 
 ## ----echo=FALSE,eval=correct------------------------------
-#  plot(x,dnorm(x),type="l")
-#  abline(v=0,lty=2)
-#  lines(x,dt(x,5),col=2)
-#  lines(x,dt(x,30),col=3)
-#  legend("topleft",legend=c("Normal","Student(5)","Student(30)"),
-#     col=1:3,lty=1)
+plot(x,dnorm(x),type="l")
+abline(v=0,lty=2)
+lines(x,dt(x,5),col=2)
+lines(x,dt(x,30),col=3)
+legend("topleft",legend=c("Normal","Student(5)","Student(30)"),
+   col=1:3,lty=1)
+
+## ----teacher=correct--------------------------------------
+taches <- read.table("data/taches_solaires.csv",sep=";",header=TRUE,dec=",")
+
+## ----teacher=correct--------------------------------------
+library(tidyverse)
+periode <- cut_interval(taches$annee,n=8)
 
 ## ----eval=correct,echo=TRUE-------------------------------
-#  couleurs <- c("yellow", "magenta", "orange", "cyan",
-#            "grey", "red", "green", "blue")
+couleurs <- c("yellow", "magenta", "orange", "cyan",
+          "grey", "red", "green", "blue")
+
+## ----teacher=correct--------------------------------------
+levels(periode) <- couleurs
+
+## ----teacher=correct--------------------------------------
+coordx <- seq(along=taches[,1])
+
+## ----teacher=correct--------------------------------------
+plot(coordx,taches[,1],xlab="Temps",ylab="Nombre de taches",
+ col=periode,type="p",pch="+")
+
+## ----teacher=correct--------------------------------------
+layout(matrix(c(1,1,2,3), 2, 2, byrow = TRUE))
+plot(maxO3~T12,data=ozone)
+hist(ozone$T12)
+boxplot(ozone$maxO3)
 
 ## ---------------------------------------------------------
 library(tidyverse)
@@ -92,6 +123,15 @@ ggplot(diamonds2) #rien
 ggplot(diamonds2)+aes(x=carat,y=price) #rien
 ggplot(diamonds2)+aes(x=carat,y=price)+geom_point() #bon
 
+## ----teacher=correct--------------------------------------
+ggplot(diamonds2)+aes(x=carat)+geom_histogram()
+
+## ----teacher=correct--------------------------------------
+ggplot(diamonds2)+aes(x=carat)+geom_histogram(bins=10)
+
+## ----teacher=correct--------------------------------------
+ggplot(diamonds2)+aes(x=cut)+geom_bar()
+
 ## ----eval=FALSE-------------------------------------------
 #  ggplot(diamonds2)+aes(x=carat,y=price)
 
@@ -100,6 +140,15 @@ ggplot(diamonds2)+aes(x=carat,y=price)+geom_point() #bon
 
 ## ---------------------------------------------------------
 ggplot(diamonds2)+aes(x=carat,y=price,color=cut)+geom_point()
+
+## ----teacher=correct--------------------------------------
+ggplot(diamonds2)+aes(x=cut)+geom_bar(fill="blue")
+
+## ----teacher=correct--------------------------------------
+ggplot(diamonds2)+aes(x=cut,fill=cut)+geom_bar()
+
+## ----teacher=correct--------------------------------------
+ggplot(diamonds2)+aes(x=cut)+geom_bar(fill=c("blue","red","green","yellow","black"))
 
 ## ---------------------------------------------------------
 D <- data.frame(X=seq(-2*pi,2*pi,by=0.01))
@@ -113,6 +162,19 @@ ggplot(diamonds2)+aes(x=price,y=..density..)+geom_histogram(bins=40)
 
 ## ----eval=FALSE,echo=TRUE---------------------------------
 #  ggplot(diamonds2)+aes(x=price,y=..density..)+stat_bin()
+
+## ----teacher=correct--------------------------------------
+X <- data.frame(X1=c("red","blue","green","black"),prob=c(0.3,0.2,0.4,0.1))
+ggplot(X)+aes(x=X1,y=prob,fill=X1)+geom_bar(stat="identity")+
+  labs(fill="Couleur")+xlab("")
+
+## ----teacher=correct--------------------------------------
+ggplot(diamonds2)+aes(x=carat,y=price)+geom_smooth(method="loess")
+ggplot(diamonds2)+aes(x=carat,y=price)+stat_smooth(method="loess")
+
+## ----teacher=correct--------------------------------------
+ggplot(diamonds2)+aes(x=carat,y=price)+geom_smooth(method="loess",linetype="dotted")
+ggplot(diamonds2)+aes(x=carat,y=price)+stat_smooth(method="loess",geom="point")
 
 ## ---------------------------------------------------------
 ggplot(diamonds2)+aes(x=carat,y=price,color=cut)+geom_point()+
@@ -178,9 +240,86 @@ p+theme_classic()
 p+theme_grey()
 p+theme_bw()
 
+## ----teacher=correct--------------------------------------
+X <- seq(-2*pi,2*pi,by=0.001)
+Y1 <- cos(X)
+Y2 <- sin(X)
+donnees1 <- data.frame(X,Y1)
+donnees2 <- data.frame(X,Y2)
+ggplot(donnees1)+geom_line(aes(x=X,y=Y1))+
+  geom_line(data=donnees2,aes(x=X,y=Y2),color="red")
+
+## ----teacher=correct--------------------------------------
+donnees <- data.frame(X,Y1,Y2)
+ggplot(donnees)+aes(x=X,y=Y1)+geom_line()+
+  geom_line(aes(y=Y2),color="red")
+#ou pour la légende
+ggplot(donnees)+aes(x=X,y=Y1)+geom_line(aes(color="cos"))+
+  geom_line(aes(y=Y2,color="sin"))+labs(color="Fonction")
+
+## ----teacher=correct--------------------------------------
+df <- data.frame(X,cos=Y1,sin=Y2)
+df1 <- df %>% pivot_longer(cols=c(cos,sin),
+                       names_to = "Fonction",
+                       values_to = "value")
+#ou
+df1 <- df %>% pivot_longer(cols=-X,
+                       names_to = "Fonction",
+                       values_to = "value")
+ggplot(df1)+aes(x=X,y=value,color=Fonction)+geom_line()
+
+## ----teacher=correct--------------------------------------
+ggplot(df1)+aes(x=X,y=value)+geom_line()+facet_wrap(~Fonction)
+
+## ----teacher=correct--------------------------------------
+library(gridExtra)
+p1 <- ggplot(donnees1)+aes(x=X,y=Y1)+geom_line()
+p2 <- ggplot(donnees2)+aes(x=X,y=Y2)+geom_line()
+grid.arrange(p1,p2,nrow=1)
+
 ## ---------------------------------------------------------
 data(mtcars)
 summary(mtcars)
+
+## ----teacher=correct--------------------------------------
+ggplot(mtcars)+aes(x=mpg)+geom_histogram()
+ggplot(mtcars)+aes(x=mpg)+geom_histogram(bins=10)
+
+## ----teacher=correct--------------------------------------
+ggplot(mtcars)+aes(x=mpg,y=..density..)+geom_histogram(bins=10)
+
+## ----teacher=correct--------------------------------------
+ggplot(mtcars)+aes(x=cyl)+geom_bar()
+
+## ----teacher=correct--------------------------------------
+ggplot(mtcars)+aes(x=disp,y=mpg,color=cyl)+geom_point()
+ggplot(mtcars)+aes(x=disp,y=mpg,color=as.factor(cyl))+geom_point()+labs(color="cyl")
+
+## ----teacher=correct--------------------------------------
+ggplot(mtcars)+aes(x=disp,y=mpg,color=as.factor(cyl))+geom_point()+
+  geom_smooth(method="lm")+labs(color="cyl")
+
+## ----teacher=correct--------------------------------------
+n <- 100
+X <- runif(n)
+eps <- rnorm(n,sd=0.2)
+Y <- 3+X+eps
+D <- data.frame(X,Y)
+
+## ----teacher=correct--------------------------------------
+model <- lm(Y~.,data=D)
+co <- coef(model)
+D$fit <- predict(model)
+co <- coef(lm(Y~.,data=D))
+ggplot(D)+aes(x=X,y=Y)+geom_point()+
+  geom_abline(slope=co[2],intercept=co[1],color="blue")
+
+## ----teacher=correct--------------------------------------
+ggplot(D)+aes(x=X,y=Y)+geom_point()+geom_smooth(method="lm")
+
+## ----teacher=correct--------------------------------------
+ggplot(D)+aes(x=X,y=Y)+geom_point()+geom_smooth(method="lm")+
+  geom_segment(aes(xend=X,yend=fit))
 
 ## ----echo=FALSE,eval=TRUE---------------------------------
 ggplot(data=diamonds) + geom_boxplot(aes(x=cut,y=carat,fill=cut)) 
@@ -220,6 +359,7 @@ ggplot(data=diamonds) +
 ## ----echo=FALSE-------------------------------------------
 cache_carto <- FALSE
 library(tidyverse)
+correct <- FALSE
 
 ## ----echo=FALSE-------------------------------------------
 knitr::opts_chunk$set(message=FALSE, warning=FALSE,cache=cache_carto)
@@ -531,17 +671,17 @@ p <- ggplot(iris)+aes(x=Species,y=Sepal.Length)+geom_boxplot()+theme_classic()
 ggplotly(p)
 
 ## ----echo=cor,eval=cor------------------------------------
-#  amPlot(Sepal.Length~Sepal.Width,data=iris,col=iris$Species)
+amPlot(Sepal.Length~Sepal.Width,data=iris,col=iris$Species) 
 
 ## ----echo=cor,eval=cor------------------------------------
-#  iris %>% plot_ly(x=~Sepal.Width,y=~Sepal.Length,color=~Species) %>%
-#    add_markers(type="scatter",mode="markers")
+iris %>% plot_ly(x=~Sepal.Width,y=~Sepal.Length,color=~Species) %>%
+  add_markers(type="scatter",mode="markers")
 
 ## ----echo=cor,eval=cor------------------------------------
-#  amBoxplot(Petal.Length~Species,data=iris)
+amBoxplot(Petal.Length~Species,data=iris)
 
 ## ----echo=cor,eval=cor------------------------------------
-#  iris %>% plot_ly(x=~Species,y=~Petal.Length) %>% add_boxplot()
+iris %>% plot_ly(x=~Species,y=~Petal.Length) %>% add_boxplot()
 
 ## ---------------------------------------------------------
 nodes <- data.frame(id = 1:15, label = paste("Id", 1:15),
@@ -624,6 +764,12 @@ webshot::webshot("https://lrouviere.shinyapps.io/dashboard/", file="dashboard.pn
 #    summary(...)
 #  })
 
+## ----name='input-output-app_html',screenshot.opts=list(delay = 5, cliprect = 'viewport',zoom=2,vwidth=200,vheight=200),echo=FALSE,eval=!comp_pdf,out.width=760,out.height=750----
+#  knitr::include_app('https://input-output-rouviere-shiny.apps.math.cnrs.fr/', height = '650px')
+
+## ----name='input-output-app_pdf',echo=FALSE,eval=comp_pdf----
+webshot::webshot("https://input-output-rouviere-shiny.apps.math.cnrs.fr/", file="dashboard.png",delay=5,zoom=1)
+
 ## ---- echo = TRUE, eval = FALSE---------------------------
 #  # rappel de la structure (ui.R)
 #  navlistPanel(
@@ -645,12 +791,24 @@ webshot::webshot("https://lrouviere.shinyapps.io/dashboard/", file="dashboard.pn
 #  tabPanel("Title of the tab", ... "(content of the tab)")
 #  )
 
+## ----name='structure-app_html',screenshot.opts=list(delay = 5, cliprect = 'viewport',zoom=2,vwidth=200,vheight=200),echo=FALSE,eval=!comp_pdf,out.width=760,out.height=750----
+#  knitr::include_app('https://structure-rouviere-shiny.apps.math.cnrs.fr/', height = '650px')
+
+## ----name='structure-app_pdf',echo=FALSE,eval=comp_pdf----
+webshot::webshot("https://structure-rouviere-shiny.apps.math.cnrs.fr/", file="dashboard.png",delay=5,zoom=1)
+
 ## ---- echo = TRUE, eval = FALSE---------------------------
 #  # server.R
 #  output$distPlot <- renderAmCharts({...})
 #  
 #  # ui.R
 #  amChartsOutput("...")
+
+## ----name='interactif-app_html',screenshot.opts=list(delay = 5, cliprect = 'viewport',zoom=2,vwidth=200,vheight=200),echo=FALSE,eval=!comp_pdf,out.width=760,out.height=750----
+#  knitr::include_app('https://interactifs-rouviere-shiny-2.apps.math.cnrs.fr/', height = '650px')
+
+## ----name='interactif_pdf',echo=FALSE,eval=comp_pdf-------
+webshot::webshot("https://interactifs-rouviere-shiny-2.apps.math.cnrs.fr/", file="dashboard.png",delay=5,zoom=1)
 
 ## ---- echo = TRUE, eval = FALSE---------------------------
 #  # think to add  "session"
@@ -679,10 +837,16 @@ webshot::webshot("https://lrouviere.shinyapps.io/dashboard/", file="dashboard.pn
 ## ----echo=TRUE,eval=FALSE---------------------------------
 #  h1("Dataset", style = "color : #0099ff;text-align:center")
 
+## ----name='plus-loin-app_html',screenshot.opts=list(delay = 5, cliprect = 'viewport',zoom=2,vwidth=200,vheight=200),echo=FALSE,eval=!comp_pdf,out.width=760,out.height=750----
+#  knitr::include_app('https://plus-loin-rouviere-shiny-2.apps.math.cnrs.fr/', height = '650px')
+
+## ----name='plus-loin-app_pdf',echo=FALSE,eval=comp_pdf----
+webshot::webshot("https://plus-loin-rouviere-shiny-2.apps.math.cnrs.fr/", file="dashboard.png",delay=5,zoom=1)
+
 ## ----echo=cor,eval=cor------------------------------------
-#  library(bestglm)
-#  amHist(SAheart$adiposity,freq=FALSE,xlab="adiposity")
-#  amBoxplot(adiposity~chd,data=SAheart)
+library(bestglm)
+amHist(SAheart$adiposity,freq=FALSE,xlab="adiposity")
+amBoxplot(adiposity~chd,data=SAheart)
 
 ## ---- eval=FALSE, message=FALSE, warning=FALSE, include=TRUE----
 #  choices=names(SAheart)[sapply(SAheart,class)=="numeric"]
