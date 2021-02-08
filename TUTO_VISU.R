@@ -359,7 +359,6 @@ ggplot(data=diamonds) +
 ## ----echo=FALSE-------------------------------------------
 cache_carto <- FALSE
 library(tidyverse)
-correct <- FALSE
 
 ## ----echo=FALSE-------------------------------------------
 knitr::opts_chunk$set(message=FALSE, warning=FALSE,cache=cache_carto)
@@ -409,6 +408,14 @@ mygeocode("the white house")
 mygeocode("Paris")
 mygeocode("Rennes")
 
+## ----teacher=correct,cache=cache_carto--------------------
+V <- c("Paris","Lyon","Marseille")
+A <- mygeocode(V)
+A <- A %>% as_tibble() %>% mutate(Villes=V)
+fr <- c(left = -6, bottom = 41, right = 10, top = 52)
+fond <- get_stamenmap(fr, zoom = 5,"toner-lite") 
+ggmap(fond)+geom_point(data=A,aes(x=lon,y=lat),color="red")
+
 ## ----echo=FALSE,eval=FALSE--------------------------------
 #  #pour aller plus vite
 #  df <- read_csv("data/villes_fr.csv")
@@ -417,6 +424,14 @@ mygeocode("Rennes")
 #  coord <- mygeocode(as.character(df$Commune)) %>% as_tibble()
 #  write_csv(coord,path="coord_exo1_ggmap.csv")
 
+## ----teacher=correct--------------------------------------
+df <- read_csv("data/villes_fr.csv")
+df$Commune <- as.character(df$Commune)
+
+## ----teacher=correct--------------------------------------
+df$Commune[10]    
+df$Commune[10] <- "Lille"
+
 ## ----echo=correct,eval=FALSE------------------------------
 #  coord <- mygeocode(as.character(df$Commune)) %>% as_tibble()
 #  df1 <- bind_cols(df,coord)
@@ -424,10 +439,10 @@ mygeocode("Rennes")
 #  ggmap(fond)+geom_point(data=df1,aes(x=lon,y=lat,size=`2014`),color="red")
 
 ## ----echo=FALSE,eval=correct------------------------------
-#  coord <- read_csv("coord_exo1_ggmap.csv")
-#  df1 <- bind_cols(df,coord)
-#  ggmap(fond)+geom_point(data=df1,aes(x=lon,y=lat),color="red")
-#  ggmap(fond)+geom_point(data=df1,aes(x=lon,y=lat,size=`2014`),color="red")
+coord <- read_csv("coord_exo1_ggmap.csv")
+df1 <- bind_cols(df,coord)
+ggmap(fond)+geom_point(data=df1,aes(x=lon,y=lat),color="red")
+ggmap(fond)+geom_point(data=df1,aes(x=lon,y=lat,size=`2014`),color="red")
 
 ## ---------------------------------------------------------
 library(sf)
@@ -481,10 +496,39 @@ ggplot(nc2)+geom_sf()+geom_sf(aes(geometry=centre))
 dpt <- read_sf("data/dpt")
 ggplot(dpt) + geom_sf()
 
+## ----teacher=correct--------------------------------------
+coord.ville1 <- data.frame(df1[,14:15]) %>% 
+  as.matrix() %>% st_multipoint() %>% st_geometry()
+coord.ville2 <- st_cast(coord.ville1, to = "POINT")
+coord.ville1
+coord.ville2
+
+## ----teacher=correct--------------------------------------
+st_geometry(df1) <- coord.ville2
+st_crs(df1) <- 4326
+ggplot(dpt)+geom_sf(fill="white")+
+  geom_sf(data=df1,aes(size=`2014`),color="red")+theme_void()
+
+## ----teacher=correct--------------------------------------
+chomage <- read_delim("data/tauxchomage.csv",delim=";")
+
+## ----teacher=correct--------------------------------------
+dpt <- read_sf("data/dpt")
+dpt2 <- inner_join(dpt,chomage,by="CODE_DEPT")
+
+## ----teacher=correct--------------------------------------
+dpt3 <- dpt2 %>% select(A2006=TCHOMB1T06,A2011=TCHOMB1T11,geometry) %>%
+  pivot_longer(-geometry,names_to="Annee",values_to="TxChomage") %>% st_as_sf()
+
 ## ----echo=FALSE,eval=FALSE--------------------------------
 #  dpt3 <- dpt2 %>% select(A2006=TCHOMB1T06,A2011=TCHOMB1T11,geometry) %>%
 #    gather(key="Annee",value="TxChomage",-geometry)
 #  #  pivot_longer(-geometry,names_to="Annee",values_to="TxChomage")
+
+## ----teacher=correct--------------------------------------
+ggplot(dpt3) + aes(fill = TxChomage)+geom_sf() +
+  facet_wrap(~Annee, nrow = 1)+
+  scale_fill_gradient(low="white",high="brown")+theme_bw()
 
 ## ----echo=FALSE,eval=FALSE--------------------------------
 #  #Pour éviter les changements
@@ -509,18 +553,47 @@ D <- inner_join(temp, station, by = c("ID"))
 #  names(temp)[1] <- c("ID")
 #  D <- inner_join(temp, station, by = c("ID"))
 
-## ----echo=TRUE,eval=correct-------------------------------
-#  station2 <- station1 %>% select(Longitude,Latitude) %>%
-#    as.matrix() %>% st_multipoint() %>% st_geometry()
-#  st_crs(station2) <- 4326
-#  station2 <- st_cast(station2, to = "POINT")
+## ---- teacher=correct-------------------------------------
+station1 <- D %>% filter(Longitude<25 & Longitude>-20) %>% na.omit()
+station4326 <- st_multipoint(as.matrix(station1[,5:4])) %>% st_geometry()
+st_crs(station4326) <- 4326
+ggplot(dpt) + geom_sf()+geom_sf(data=station4326)
 
 ## ----echo=TRUE,eval=correct-------------------------------
-#  centro <- st_centroid(dpt$geometry)
-#  centro <- st_transform(centro,crs=4326)
+station2 <- station1 %>% select(Longitude,Latitude) %>% 
+  as.matrix() %>% st_multipoint() %>% st_geometry()
+st_crs(station2) <- 4326
+station2 <- st_cast(station2, to = "POINT")
+
+## ----teacher=correct--------------------------------------
+df <- data.frame(temp=station1$t)
+st_geometry(df) <- station2
+
+## ----teacher=correct--------------------------------------
+ggplot(dpt) + geom_sf(fill="white")+
+  geom_sf(data=df,aes(color=temp),size=2)+
+  scale_color_continuous(low="yellow",high="red")
 
 ## ----echo=TRUE,eval=correct-------------------------------
-#  DD <- st_distance(df,centro)
+centro <- st_centroid(dpt$geometry) 
+centro <- st_transform(centro,crs=4326)
+
+## ----echo=TRUE,eval=correct-------------------------------
+DD <- st_distance(df,centro)
+
+## ----teacher=correct--------------------------------------
+NN <- apply(DD,2,order)[1,]
+t_prev <- station1[NN,2]
+
+## ----teacher=correct--------------------------------------
+dpt1 <- dpt %>% mutate(t_prev=as.matrix(t_prev))
+ggplot(dpt1) + geom_sf(aes(fill=t_prev)) +
+  scale_fill_continuous(low="yellow",high="red")+theme_void()
+
+## ----teacher=correct--------------------------------------
+ggplot(dpt1) + geom_sf(aes(fill=t_prev,color=t_prev)) + 
+  scale_fill_continuous(low="yellow",high="red") + 
+  scale_color_continuous(low="yellow",high="red")+theme_void()
 
 ## ---------------------------------------------------------
 world <- rnaturalearth::ne_countries(scale = "medium", returnclass = "sf")
@@ -546,6 +619,9 @@ regions1 <- ms_simplify(regions)
 format(object.size(regions1),units="Mb")
 ggplot(regions1)+geom_sf()+
   coord_sf(xlim = c(-5.5,10),ylim=c(41,51))+theme_void()
+
+## ----echo=FALSE-------------------------------------------
+correct <- FALSE
 
 ## ----message=FALSE, warning=FALSE-------------------------
 library(leaflet)
@@ -653,8 +729,8 @@ D %>% plot_ly(x=~X,y=~Y) %>%
          yaxis=list(title="ordonnées"))
 
 ## ----name="plotly_html",eval=!comp_pdf,echo=!comp_pdf-----
-#  plot_ly(z = volcano, type = "surface")
-#  plot_ly(z = volcano, type = "contour")
+plot_ly(z = volcano, type = "surface")
+plot_ly(z = volcano, type = "contour")
 
 ## ----eval=FALSE,echo=FALSE--------------------------------
 #  p <- plot_ly(z = volcano, type = "surface")
@@ -664,7 +740,7 @@ D %>% plot_ly(x=~X,y=~Y) %>%
 #  plot_ly(z = volcano, type = "surface")
 
 ## ----name="plotly_pdf1",eval=comp_pdf,echo=comp_pdf-------
-plot_ly(z = volcano, type = "contour")
+#  plot_ly(z = volcano, type = "contour")
 
 ## ---------------------------------------------------------
 p <- ggplot(iris)+aes(x=Species,y=Sepal.Length)+geom_boxplot()+theme_classic()
@@ -746,10 +822,10 @@ plot(media)
 #                     selected=list("T9"))
 
 ## ----name='app_dash_html',screenshot.opts=list(delay = 5, cliprect = 'viewport',zoom=2,vwidth=200,vheight=200),echo=FALSE,eval=!comp_pdf,out.width=760,out.height=750----
-#  knitr::include_app('https://lrouviere.shinyapps.io/dashboard/', height = '650px')
+knitr::include_app('https://lrouviere.shinyapps.io/dashboard/', height = '650px')
 
 ## ----name='app_dash_pdf',echo=FALSE,eval=comp_pdf---------
-webshot::webshot("https://lrouviere.shinyapps.io/dashboard/", file="dashboard.png",delay=20,zoom=1)
+#  webshot::webshot("https://lrouviere.shinyapps.io/dashboard/", file="dashboard.png",delay=20,zoom=1)
 
 ## ---- echo = TRUE, eval = FALSE---------------------------
 #  selectInput(inputId = "color", label = "Couleur :",
@@ -765,10 +841,10 @@ webshot::webshot("https://lrouviere.shinyapps.io/dashboard/", file="dashboard.pn
 #  })
 
 ## ----name='input-output-app_html',screenshot.opts=list(delay = 5, cliprect = 'viewport',zoom=2,vwidth=200,vheight=200),echo=FALSE,eval=!comp_pdf,out.width=760,out.height=750----
-#  knitr::include_app('https://input-output-rouviere-shiny.apps.math.cnrs.fr/', height = '650px')
+knitr::include_app('https://input-output-rouviere-shiny.apps.math.cnrs.fr/', height = '650px')
 
 ## ----name='input-output-app_pdf',echo=FALSE,eval=comp_pdf----
-webshot::webshot("https://input-output-rouviere-shiny.apps.math.cnrs.fr/", file="dashboard.png",delay=5,zoom=1)
+#  webshot::webshot("https://input-output-rouviere-shiny.apps.math.cnrs.fr/", file="dashboard.png",delay=5,zoom=1)
 
 ## ---- echo = TRUE, eval = FALSE---------------------------
 #  # rappel de la structure (ui.R)
@@ -792,10 +868,10 @@ webshot::webshot("https://input-output-rouviere-shiny.apps.math.cnrs.fr/", file=
 #  )
 
 ## ----name='structure-app_html',screenshot.opts=list(delay = 5, cliprect = 'viewport',zoom=2,vwidth=200,vheight=200),echo=FALSE,eval=!comp_pdf,out.width=760,out.height=750----
-#  knitr::include_app('https://structure-rouviere-shiny.apps.math.cnrs.fr/', height = '650px')
+knitr::include_app('https://structure-rouviere-shiny.apps.math.cnrs.fr/', height = '650px')
 
 ## ----name='structure-app_pdf',echo=FALSE,eval=comp_pdf----
-webshot::webshot("https://structure-rouviere-shiny.apps.math.cnrs.fr/", file="dashboard.png",delay=5,zoom=1)
+#  webshot::webshot("https://structure-rouviere-shiny.apps.math.cnrs.fr/", file="dashboard.png",delay=5,zoom=1)
 
 ## ---- echo = TRUE, eval = FALSE---------------------------
 #  # server.R
@@ -805,10 +881,10 @@ webshot::webshot("https://structure-rouviere-shiny.apps.math.cnrs.fr/", file="da
 #  amChartsOutput("...")
 
 ## ----name='interactif-app_html',screenshot.opts=list(delay = 5, cliprect = 'viewport',zoom=2,vwidth=200,vheight=200),echo=FALSE,eval=!comp_pdf,out.width=760,out.height=750----
-#  knitr::include_app('https://interactifs-rouviere-shiny-2.apps.math.cnrs.fr/', height = '650px')
+knitr::include_app('https://interactifs-rouviere-shiny-2.apps.math.cnrs.fr/', height = '650px')
 
 ## ----name='interactif_pdf',echo=FALSE,eval=comp_pdf-------
-webshot::webshot("https://interactifs-rouviere-shiny-2.apps.math.cnrs.fr/", file="dashboard.png",delay=5,zoom=1)
+#  webshot::webshot("https://interactifs-rouviere-shiny-2.apps.math.cnrs.fr/", file="dashboard.png",delay=5,zoom=1)
 
 ## ---- echo = TRUE, eval = FALSE---------------------------
 #  # think to add  "session"
@@ -838,10 +914,10 @@ webshot::webshot("https://interactifs-rouviere-shiny-2.apps.math.cnrs.fr/", file
 #  h1("Dataset", style = "color : #0099ff;text-align:center")
 
 ## ----name='plus-loin-app_html',screenshot.opts=list(delay = 5, cliprect = 'viewport',zoom=2,vwidth=200,vheight=200),echo=FALSE,eval=!comp_pdf,out.width=760,out.height=750----
-#  knitr::include_app('https://plus-loin-rouviere-shiny-2.apps.math.cnrs.fr/', height = '650px')
+knitr::include_app('https://plus-loin-rouviere-shiny-2.apps.math.cnrs.fr/', height = '650px')
 
 ## ----name='plus-loin-app_pdf',echo=FALSE,eval=comp_pdf----
-webshot::webshot("https://plus-loin-rouviere-shiny-2.apps.math.cnrs.fr/", file="dashboard.png",delay=5,zoom=1)
+#  webshot::webshot("https://plus-loin-rouviere-shiny-2.apps.math.cnrs.fr/", file="dashboard.png",delay=5,zoom=1)
 
 ## ----echo=cor,eval=cor------------------------------------
 library(bestglm)
@@ -852,14 +928,14 @@ amBoxplot(adiposity~chd,data=SAheart)
 #  choices=names(SAheart)[sapply(SAheart,class)=="numeric"]
 
 ## ----name='desc-app_html',screenshot.opts=list(delay = 5, cliprect = 'viewport',zoom=2,vwidth=200,vheight=200),echo=FALSE,eval=!comp_pdf,out.width=760,out.height=750----
-#  knitr::include_app('https://lrouviere.shinyapps.io/DESC_APP/', height = '650px')
+knitr::include_app('https://lrouviere.shinyapps.io/DESC_APP/', height = '650px')
 
 ## ----name='desc-app_pdf',echo=FALSE,eval=comp_pdf---------
-webshot::webshot("https://lrouviere.shinyapps.io/DESC_APP/", file="dashboard.png",delay=5,zoom=1)
+#  webshot::webshot("https://lrouviere.shinyapps.io/DESC_APP/", file="dashboard.png",delay=5,zoom=1)
 
 ## ----name='velib-app_html',screenshot.opts=list(delay = 5, cliprect = 'viewport',zoom=2,vwidth=200,vheight=200),echo=FALSE,eval=!comp_pdf,out.width=760,out.height=750----
-#  knitr::include_app('https://lrouviere.shinyapps.io/velib/', height = '650px')
+knitr::include_app('https://lrouviere.shinyapps.io/velib/', height = '650px')
 
 ## ----name='velib-app_pdf',echo=FALSE,eval=comp_pdf--------
-webshot::webshot("https://lrouviere.shinyapps.io/velib/", file="dashboard.png",delay=5,zoom=1)
+#  webshot::webshot("https://lrouviere.shinyapps.io/velib/", file="dashboard.png",delay=5,zoom=1)
 
