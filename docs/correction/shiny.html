@@ -24,7 +24,7 @@
 <meta name="author" content="Laurent Rouvière" />
 
 
-<meta name="date" content="2021-02-08" />
+<meta name="date" content="2021-02-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -247,16 +247,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Pour résumer on souhaite une colonne avec tous les inputs et une autre avec tous les outputs.</p>
 <ol style="list-style-type: decimal">
 <li><p>Ajouter dans <code>ui.R</code> une entrée qui permette de changer la couleur de l’histogramme. On pourra utiliser</p>
-<div class="sourceCode" id="cb156"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb156-1"><a href="shiny.html#cb156-1"></a><span class="kw">selectInput</span>(<span class="dt">inputId =</span> <span class="st">&quot;color&quot;</span>, <span class="dt">label =</span> <span class="st">&quot;Couleur :&quot;</span>,</span>
-<span id="cb156-2"><a href="shiny.html#cb156-2"></a>            <span class="dt">choices =</span> <span class="kw">c</span>(<span class="st">&quot;Rouge&quot;</span> =<span class="st"> &quot;red&quot;</span>, <span class="st">&quot;Vert&quot;</span> =<span class="st"> &quot;green&quot;</span>, <span class="st">&quot;Bleu&quot;</span> =<span class="st"> &quot;blue&quot;</span>))</span></code></pre></div></li>
+<div class="sourceCode" id="cb182"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb182-1"><a href="shiny.html#cb182-1"></a><span class="kw">selectInput</span>(<span class="dt">inputId =</span> <span class="st">&quot;color&quot;</span>, <span class="dt">label =</span> <span class="st">&quot;Couleur :&quot;</span>,</span>
+<span id="cb182-2"><a href="shiny.html#cb182-2"></a>            <span class="dt">choices =</span> <span class="kw">c</span>(<span class="st">&quot;Rouge&quot;</span> =<span class="st"> &quot;red&quot;</span>, <span class="st">&quot;Vert&quot;</span> =<span class="st"> &quot;green&quot;</span>, <span class="st">&quot;Bleu&quot;</span> =<span class="st"> &quot;blue&quot;</span>))</span></code></pre></div></li>
 <li><p>Ajouter une sortie qui permette de visualiser le <strong>summary</strong> du jeu de données <code>faithful</code>. On pourra utiliser</p>
-<div class="sourceCode" id="cb157"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb157-1"><a href="shiny.html#cb157-1"></a><span class="co"># ui.R</span></span>
-<span id="cb157-2"><a href="shiny.html#cb157-2"></a><span class="kw">verbatimTextOutput</span>(<span class="st">&quot;...&quot;</span>)</span>
-<span id="cb157-3"><a href="shiny.html#cb157-3"></a></span>
-<span id="cb157-4"><a href="shiny.html#cb157-4"></a><span class="co"># server.R</span></span>
-<span id="cb157-5"><a href="shiny.html#cb157-5"></a>output<span class="op">$</span>... &lt;-<span class="st"> </span><span class="kw">renderPrint</span>({</span>
-<span id="cb157-6"><a href="shiny.html#cb157-6"></a>  <span class="kw">summary</span>(...)</span>
-<span id="cb157-7"><a href="shiny.html#cb157-7"></a>})</span></code></pre></div></li>
+<div class="sourceCode" id="cb183"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb183-1"><a href="shiny.html#cb183-1"></a><span class="co"># ui.R</span></span>
+<span id="cb183-2"><a href="shiny.html#cb183-2"></a><span class="kw">verbatimTextOutput</span>(<span class="st">&quot;...&quot;</span>)</span>
+<span id="cb183-3"><a href="shiny.html#cb183-3"></a></span>
+<span id="cb183-4"><a href="shiny.html#cb183-4"></a><span class="co"># server.R</span></span>
+<span id="cb183-5"><a href="shiny.html#cb183-5"></a>output<span class="op">$</span>... &lt;-<span class="st"> </span><span class="kw">renderPrint</span>({</span>
+<span id="cb183-6"><a href="shiny.html#cb183-6"></a>  <span class="kw">summary</span>(...)</span>
+<span id="cb183-7"><a href="shiny.html#cb183-7"></a>})</span></code></pre></div></li>
 </ol>
 
 <div class="exercise">
@@ -291,28 +291,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <ol style="list-style-type: decimal">
 <li><p>Dans l’onglet <strong>Data</strong> utiliser <code>navlistPanel</code> pour séparer le <code>summary</code> et la table <code>table</code> en deux onglets :</p>
-<div class="sourceCode" id="cb158"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb158-1"><a href="shiny.html#cb158-1"></a><span class="co"># rappel de la structure (ui.R)</span></span>
-<span id="cb158-2"><a href="shiny.html#cb158-2"></a><span class="kw">navlistPanel</span>(</span>
-<span id="cb158-3"><a href="shiny.html#cb158-3"></a><span class="st">&quot;Title of the structure&quot;</span>,</span>
-<span id="cb158-4"><a href="shiny.html#cb158-4"></a><span class="kw">tabPanel</span>(<span class="st">&quot;Title of the tab&quot;</span>, ... <span class="st">&quot;(content of the tab)&quot;</span>),</span>
-<span id="cb158-5"><a href="shiny.html#cb158-5"></a><span class="kw">tabPanel</span>(<span class="st">&quot;Title of the tab&quot;</span>, ... <span class="st">&quot;(content of the tab)&quot;</span>)</span>
-<span id="cb158-6"><a href="shiny.html#cb158-6"></a>)</span></code></pre></div></li>
+<div class="sourceCode" id="cb184"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb184-1"><a href="shiny.html#cb184-1"></a><span class="co"># rappel de la structure (ui.R)</span></span>
+<span id="cb184-2"><a href="shiny.html#cb184-2"></a><span class="kw">navlistPanel</span>(</span>
+<span id="cb184-3"><a href="shiny.html#cb184-3"></a><span class="st">&quot;Title of the structure&quot;</span>,</span>
+<span id="cb184-4"><a href="shiny.html#cb184-4"></a><span class="kw">tabPanel</span>(<span class="st">&quot;Title of the tab&quot;</span>, ... <span class="st">&quot;(content of the tab)&quot;</span>),</span>
+<span id="cb184-5"><a href="shiny.html#cb184-5"></a><span class="kw">tabPanel</span>(<span class="st">&quot;Title of the tab&quot;</span>, ... <span class="st">&quot;(content of the tab)&quot;</span>)</span>
+<span id="cb184-6"><a href="shiny.html#cb184-6"></a>)</span></code></pre></div></li>
 <li><p>Dans l’onglet <strong>Visualization</strong> changer <code>sidebarLayout</code> - <code>sidebarPanel</code> - <code>mainPanel</code> par un <code>fluidRow</code> à 2 colonnes :</p>
 <ul>
 <li>1/4 : pour le <code>sidebarPanel</code></li>
 <li>3/4 : pour le <code>mainPanel</code>.</li>
 </ul>
-<div class="sourceCode" id="cb159"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb159-1"><a href="shiny.html#cb159-1"></a><span class="kw">fluidRow</span>(</span>
-<span id="cb159-2"><a href="shiny.html#cb159-2"></a>  <span class="kw">column</span>(<span class="dt">width =</span> <span class="dv">3</span>, ...), <span class="co"># column 1/4 (3/12)</span></span>
-<span id="cb159-3"><a href="shiny.html#cb159-3"></a>  <span class="kw">column</span>(<span class="dt">width =</span> <span class="dv">9</span>, ...)  <span class="co"># column 3/4 (9/12)</span></span>
-<span id="cb159-4"><a href="shiny.html#cb159-4"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb185"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb185-1"><a href="shiny.html#cb185-1"></a><span class="kw">fluidRow</span>(</span>
+<span id="cb185-2"><a href="shiny.html#cb185-2"></a>  <span class="kw">column</span>(<span class="dt">width =</span> <span class="dv">3</span>, ...), <span class="co"># column 1/4 (3/12)</span></span>
+<span id="cb185-3"><a href="shiny.html#cb185-3"></a>  <span class="kw">column</span>(<span class="dt">width =</span> <span class="dv">9</span>, ...)  <span class="co"># column 3/4 (9/12)</span></span>
+<span id="cb185-4"><a href="shiny.html#cb185-4"></a>)</span></code></pre></div>
 <p><em>Indication : utiliser <code>wellPanel</code> pour la colonne de gauche.</em></p></li>
 <li><p>Ajouter un bloxplot dans l’onglet visualisation (même variable et même couleur). On pourra également utiliser <code>tabsetPanel</code> pour avoir deux onglets pour l’histogramme et le boxplot.</p>
-<div class="sourceCode" id="cb160"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb160-1"><a href="shiny.html#cb160-1"></a><span class="co"># rappel de la structure (ui.R)</span></span>
-<span id="cb160-2"><a href="shiny.html#cb160-2"></a><span class="kw">tabsetPanel</span>(</span>
-<span id="cb160-3"><a href="shiny.html#cb160-3"></a><span class="kw">tabPanel</span>(<span class="st">&quot;Title of the tab&quot;</span>, ... <span class="st">&quot;(content of the tab)&quot;</span>),</span>
-<span id="cb160-4"><a href="shiny.html#cb160-4"></a><span class="kw">tabPanel</span>(<span class="st">&quot;Title of the tab&quot;</span>, ... <span class="st">&quot;(content of the tab)&quot;</span>)</span>
-<span id="cb160-5"><a href="shiny.html#cb160-5"></a>)</span></code></pre></div></li>
+<div class="sourceCode" id="cb186"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb186-1"><a href="shiny.html#cb186-1"></a><span class="co"># rappel de la structure (ui.R)</span></span>
+<span id="cb186-2"><a href="shiny.html#cb186-2"></a><span class="kw">tabsetPanel</span>(</span>
+<span id="cb186-3"><a href="shiny.html#cb186-3"></a><span class="kw">tabPanel</span>(<span class="st">&quot;Title of the tab&quot;</span>, ... <span class="st">&quot;(content of the tab)&quot;</span>),</span>
+<span id="cb186-4"><a href="shiny.html#cb186-4"></a><span class="kw">tabPanel</span>(<span class="st">&quot;Title of the tab&quot;</span>, ... <span class="st">&quot;(content of the tab)&quot;</span>)</span>
+<span id="cb186-5"><a href="shiny.html#cb186-5"></a>)</span></code></pre></div></li>
 </ol>
 <p>L’application demandée pourra ressembler à</p>
 <iframe src="https://structure-rouviere-shiny.apps.math.cnrs.fr/?showcase=0" width="760" height="650px">
@@ -323,11 +323,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="ajout-de-graphes-interactifs" class="section level2">
 <h2><span class="header-section-number">4.4</span> Ajout de graphes interactifs</h2>
 <p>Dans l’application précédente, remplacer l’histogramme et la boxplot par des graphes javascript réalisés avec <a href="http://datastorm-open.github.io/introduction_ramcharts/">rAmCharts</a>. On pourra utiliser</p>
-<div class="sourceCode" id="cb161"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb161-1"><a href="shiny.html#cb161-1"></a><span class="co"># server.R</span></span>
-<span id="cb161-2"><a href="shiny.html#cb161-2"></a>output<span class="op">$</span>distPlot &lt;-<span class="st"> </span><span class="kw">renderAmCharts</span>({...})</span>
-<span id="cb161-3"><a href="shiny.html#cb161-3"></a></span>
-<span id="cb161-4"><a href="shiny.html#cb161-4"></a><span class="co"># ui.R</span></span>
-<span id="cb161-5"><a href="shiny.html#cb161-5"></a><span class="kw">amChartsOutput</span>(<span class="st">&quot;...&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb187"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb187-1"><a href="shiny.html#cb187-1"></a><span class="co"># server.R</span></span>
+<span id="cb187-2"><a href="shiny.html#cb187-2"></a>output<span class="op">$</span>distPlot &lt;-<span class="st"> </span><span class="kw">renderAmCharts</span>({...})</span>
+<span id="cb187-3"><a href="shiny.html#cb187-3"></a></span>
+<span id="cb187-4"><a href="shiny.html#cb187-4"></a><span class="co"># ui.R</span></span>
+<span id="cb187-5"><a href="shiny.html#cb187-5"></a><span class="kw">amChartsOutput</span>(<span class="st">&quot;...&quot;</span>)</span></code></pre></div>
 <p>L’application demandée pourra ressembler à</p>
 <iframe src="https://interactifs-rouviere-shiny-2.apps.math.cnrs.fr/?showcase=0" width="760" height="650px">
 </iframe>
@@ -339,29 +339,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li><p>ajouter un <code>actionButton</code> combiné à un <code>isolate</code> pour mettre à jour l’application uniquement lorsque l’utilisateur clique sur le bouton.</p></li>
 <li><p>Utiliser <code>observeEvent</code> pour forcer l’apparition de l’histogramme lorsqu’on met à jour l’application. On pourra utiliser</p>
-<div class="sourceCode" id="cb162"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb162-1"><a href="shiny.html#cb162-1"></a><span class="co"># think to add  &quot;session&quot; </span></span>
-<span id="cb162-2"><a href="shiny.html#cb162-2"></a><span class="kw">shinyServer</span>(<span class="cf">function</span>(input, output, session)</span>
-<span id="cb162-3"><a href="shiny.html#cb162-3"></a></span>
-<span id="cb162-4"><a href="shiny.html#cb162-4"></a><span class="co"># an id </span></span>
-<span id="cb162-5"><a href="shiny.html#cb162-5"></a><span class="kw">tabsetPanel</span>(<span class="dt">id =</span> <span class="st">&quot;viz&quot;</span>, </span>
-<span id="cb162-6"><a href="shiny.html#cb162-6"></a>  <span class="kw">tabPanel</span>(<span class="st">&quot;Histogram&quot;</span>, ...</span>
-<span id="cb162-7"><a href="shiny.html#cb162-7"></a></span>
-<span id="cb162-8"><a href="shiny.html#cb162-8"></a><span class="co"># and finaly</span></span>
-<span id="cb162-9"><a href="shiny.html#cb162-9"></a><span class="kw">observeEvent</span>(input<span class="op">$</span>go, {</span>
-<span id="cb162-10"><a href="shiny.html#cb162-10"></a><span class="kw">updateTabsetPanel</span>(session, <span class="dt">inputId =</span> <span class="st">&quot;viz&quot;</span>, <span class="dt">selected =</span> <span class="st">&quot;Histogram&quot;</span>)</span>
-<span id="cb162-11"><a href="shiny.html#cb162-11"></a>})  </span></code></pre></div></li>
+<div class="sourceCode" id="cb188"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb188-1"><a href="shiny.html#cb188-1"></a><span class="co"># think to add  &quot;session&quot; </span></span>
+<span id="cb188-2"><a href="shiny.html#cb188-2"></a><span class="kw">shinyServer</span>(<span class="cf">function</span>(input, output, session)</span>
+<span id="cb188-3"><a href="shiny.html#cb188-3"></a></span>
+<span id="cb188-4"><a href="shiny.html#cb188-4"></a><span class="co"># an id </span></span>
+<span id="cb188-5"><a href="shiny.html#cb188-5"></a><span class="kw">tabsetPanel</span>(<span class="dt">id =</span> <span class="st">&quot;viz&quot;</span>, </span>
+<span id="cb188-6"><a href="shiny.html#cb188-6"></a>  <span class="kw">tabPanel</span>(<span class="st">&quot;Histogram&quot;</span>, ...</span>
+<span id="cb188-7"><a href="shiny.html#cb188-7"></a></span>
+<span id="cb188-8"><a href="shiny.html#cb188-8"></a><span class="co"># and finaly</span></span>
+<span id="cb188-9"><a href="shiny.html#cb188-9"></a><span class="kw">observeEvent</span>(input<span class="op">$</span>go, {</span>
+<span id="cb188-10"><a href="shiny.html#cb188-10"></a><span class="kw">updateTabsetPanel</span>(session, <span class="dt">inputId =</span> <span class="st">&quot;viz&quot;</span>, <span class="dt">selected =</span> <span class="st">&quot;Histogram&quot;</span>)</span>
+<span id="cb188-11"><a href="shiny.html#cb188-11"></a>})  </span></code></pre></div></li>
 <li><p>Utiliser <code>reactive</code>pour stocker la variable sélectionnée</p>
-<div class="sourceCode" id="cb163"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb163-1"><a href="shiny.html#cb163-1"></a><span class="co"># Example of reactive</span></span>
-<span id="cb163-2"><a href="shiny.html#cb163-2"></a>data &lt;-<span class="st"> </span><span class="kw">reactive</span>({</span>
-<span id="cb163-3"><a href="shiny.html#cb163-3"></a>  ...</span>
-<span id="cb163-4"><a href="shiny.html#cb163-4"></a>})</span>
-<span id="cb163-5"><a href="shiny.html#cb163-5"></a></span>
-<span id="cb163-6"><a href="shiny.html#cb163-6"></a>output<span class="op">$</span>plot &lt;-<span class="st"> </span><span class="kw">renderPlot</span>({</span>
-<span id="cb163-7"><a href="shiny.html#cb163-7"></a>  x &lt;-<span class="st"> </span><span class="kw">data</span>()</span>
-<span id="cb163-8"><a href="shiny.html#cb163-8"></a>  ...</span>
-<span id="cb163-9"><a href="shiny.html#cb163-9"></a>})</span></code></pre></div></li>
+<div class="sourceCode" id="cb189"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb189-1"><a href="shiny.html#cb189-1"></a><span class="co"># Example of reactive</span></span>
+<span id="cb189-2"><a href="shiny.html#cb189-2"></a>data &lt;-<span class="st"> </span><span class="kw">reactive</span>({</span>
+<span id="cb189-3"><a href="shiny.html#cb189-3"></a>  ...</span>
+<span id="cb189-4"><a href="shiny.html#cb189-4"></a>})</span>
+<span id="cb189-5"><a href="shiny.html#cb189-5"></a></span>
+<span id="cb189-6"><a href="shiny.html#cb189-6"></a>output<span class="op">$</span>plot &lt;-<span class="st"> </span><span class="kw">renderPlot</span>({</span>
+<span id="cb189-7"><a href="shiny.html#cb189-7"></a>  x &lt;-<span class="st"> </span><span class="kw">data</span>()</span>
+<span id="cb189-8"><a href="shiny.html#cb189-8"></a>  ...</span>
+<span id="cb189-9"><a href="shiny.html#cb189-9"></a>})</span></code></pre></div></li>
 <li><p>Ajouter un titre en bleu sur le jeu de données. On pourra utiliser <code>h1</code></p>
-<div class="sourceCode" id="cb164"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb164-1"><a href="shiny.html#cb164-1"></a><span class="kw">h1</span>(<span class="st">&quot;Dataset&quot;</span>, <span class="dt">style =</span> <span class="st">&quot;color : #0099ff;text-align:center&quot;</span>)</span></code></pre></div></li>
+<div class="sourceCode" id="cb190"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb190-1"><a href="shiny.html#cb190-1"></a><span class="kw">h1</span>(<span class="st">&quot;Dataset&quot;</span>, <span class="dt">style =</span> <span class="st">&quot;color : #0099ff;text-align:center&quot;</span>)</span></code></pre></div></li>
 <li><p>Ajouter un troisième onglet pour présenter un résumé de votre Uinersité, avec un logo de l’institution et un lien vers son site web.</p></li>
 <li><p><strong>Pour aller plus loin</strong> : changer le thème de l’application avec un fichier de style <code>.css</code>. On pourra par exemple utiliser bootswatch <a href="http://bootswatch.com/3" class="uri">http://bootswatch.com/3</a>.</p></li>
 </ul>
@@ -380,18 +380,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>On considère le jeu de données <em>SAheart</em> du package <strong>bestglm</strong>.</p>
 <ol style="list-style-type: decimal">
 <li><p>A l’aide du package <strong>rAmCharts</strong>, représenter les histogrammes des variables quantitatives du jeu de données ainsi que les boxplots de ces variables en fonction de la variable <strong>chd</strong>.</p>
-<div class="sourceCode" id="cb165"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb165-1"><a href="shiny.html#cb165-1"></a><span class="kw">library</span>(bestglm)</span>
-<span id="cb165-2"><a href="shiny.html#cb165-2"></a><span class="kw">amHist</span>(SAheart<span class="op">$</span>adiposity,<span class="dt">freq=</span><span class="ot">FALSE</span>,<span class="dt">xlab=</span><span class="st">&quot;adiposity&quot;</span>)</span></code></pre></div>
-<div id="htmlwidget-3138204c43c56206af5f" style="width:100%;height:500px;" class="ramcharts_base html-widget"></div>
-<script type="application/json" data-for="htmlwidget-3138204c43c56206af5f">{"x":{"chartData":{"columnSpacing":0,"columnWidth":1,"fillAlphas":1,"lineAlpha":1,"categoryAxis":{"title":"adiposity"},"categoryField":"x","creditsPosition":"bottom-right","dataProvider":[{"x":7.5,"y":0.004,"cut":"(from 5 to 10)","color":"#1e90ff"},{"x":12.5,"y":0.019,"cut":"(from 10 to 15)","color":"#1e90ff"},{"x":17.5,"y":0.028,"cut":"(from 15 to 20)","color":"#1e90ff"},{"x":22.5,"y":0.038,"cut":"(from 20 to 25)","color":"#1e90ff"},{"x":27.5,"y":0.051,"cut":"(from 25 to 30)","color":"#1e90ff"},{"x":32.5,"y":0.039,"cut":"(from 30 to 35)","color":"#1e90ff"},{"x":37.5,"y":0.019,"cut":"(from 35 to 40)","color":"#1e90ff"},{"x":42.5,"y":0.002,"cut":"(from 40 to 45)","color":"#1e90ff"}],"graphs":[{"animationPlayed":false,"fillAlphas":0.8,"lineAlpha":1,"fillColorsField":"color","lineColor":"#1e90ff","labelText":"","balloonText":"<b>[[value]]<\/b> <br/> [[cut]] ","type":"column","valueField":"y"}],"theme":"light","type":"serial","valueAxes":[{"minimum":0,"maximum":0.05355,"title":"Density"}]},"background":"#ffffff","listeners":null,"axes_listeners":null,"axes_listenersIndices":null,"categoryAxis_listeners":null,"chartCursor_listeners":null,"dataSetSelector_listeners":null,"legend_listeners":null,"panels_listeners":null,"panels_listenersIndices":null,"periodSelector_listeners":null,"valueAxes_listeners":null,"valueAxes_listenersIndices":[],"stockLegend_listeners":null,"group":null,"is_ts_module":false},"evals":[],"jsHooks":[]}</script>
+<div class="sourceCode" id="cb191"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb191-1"><a href="shiny.html#cb191-1"></a><span class="kw">library</span>(bestglm)</span>
+<span id="cb191-2"><a href="shiny.html#cb191-2"></a><span class="kw">amHist</span>(SAheart<span class="op">$</span>adiposity,<span class="dt">freq=</span><span class="ot">FALSE</span>,<span class="dt">xlab=</span><span class="st">&quot;adiposity&quot;</span>)</span></code></pre></div>
+<div id="htmlwidget-a6b295ebc110f939c06a" style="width:100%;height:500px;" class="ramcharts_base html-widget"></div>
+<script type="application/json" data-for="htmlwidget-a6b295ebc110f939c06a">{"x":{"chartData":{"columnSpacing":0,"columnWidth":1,"fillAlphas":1,"lineAlpha":1,"categoryAxis":{"title":"adiposity"},"categoryField":"x","creditsPosition":"bottom-right","dataProvider":[{"x":7.5,"y":0.004,"cut":"(from 5 to 10)","color":"#1e90ff"},{"x":12.5,"y":0.019,"cut":"(from 10 to 15)","color":"#1e90ff"},{"x":17.5,"y":0.028,"cut":"(from 15 to 20)","color":"#1e90ff"},{"x":22.5,"y":0.038,"cut":"(from 20 to 25)","color":"#1e90ff"},{"x":27.5,"y":0.051,"cut":"(from 25 to 30)","color":"#1e90ff"},{"x":32.5,"y":0.039,"cut":"(from 30 to 35)","color":"#1e90ff"},{"x":37.5,"y":0.019,"cut":"(from 35 to 40)","color":"#1e90ff"},{"x":42.5,"y":0.002,"cut":"(from 40 to 45)","color":"#1e90ff"}],"graphs":[{"animationPlayed":false,"fillAlphas":0.8,"lineAlpha":1,"fillColorsField":"color","lineColor":"#1e90ff","labelText":"","balloonText":"<b>[[value]]<\/b> <br/> [[cut]] ","type":"column","valueField":"y"}],"theme":"light","type":"serial","valueAxes":[{"minimum":0,"maximum":0.05355,"title":"Density"}]},"background":"#ffffff","listeners":null,"axes_listeners":null,"axes_listenersIndices":null,"categoryAxis_listeners":null,"chartCursor_listeners":null,"dataSetSelector_listeners":null,"legend_listeners":null,"panels_listeners":null,"panels_listenersIndices":null,"periodSelector_listeners":null,"valueAxes_listeners":null,"valueAxes_listenersIndices":[],"stockLegend_listeners":null,"group":null,"is_ts_module":false},"evals":[],"jsHooks":[]}</script>
 amBoxplot(adiposity~chd,data=SAheart)
-<div id="htmlwidget-e5c88fc252b5e4ab8b2d" style="width:100%;height:500px;" class="ramcharts_base html-widget"></div>
-<script type="application/json" data-for="htmlwidget-e5c88fc252b5e4ab8b2d">{"x":{"chartData":{"rotate":false,"categoryField":"cat","dataProvider":[{"cat":"0","low_outlier":6.74,"low":6.74,"open":17.42,"median":24.62,"close":29.98,"high":42.06,"high_outlier":42.06,"color":"#1e90ff"},{"cat":"1","low_outlier":9.39,"low":9.39,"open":23.41,"median":28.41,"close":33.62,"high":42.49,"high_outlier":42.49,"color":"#1e90ff"}],"graphs":[{"animationPlayed":false,"id":"g1","closeField":"close","fillColorsField":"color","highField":"high","lineColor":"#7f8da9","lineAlpha":1,"lowField":"low","fillAlphas":"0.9","negativeLineColor":"#7f8da9","openField":"open","columnWidth":0.4,"balloonText":"High = <b>[[high_outlier]]<\/b><br/>3rd quart. = <b>[[close]]<\/b><br/>Median = <b>[[median]]<\/b><br/>1st quart. = <b>[[open]]<\/b><br/>Low = <b>[[low_outlier]]<\/b><br/>","title":"Price:","type":"candlestick","valueField":"close"},{"animationPlayed":false,"id":"g2","lineColor":"black","noStepRisers":true,"lineThickness":3,"periodSpan":0.4,"balloonText":"","type":"step","valueField":"median"},{"animationPlayed":false,"id":"g3","lineColor":"black","noStepRisers":true,"periodSpan":0.3,"balloonText":"","type":"step","valueField":"low_outlier"},{"animationPlayed":false,"id":"g4","lineColor":"black","noStepRisers":true,"periodSpan":0.3,"balloonText":"","type":"step","valueField":"high_outlier"},{"animationPlayed":false,"id":"g5","lineColor":"black","lineAlpha":0,"bullet":"round","noStepRisers":true,"periodSpan":0.5,"balloonText":"","type":"line","valueField":"real_outlier"},{"animationPlayed":false,"lineColor":"black","lineAlpha":0,"bullet":"round","noStepRisers":true,"periodSpan":0.5,"balloonText":"[[individual_1]]<br/><b> Value <\/b>: [[real_outlier_1]]","type":"line","valueField":"real_outlier_1"}],"theme":"light","type":"serial"},"background":"#ffffff","listeners":null,"axes_listeners":null,"axes_listenersIndices":null,"categoryAxis_listeners":null,"chartCursor_listeners":null,"dataSetSelector_listeners":null,"legend_listeners":null,"panels_listeners":null,"panels_listenersIndices":null,"periodSelector_listeners":null,"valueAxes_listeners":null,"valueAxes_listenersIndices":null,"stockLegend_listeners":null,"group":null,"is_ts_module":false},"evals":[],"jsHooks":[]}</script></li>
+<div id="htmlwidget-e3f02ed43e1ec883d98f" style="width:100%;height:500px;" class="ramcharts_base html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e3f02ed43e1ec883d98f">{"x":{"chartData":{"rotate":false,"categoryField":"cat","dataProvider":[{"cat":"0","low_outlier":6.74,"low":6.74,"open":17.42,"median":24.62,"close":29.98,"high":42.06,"high_outlier":42.06,"color":"#1e90ff"},{"cat":"1","low_outlier":9.39,"low":9.39,"open":23.41,"median":28.41,"close":33.62,"high":42.49,"high_outlier":42.49,"color":"#1e90ff"}],"graphs":[{"animationPlayed":false,"id":"g1","closeField":"close","fillColorsField":"color","highField":"high","lineColor":"#7f8da9","lineAlpha":1,"lowField":"low","fillAlphas":"0.9","negativeLineColor":"#7f8da9","openField":"open","columnWidth":0.4,"balloonText":"High = <b>[[high_outlier]]<\/b><br/>3rd quart. = <b>[[close]]<\/b><br/>Median = <b>[[median]]<\/b><br/>1st quart. = <b>[[open]]<\/b><br/>Low = <b>[[low_outlier]]<\/b><br/>","title":"Price:","type":"candlestick","valueField":"close"},{"animationPlayed":false,"id":"g2","lineColor":"black","noStepRisers":true,"lineThickness":3,"periodSpan":0.4,"balloonText":"","type":"step","valueField":"median"},{"animationPlayed":false,"id":"g3","lineColor":"black","noStepRisers":true,"periodSpan":0.3,"balloonText":"","type":"step","valueField":"low_outlier"},{"animationPlayed":false,"id":"g4","lineColor":"black","noStepRisers":true,"periodSpan":0.3,"balloonText":"","type":"step","valueField":"high_outlier"},{"animationPlayed":false,"id":"g5","lineColor":"black","lineAlpha":0,"bullet":"round","noStepRisers":true,"periodSpan":0.5,"balloonText":"","type":"line","valueField":"real_outlier"},{"animationPlayed":false,"lineColor":"black","lineAlpha":0,"bullet":"round","noStepRisers":true,"periodSpan":0.5,"balloonText":"[[individual_1]]<br/><b> Value <\/b>: [[real_outlier_1]]","type":"line","valueField":"real_outlier_1"}],"theme":"light","type":"serial"},"background":"#ffffff","listeners":null,"axes_listeners":null,"axes_listenersIndices":null,"categoryAxis_listeners":null,"chartCursor_listeners":null,"dataSetSelector_listeners":null,"legend_listeners":null,"panels_listeners":null,"panels_listenersIndices":null,"periodSelector_listeners":null,"valueAxes_listeners":null,"valueAxes_listenersIndices":null,"stockLegend_listeners":null,"group":null,"is_ts_module":false},"evals":[],"jsHooks":[]}</script></li>
 <li><p>Créer une application shiny avec <a href="https://rstudio.github.io/shinydashboard/index.html">shinydashboard</a> qui permette de</p>
 <ul>
 <li>choisir une variable parmi les variables quantitatives du jeu de données. On pourra utiliser <strong>radioButtons</strong> avec l’argument</li>
 </ul>
-<div class="sourceCode" id="cb166"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb166-1"><a href="shiny.html#cb166-1"></a>choices=<span class="kw">names</span>(SAheart)[<span class="kw">sapply</span>(SAheart,class)<span class="op">==</span><span class="st">&quot;numeric&quot;</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb192"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb192-1"><a href="shiny.html#cb192-1"></a>choices=<span class="kw">names</span>(SAheart)[<span class="kw">sapply</span>(SAheart,class)<span class="op">==</span><span class="st">&quot;numeric&quot;</span>]</span></code></pre></div>
 <ul>
 <li>visualiser l’histogramme, puis le boxplot en fonction de <em>chd</em> de la variable sélectionnée. Ces graphiques devront être faits avec <strong>rAmCharts</strong>. On pourra utiliser <strong>amChartsOutput</strong>. L’application demandée pourra ressembler à</li>
 </ul>

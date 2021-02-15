@@ -620,9 +620,6 @@ format(object.size(regions1),units="Mb")
 ggplot(regions1)+geom_sf()+
   coord_sf(xlim = c(-5.5,10),ylim=c(41,51))+theme_void()
 
-## ----echo=FALSE-------------------------------------------
-correct <- FALSE
-
 ## ----message=FALSE, warning=FALSE-------------------------
 library(leaflet)
 leaflet() %>% addTiles()
@@ -659,6 +656,17 @@ leaflet() %>% addTiles() %>%
     options = popupOptions(closeButton = FALSE)
   )
 
+## ---- teacher=correct-------------------------------------
+R2 <- mygeocode("Universite Rennes 2 Villejean") %>% as_tibble()
+info <- paste(sep = "<br/>",
+  "<b><a href='https://www.univ-rennes2.fr'>Universite Rennes 2</a></b>",
+  "Campus Villejean")
+
+
+leaflet() %>% addTiles() %>%  
+  addPopups(R2[1]$lon, R2[2]$lat, info,options = popupOptions(closeButton = FALSE))
+
+
 ## ----echo=FALSE,eval=FALSE--------------------------------
 #  #Pour éviter les problèmes de changement
 #  sta.Paris <- read_delim("https://opendata.paris.fr/explore/dataset/velib-disponibilite-en-temps-reel/download/?format=csv&timezone=Europe/Berlin&use_labels_for_header=true",delim=";")
@@ -677,11 +685,75 @@ sta.Paris1 <- sta.Paris %>% separate(`Coordonnées géographiques`,
                                  into=c("lat","lon"),sep=",") %>% 
   mutate(lat=as.numeric(lat),lon=as.numeric(lon))
 
+## ---- teacher=correct-------------------------------------
+map.velib1 <- leaflet(data = sta.Paris1) %>% 
+  addTiles() %>%
+  addCircleMarkers(~ lon, ~ lat,radius=3,
+stroke = FALSE, fillOpacity = 0.5,color="red"
+  )
+
+map.velib1
+
+## ----teacher=correct--------------------------------------
+map.velib2 <- leaflet(data = sta.Paris1) %>% 
+  addTiles() %>% 
+  addCircleMarkers(~ lon, ~ lat,radius=3,stroke = FALSE, 
+               fillOpacity = 0.7,color="red", 
+               popup = ~ sprintf("<b> Vélos dispos: %s</b>",
+                                 as.character(`Nombre total vélos disponibles`)))
+
+#ou sans sprintf
+
+map.velib2 <- leaflet(data = sta.Paris1) %>% 
+  addTiles() %>% 
+  addCircleMarkers(~ lon, ~ lat,radius=3,stroke = FALSE, fillOpacity = 0.7,color="red", 
+               popup = ~ paste("Vélos dispos :",
+                               as.character(`Nombre total vélos disponibles`)))
+
+map.velib2
+
+## ----teacher=correct--------------------------------------
+map.velib3 <- leaflet(data = sta.Paris1) %>% 
+  addTiles() %>%
+  addCircleMarkers(~ lon, ~ lat,radius=3,stroke = FALSE, 
+               fillOpacity = 0.7,color="red", 
+               popup = ~ paste(as.character(`Nom station`),", Vélos dispos :",
+                               as.character(`Nombre total vélos disponibles`),
+                               sep=""))
+
+map.velib3
+
 ## ---------------------------------------------------------
 ColorPal1 <- colorNumeric(scales::seq_gradient_pal(low = "#132B43", high = "#56B1F7",
                                                space = "Lab"), domain = c(0,1))
 ColorPal2 <- colorNumeric(scales::seq_gradient_pal(low = "red", high = "black", 
                                                space = "Lab"), domain = c(0,1))
+
+## ---- teacher=correct-------------------------------------
+map.velib4 <- leaflet(data = sta.Paris1) %>% 
+  addTiles() %>%
+  addCircleMarkers(~ lon, ~ lat,radius=3,stroke = FALSE, fillOpacity = 0.7,
+               color=~ColorPal1(`Nombre total vélos disponibles`/
+                                  `Capacité de la station`), 
+               popup = ~ paste(as.character(`Nom station`),", Vélos dispos :",
+                               as.character(`Nombre total vélos disponibles`),
+                               sep=""))
+
+map.velib4
+
+## ----teachar=correct--------------------------------------
+map.velib5 <- leaflet(data = sta.Paris1) %>% 
+  addTiles() %>%
+  addCircleMarkers(~ lon, ~ lat,stroke = FALSE, fillOpacity = 0.7,
+               color=~ColorPal2(`Nombre total vélos disponibles`/
+                                  `Capacité de la station`),
+               radius=~(`Nombre total vélos disponibles`/
+                          `Capacité de la station`)*8,
+               popup = ~ paste(as.character(`Nom station`),", Vélos dispos :",
+                               as.character(`Nombre total vélos disponibles`),
+                               sep=""))
+
+map.velib5
 
 ## ----echo=correct,eval=TRUE-------------------------------
 nom.station <- "Jussieu - Fossés Saint-Bernard"
@@ -702,13 +774,40 @@ addMarkers(lng=df$lon,lat=df$lat,
 
 ## ---------------------------------------------------------
 local.station("Jussieu - Fossés Saint-Bernard")
+
+## ---------------------------------------------------------
 local.station("Gare Montparnasse - Arrivée")
+
+## ----teacher=correct--------------------------------------
+dpt2 <- st_transform(dpt1, crs = 4326)
+dpt2$t_prev <- round(dpt2$t_prev)
+pal <- colorNumeric(scales::seq_gradient_pal(low = "yellow", high = "red",
+                                             space = "Lab"), domain = dpt2$t_prev)
+m <- leaflet() %>% addTiles() %>% 
+  addPolygons(data = dpt2,color=~pal(t_prev),fillOpacity = 0.6, 
+              stroke = TRUE,weight=1,
+              popup=~paste(as.character(NOM_DEPT),as.character(t_prev),sep=" : ")) %>% 
+  addLayersControl(options=layersControlOptions(collapsed = FALSE))
+m
+
+## ----teacher=correct--------------------------------------
+pal1 <- colorNumeric(palette = c("inferno"),domain = dpt2$t_prev)
+m1 <- leaflet() %>% addTiles() %>% 
+  addPolygons(data = dpt2,color=~pal1(t_prev),fillOpacity = 0.6, 
+              stroke = TRUE,weight=1,
+              popup=~paste(as.character(NOM_DEPT),as.character(t_prev),sep=" : ")) %>% 
+  addLayersControl(options=layersControlOptions(collapsed = FALSE))
+m1
 
 ## ---------------------------------------------------------
 library(rAmCharts)
 amHist(iris$Petal.Length)
+
+## ---------------------------------------------------------
 amPlot(iris, col = colnames(iris)[1:2], type = c("l", "st"), 
        zoom = TRUE, legend = TRUE)
+
+## ---------------------------------------------------------
 amBoxplot(iris)
 
 ## ----message=FALSE, warning=FALSE-------------------------
@@ -730,6 +829,8 @@ D %>% plot_ly(x=~X,y=~Y) %>%
 
 ## ----name="plotly_html",eval=!comp_pdf,echo=!comp_pdf-----
 plot_ly(z = volcano, type = "surface")
+
+## ---------------------------------------------------------
 plot_ly(z = volcano, type = "contour")
 
 ## ----eval=FALSE,echo=FALSE--------------------------------
@@ -765,8 +866,14 @@ nodes <- data.frame(id = 1:15, label = paste("Id", 1:15),
 edges <- data.frame(from = trunc(runif(15)*(15-1))+1,to = trunc(runif(15)*(15-1))+1)
 library(visNetwork)
 visNetwork(nodes,edges)
+
+## ---------------------------------------------------------
 visNetwork(nodes, edges) %>% visOptions(highlightNearest = TRUE)
+
+## ---------------------------------------------------------
 visNetwork(nodes, edges) %>% visOptions(highlightNearest = TRUE, nodesIdSelection = TRUE)
+
+## ---------------------------------------------------------
 visNetwork(nodes, edges) %>% visOptions(selectedBy = "group")
 
 ## ---------------------------------------------------------
@@ -783,6 +890,25 @@ V(media)$name <- nodes$media
 ## ---------------------------------------------------------
 plot(media)
 
+## ----teacher=correct--------------------------------------
+media.VN <- toVisNetworkData(media)
+visNetwork(nodes=media.VN$nodes,edges=media.VN$edges)
+
+## ----teacher=correct--------------------------------------
+visNetwork(nodes=media.VN$nodes,edges=media.VN$edges) %>% 
+  visOptions(selectedBy = "type.label") 
+
+## ----teacher=correct--------------------------------------
+media.VN1 <- media.VN
+names(media.VN1$nodes)[3] <- "group"
+visNetwork(nodes=media.VN1$nodes,edges=media.VN1$edges) %>% 
+  visOptions(selectedBy = "type.label")
+
+## ----teacher=correct--------------------------------------
+names(media.VN1$edges)[3] <- "value"
+visNetwork(nodes=media.VN1$nodes,edges=media.VN1$edges) %>% 
+  visOptions(selectedBy = "type.label",highlightNearest = TRUE) 
+
 ## ----echo=FALSE,eval=FALSE,indent='    '------------------
 #  df <- read.table("data/ozone.txt")
 #  gg.nuage <- ggplot(df)+aes(x=T12,y=maxO3)+geom_point()+geom_smooth()
@@ -790,6 +916,23 @@ plot(media)
 #  p12 <- predict(modT12) %>% as.numeric()
 #  am.nuage <- amPlot(x=df$T12,y=df$maxO3) %>% amLines(y=p12,type="line")
 #  pl.nuage <- ggplotly(gg.nuage)
+
+## ----teacher=correct,indent='        '--------------------
+df <- read.table("data/ozone.txt")
+cc <- cor(df[,1:11])
+mat.cor <- corrplot::corrplot(cc)
+
+## ----teacher=correct,indent='        '--------------------
+gg.H <- ggplot(df)+aes(x=maxO3)+geom_histogram(bins = 10)
+am.H <- amHist(df$maxO3)
+pl.H <- ggplotly(gg.H)
+
+## ----teacher=correct,indent='        '--------------------
+mod <- lm(maxO3~.,data=df)
+res <- rstudent(mod)
+df1 <- data.frame(maxO3=df$maxO3,r.student=res)
+Ggg <- ggplot(df1)+aes(x=maxO3,y=res)+geom_point()+geom_smooth()
+Gggp <- ggplotly(Ggg)
 
 ## ----eval=FALSE,indent='        '-------------------------
 #  radioButtons("variable1",
