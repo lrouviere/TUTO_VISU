@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2021.3.12)  23 SEP 2021 10:10
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.10.27)  17 DEC 2021 12:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -118,12 +118,8 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
-) (/usr/local/texlive/2020/texmf-dist/tex/generic/iftex/ifxetex.sty
-Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
-(/usr/local/texlive/2020/texmf-dist/tex/generic/iftex/iftex.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2020/03/06 v1.0d TeX engine tests
-)) (/usr/local/texlive/2020/texmf-dist/tex/generic/iftex/ifluatex.sty
-Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/unicode-math/unicode-math.sty (
 /usr/local/texlive/2020/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2020-03-06 L3 programming layer (loader) 
@@ -496,7 +492,7 @@ LaTeX Info: Redefining \degres on input line 782.
 \parindentFFN=\dimen192
 \FBfnindent=\dimen193
 )) (/usr/local/texlive/2020/texmf-dist/tex/latex/carlisle/scalefnt.sty)
-Package hyperref Info: Option `colorlinks' set `true' on input line 123.
+Package hyperref Info: Option `colorlinks' set `true' on input line 127.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/sectsty/sectsty.sty
 Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
 les
@@ -525,12 +521,12 @@ LaTeX Warning: Command \markright  has changed.
 \tf@code=\write4
 \openout4 = `TUTO_VISU.adx'.
 
-Package index Info: Writing index file TUTO_VISU.adx on input line 142.
+Package index Info: Writing index file TUTO_VISU.adx on input line 146.
 \idxtitle@default=\toks28
 \tf@default=\write5
 \openout5 = `TUTO_VISU.idx'.
 
-Package index Info: Writing index file TUTO_VISU.idx on input line 152.
+Package index Info: Writing index file TUTO_VISU.idx on input line 156.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
 \labelindent=\skip63
@@ -565,43 +561,44 @@ Package: amsthm 2017/10/31 v2.20.4
 \c@definition=\count322
 \c@example=\count323
 \c@exercise=\count324
+\c@hypothesis=\count325
 (./TUTO_VISU.aux)
 \openout1 = `TUTO_VISU.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 246.
-LaTeX Font Info:    ... okay on input line 246.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 246.
-LaTeX Font Info:    ... okay on input line 246.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 246.
-LaTeX Font Info:    ... okay on input line 246.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 246.
-LaTeX Font Info:    ... okay on input line 246.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 246.
-LaTeX Font Info:    ... okay on input line 246.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 246.
-LaTeX Font Info:    ... okay on input line 246.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 246.
-LaTeX Font Info:    ... okay on input line 246.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 246.
-LaTeX Font Info:    ... okay on input line 246.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 246.
-LaTeX Font Info:    ... okay on input line 246.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 246.
-LaTeX Font Info:    ... okay on input line 246.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 248.
+LaTeX Font Info:    ... okay on input line 248.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 248.
+LaTeX Font Info:    ... okay on input line 248.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 248.
+LaTeX Font Info:    ... okay on input line 248.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 248.
+LaTeX Font Info:    ... okay on input line 248.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 248.
+LaTeX Font Info:    ... okay on input line 248.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 248.
+LaTeX Font Info:    ... okay on input line 248.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 248.
+LaTeX Font Info:    ... okay on input line 248.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 248.
+LaTeX Font Info:    ... okay on input line 248.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 248.
+LaTeX Font Info:    ... okay on input line 248.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 248.
+LaTeX Font Info:    ... okay on input line 248.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/lmr/m/n --> TU/lmr/m/n on input line 246.
+(Font)                  OT1/lmr/m/n --> TU/lmr/m/n on input line 248.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> TU/lmr/m/it on input line 246.
+(Font)                  OT1/lmr/m/it --> TU/lmr/m/it on input line 248.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> TU/lmr/bx/n on input line 246.
+(Font)                  OT1/lmr/bx/n --> TU/lmr/bx/n on input line 248.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 246.
+(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 248.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> TU/lmss/bx/n on input line 246.
+(Font)                  OT1/lmss/bx/n --> TU/lmss/bx/n on input line 248.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 246.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 248.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/bx/n on input line 246.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/bx/n on input line 248.
 
 Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
 
@@ -630,7 +627,7 @@ pt=math;language=dflt;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 246.
+(Font)              scaled to size 10.0pt on input line 248.
 
 Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
 
@@ -669,18 +666,18 @@ pt=math;language=dflt;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 246.
+(Font)              scaled to size 10.0pt on input line 248.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 246.
+(Font)              `operators' in the math version `normal' on input line 248.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/lmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input
- line 246.
+ line 248.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 246.
+(Font)              `operators' in the math version `bold' on input line 248.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/lmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on inpu
-t line 246.
+t line 248.
 
 Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
 
@@ -767,15 +764,15 @@ t=math;language=dflt;"
 (fontspec)             \fontdimen 21\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 246.
+(Font)              `symbols' in the math version `normal' on input line 248.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
 (Font)                  OMS/lmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on inpu
-t line 246.
+t line 248.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 246.
+(Font)              `symbols' in the math version `bold' on input line 248.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  OMS/lmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on inpu
-t line 246.
+t line 248.
 
 Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
 
@@ -845,17 +842,17 @@ pt=math;language=dflt;"
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
 (Font)              `largesymbols' in the math version `normal' on input line 2
-46.
+48.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
 (Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/m/n on inpu
-t line 246.
+t line 248.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 246
+(Font)              `largesymbols' in the math version `bold' on input line 248
 .
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/b/n on inpu
-t line 246.
-LaTeX Info: Redefining \microtypecontext on input line 246.
+t line 248.
+LaTeX Info: Redefining \microtypecontext on input line 248.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
 Package microtype Info: No adjustment of tracking.
@@ -867,7 +864,7 @@ File: mt-LatinModernRoman.cfg 2013/03/13 v1.0 microtype config. file: Latin Mod
 ern Roman (RS)
 )
 \AtBeginShipoutBox=\box58
-Package hyperref Info: Link coloring ON on input line 246.
+Package hyperref Info: Link coloring ON on input line 248.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 (/usr/local/texlive/2020/texmf-dist/tex/latex/refcount/refcount.sty
@@ -877,11 +874,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count325
+\c@section@level=\count326
 )
-LaTeX Info: Redefining \ref on input line 246.
-LaTeX Info: Redefining \pageref on input line 246.
-LaTeX Info: Redefining \nameref on input line 246.
+LaTeX Info: Redefining \ref on input line 248.
+LaTeX Info: Redefining \pageref on input line 248.
+LaTeX Info: Redefining \nameref on input line 248.
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
@@ -916,45 +913,45 @@ LaTeX Info: Redefining \nameref on input line 246.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \dots on input line 246.
+LaTeX Info: Redefining \dots on input line 248.
 Package french.ldf Info: Setting StandardItemizeEnv=true for
 (french.ldf)             compatibility with enumitem package,
-(french.ldf)             reported on input line 246.
+(french.ldf)             reported on input line 248.
 Package french.ldf Info: Setting StandardEnumerateEnv=true for
 (french.ldf)             compatibility with enumitem package,
-(french.ldf)             reported on input line 246.
-LaTeX Info: Redefining \up on input line 246.
+(french.ldf)             reported on input line 248.
+LaTeX Info: Redefining \up on input line 248.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 248.
+(Font)              scaled to size 12.0pt on input line 250.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 248.
+(Font)              scaled to size 8.0pt on input line 250.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 248.
+(Font)              scaled to size 6.0pt on input line 250.
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 2
-48.
+50.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 12.0011pt on input line 248.
+(Font)              scaled to size 12.0011pt on input line 250.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 8.00073pt on input line 248.
+(Font)              scaled to size 8.00073pt on input line 250.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 6.00055pt on input line 248.
+(Font)              scaled to size 6.00055pt on input line 250.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 11.99872pt on input line 248.
+(Font)              scaled to size 11.99872pt on input line 250.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.99915pt on input line 248.
+(Font)              scaled to size 7.99915pt on input line 250.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.99936pt on input line 248.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 248
+(Font)              scaled to size 5.99936pt on input line 250.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 250
 .
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 248
+LaTeX Font Info:    Trying to load font information for U+msb on input line 250
 .
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1026,15 +1023,15 @@ f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-12-3.pdf>
 [9] [10]
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 527.
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 540.
 [11]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-32-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-32-1.pdf>
-[12]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-33-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-33-1.pdf>
+[12]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-33-2.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-33-2.pdf>
@@ -1042,7 +1039,12 @@ f)
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-33-3.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-33-3.pdf>
-[14] [15]
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 641--642
+
+ []
+
+[15]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-39-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-39-1.pdf>
@@ -1059,124 +1061,126 @@ File: TUTO_VISU_files/figure-latex/unnamed-chunk-45-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-45-1.pdf>
 [19] [20]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-50-1.pdf Graphic file (type pd
-f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-50-1.pdf>
-[21]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-51-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-51-1.pdf>
-[22]
+[21]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-52-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-52-1.pdf>
+[22]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-53-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-53-1.pdf>
-[23]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-54-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-54-1.pdf>
-[24]
+[23]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-55-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-55-1.pdf>
-[25]
+[24]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-56-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-56-1.pdf>
-[26]
+[25]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-57-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-57-1.pdf>
-[27]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-57-2.pdf Graphic file (type pd
-f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-57-2.pdf>
-[28]
+[26]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-58-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-58-1.pdf>
-[29]
+[27]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-58-2.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-58-2.pdf>
+[28]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-59-1.pdf Graphic file (type pd
+f)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-59-1.pdf>
+[29]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-59-2.pdf Graphic file (type pd
+f)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-59-2.pdf>
 [30]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-60-1.pdf Graphic file (type pd
-f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-60-1.pdf>
-[31]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-60-2.pdf Graphic file (type pd
-f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-60-2.pdf>
-[32]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-60-3.pdf Graphic file (type pd
-f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-60-3.pdf>
-[33]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-61-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-61-1.pdf>
-[34]
+[31]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-61-2.pdf Graphic file (type pd
+f)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-61-2.pdf>
+[32]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-61-3.pdf Graphic file (type pd
+f)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-61-3.pdf>
+[33]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-62-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-62-1.pdf>
+[34]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-63-1.pdf Graphic file (type pd
+f)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-63-1.pdf>
 [35]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-62-2.pdf Graphic file (type pd
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-63-2.pdf Graphic file (type pd
 f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-62-2.pdf>
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-63-2.pdf>
 [36]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-62-3.pdf Graphic file (type pd
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-63-3.pdf Graphic file (type pd
 f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-62-3.pdf>
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-63-3.pdf>
 [37]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-62-4.pdf Graphic file (type pd
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-63-4.pdf Graphic file (type pd
 f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-62-4.pdf>
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-63-4.pdf>
 [38] [39]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-80-1.pdf Graphic file (type pd
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-81-1.pdf Graphic file (type pd
 f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-80-1.pdf>
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-81-1.pdf>
 [40]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-80-2.pdf Graphic file (type pd
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-81-2.pdf Graphic file (type pd
 f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-80-2.pdf>
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-80-3.pdf Graphic file (type pd
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-81-2.pdf>
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-81-3.pdf Graphic file (type pd
 f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-80-3.pdf>
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-81-3.pdf>
 [41]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-83-1.pdf Graphic file (type pd
-f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-83-1.pdf>
-[42]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-84-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-84-1.pdf>
-[43]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-89-1.pdf Graphic file (type pd
+[42]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-85-1.pdf Graphic file (type pd
 f)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-89-1.pdf>
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-85-1.pdf>
+[43]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-90-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-90-1.pdf>
-[44]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-91-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-91-1.pdf>
-[45]
+[44]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-92-1.pdf Graphic file (type pd
 f)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-92-1.pdf>
+[45]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-93-1.pdf Graphic file (type pd
+f)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-93-1.pdf>
 [46]
 
 LaTeX Font Warning: Font shape `TU/lmtt/bx/it' in size <10> not available
-(Font)              Font shape `TU/lmtt/b/sl' tried instead on input line 1300.
+(Font)              Font shape `TU/lmtt/b/sl' tried instead on input line 1328.
 
 
-[47] [48]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-104-1.pdf Graphic file (type p
-df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-104-1.pdf>
+[47]
+Underfull \hbox (badness 10000) in paragraph at lines 1366--1367
+
+ []
+
+[48]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-105-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-105-1.pdf>
@@ -1184,160 +1188,178 @@ df)
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-106-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-106-1.pdf>
-[50]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-112-1.pdf Graphic file (type p
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-107-1.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-112-1.pdf>
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-107-1.pdf>
+[50]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-113-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-113-1.pdf>
-[51]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-114-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-114-1.pdf>
-[52]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-137-1.pdf Graphic file (type p
+[51]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-115-1.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-137-1.pdf>
-[53]
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-115-1.pdf>
+[52] [53]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-138-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-138-1.pdf>
-[54]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-141-1.pdf Graphic file (type p
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-139-1.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-141-1.pdf>
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-139-1.pdf>
+[54]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-142-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-142-1.pdf>
 [55]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-144-1.pdf Graphic file (type p
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-143-1.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-144-1.pdf>
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-143-1.pdf>
 [56]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-144-2.pdf Graphic file (type p
-df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-144-2.pdf>
-[57]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-144-3.pdf Graphic file (type p
-df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-144-3.pdf>
-[58]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-144-4.pdf Graphic file (type p
-df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-144-4.pdf>
-[59]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-145-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-145-1.pdf>
-[60]
+[57]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-146-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-146-1.pdf>
-[61] [62]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-158-1.pdf Graphic file (type p
+[58]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-147-1.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-158-1.pdf>
-[63]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-160-1.pdf Graphic file (type p
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-147-1.pdf>
+[59]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-148-1.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-160-1.pdf>
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-161-1.pdf Graphic file (type p
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-148-1.pdf>
+[60]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-149-1.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-161-1.pdf>
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-149-1.pdf>
+[61]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-150-1.pdf Graphic file (type p
+df)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-150-1.pdf>
+[62] [63]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-162-1.pdf Graphic file (type p
+df)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-162-1.pdf>
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-164-1.pdf Graphic file (type p
+df)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-164-1.pdf>
 [64]
-LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <12> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 1864.
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-165-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-165-1.pdf>
 [65]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-166-1.pdf Graphic file (type p
-df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-166-1.pdf>
-[66]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-167-1.pdf Graphic file (type p
-df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-167-1.pdf>
-[67] [68]
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <12> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 1890.
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-169-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-169-1.pdf>
+[66]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-170-1.pdf Graphic file (type p
+df)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-170-1.pdf>
+[67]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-171-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-171-1.pdf>
-[69]
-File: surface-plot.pdf Graphic file (type pdf)
-<use surface-plot.pdf>
-[70]
+[68] [69]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-173-1.pdf Graphic file (type p
+df)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-173-1.pdf>
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-175-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-175-1.pdf>
+[70]
+File: surface-plot.pdf Graphic file (type pdf)
+<use surface-plot.pdf>
 [71]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-176-1.pdf Graphic file (type p
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-179-1.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-176-1.pdf>
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-179-1.pdf>
 [72]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-181-1.pdf Graphic file (type p
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-180-1.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-181-1.pdf>
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-182-1.pdf Graphic file (type p
-df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-182-1.pdf>
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-180-1.pdf>
 [73]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-183-1.pdf Graphic file (type p
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-185-1.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-183-1.pdf>
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-184-1.pdf Graphic file (type p
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-185-1.pdf>
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-186-1.pdf Graphic file (type p
 df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-184-1.pdf>
-[74] [75]
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-186-1.pdf>
+[74]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-187-1.pdf Graphic file (type p
 df)
 <use TUTO_VISU_files/figure-latex/unnamed-chunk-187-1.pdf>
-[76] [77]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-205-1.png Graphic file (type b
-mp)
-<TUTO_VISU_files/figure-latex/unnamed-chunk-205-1.png>
-[78] [79]
+
+Underfull \hbox (badness 10000) in paragraph at lines 2047--2048
+
+ []
+
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-188-1.pdf Graphic file (type p
+df)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-188-1.pdf>
+[75] [76]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-191-1.pdf Graphic file (type p
+df)
+<use TUTO_VISU_files/figure-latex/unnamed-chunk-191-1.pdf>
+
+Underfull \hbox (badness 10000) in paragraph at lines 2120--2121
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2129--2130
+
+ []
+
+[77] [78]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-209-1.png Graphic file (type b
 mp)
 <TUTO_VISU_files/figure-latex/unnamed-chunk-209-1.png>
-[80] [81]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-214-1.png Graphic file (type b
+[79] [80]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-213-1.png Graphic file (type b
 mp)
-<TUTO_VISU_files/figure-latex/unnamed-chunk-214-1.png>
-[82] [83]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-217-1.pdf Graphic file (type p
-df)
-<use TUTO_VISU_files/figure-latex/unnamed-chunk-217-1.pdf>
-[84]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-222-1.png Graphic file (type b
+<TUTO_VISU_files/figure-latex/unnamed-chunk-213-1.png>
+[81] [82]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-218-1.png Graphic file (type b
 mp)
-<TUTO_VISU_files/figure-latex/unnamed-chunk-222-1.png>
+<TUTO_VISU_files/figure-latex/unnamed-chunk-218-1.png>
+[83] [84]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-221-1.png Graphic file (type b
+mp)
+<TUTO_VISU_files/figure-latex/unnamed-chunk-221-1.png>
 [85] [86]
 File: TUTO_VISU_files/figure-latex/unnamed-chunk-226-1.png Graphic file (type b
 mp)
 <TUTO_VISU_files/figure-latex/unnamed-chunk-226-1.png>
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-228-1.png Graphic file (type b
+[87] [88]
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-230-1.png Graphic file (type b
 mp)
-<TUTO_VISU_files/figure-latex/unnamed-chunk-228-1.png>
-[87]
+<TUTO_VISU_files/figure-latex/unnamed-chunk-230-1.png>
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-232-1.png Graphic file (type b
+mp)
+<TUTO_VISU_files/figure-latex/unnamed-chunk-232-1.png>
+[89]
 No file TUTO_VISU.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2548.
-[88]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2548.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2588.
+[90]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2588.
 (./TUTO_VISU.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 2548.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 2548.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 2588.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 2588.
  ) 
 Here is how much of TeX's memory you used:
- 22104 strings out of 479418
- 404873 string characters out of 5884585
- 848175 words of memory out of 5000000
- 39196 multiletter control sequences out of 15000+600000
+ 22102 strings out of 479418
+ 404767 string characters out of 5884584
+ 848120 words of memory out of 5000000
+ 39199 multiletter control sequences out of 15000+600000
  538813 words of font info for 80 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 59i,7n,118p,1030b,667s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 59i,7n,118p,1030b,766s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on TUTO_VISU.pdf (88 pages).
+Output written on TUTO_VISU.pdf (90 pages).

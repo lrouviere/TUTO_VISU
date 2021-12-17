@@ -362,7 +362,7 @@ names(temp)[1] <- c("ID")
 D <- inner_join(temp, station, by = c("ID"))
 
 ## ---- echo=correct,eval=FALSE-----------------------------
-#  donnees <- read_delim("https://donneespubliques.meteofrance.fr/donnees_libres/Txt/Synop/synop.2020052415.csv",delim=";",col_types = cols(t=col_double()))
+#  donnees <- read_delim("https://donneespubliques.meteofrance.fr/donnees_libres/Txt/Synop/synop.2021122415.csv",delim=";",col_types = cols(t=col_double()))
 #  station <- read_delim("https://donneespubliques.meteofrance.fr/donnees_libres/Txt/Synop/postesSynop.csv",delim=";")
 #  donnees$t <- donnees$t-273.15 #on passe en degrés celcius
 #  temp <- donnees %>% select(numer_sta,t)
@@ -419,12 +419,17 @@ Paris <- mygeocode("paris")
 m2 <- leaflet() %>% setView(lng = Paris[1], lat = Paris[2], zoom = 12) %>% 
   addTiles()
 m2 %>% addProviderTiles("Stamen.Toner")
+
+## ---------------------------------------------------------
 m2 %>% addProviderTiles("Wikimedia")
+
+## ---------------------------------------------------------
 m2 %>% addProviderTiles("Esri.NatGeoWorldMap")
+
+## ---------------------------------------------------------
 m2 %>%
   addProviderTiles("Stamen.Watercolor") %>%
   addProviderTiles("Stamen.TonerHybrid")
-
 
 ## ---------------------------------------------------------
 data(quakes)
@@ -452,8 +457,7 @@ leaflet() %>% addTiles() %>%
 sta.Paris <- read_csv("data/sta.Paris.csv")
 
 ## ---- echo=correct,eval=FALSE-----------------------------
-#  lien <- "https://opendata.paris.fr/explore/dataset/velib-disponibilite-en-temps-reel/
-#  download/?format=csv&timezone=Europe/Berlin&use_labels_for_header=true"
+#  lien <- "https://opendata.paris.fr/explore/dataset/velib-disponibilite-en-temps-reel/download/?format=csv&timezone=Europe/Berlin&use_labels_for_header=true"
 #  sta.Paris <- read_delim(lien,delim=";")
 
 ## ---- echo=correct,eval=TRUE------------------------------
@@ -515,7 +519,7 @@ amPlot(iris, col = colnames(iris)[1:2], type = c("l", "st"),
 ## ---------------------------------------------------------
 amBoxplot(iris)
 
-## ----message=FALSE, warning=FALSE-------------------------
+## ---------------------------------------------------------
 library(plotly)
 n <- 100
 X <- runif(n,-5,5)
@@ -576,7 +580,8 @@ visNetwork(nodes,edges)
 visNetwork(nodes, edges) %>% visOptions(highlightNearest = TRUE)
 
 ## ---------------------------------------------------------
-visNetwork(nodes, edges) %>% visOptions(highlightNearest = TRUE, nodesIdSelection = TRUE)
+visNetwork(nodes, edges) %>% visOptions(highlightNearest = TRUE,
+                                        nodesIdSelection = TRUE)
 
 ## ---------------------------------------------------------
 visNetwork(nodes, edges) %>% visOptions(selectedBy = "group")
@@ -733,6 +738,7 @@ webshot::webshot("https://plus-loin-rouviere-shiny-2.apps.math.cnrs.fr/", file="
 
 ## ----echo=cor,eval=cor------------------------------------
 #  library(bestglm)
+#  library(rAmCharts)
 #  amHist(SAheart$adiposity,freq=FALSE,xlab="adiposity")
 #  amBoxplot(adiposity~chd,data=SAheart)
 

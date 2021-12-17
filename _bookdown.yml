@@ -7,3 +7,6 @@ language:
     chapter_name: "Chapitre "
   label:
     exr: "Exercice "
+#rmd_files:
+#  html: ["index.Rmd","01-risque.Rmd"]
+#  latex: ["index.Rmd","04-shiny.Rmd"]
