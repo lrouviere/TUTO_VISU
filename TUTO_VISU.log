@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.10.27)  17 DEC 2021 12:22
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2021.3.12)  12 JAN 2022 11:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1338,12 +1338,12 @@ File: TUTO_VISU_files/figure-latex/unnamed-chunk-226-1.png Graphic file (type b
 mp)
 <TUTO_VISU_files/figure-latex/unnamed-chunk-226-1.png>
 [87] [88]
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-230-1.png Graphic file (type b
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-231-1.png Graphic file (type b
 mp)
-<TUTO_VISU_files/figure-latex/unnamed-chunk-230-1.png>
-File: TUTO_VISU_files/figure-latex/unnamed-chunk-232-1.png Graphic file (type b
+<TUTO_VISU_files/figure-latex/unnamed-chunk-231-1.png>
+File: TUTO_VISU_files/figure-latex/unnamed-chunk-233-1.png Graphic file (type b
 mp)
-<TUTO_VISU_files/figure-latex/unnamed-chunk-232-1.png>
+<TUTO_VISU_files/figure-latex/unnamed-chunk-233-1.png>
 [89]
 No file TUTO_VISU.bbl.
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2588.
@@ -1355,7 +1355,7 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 2588.
  ) 
 Here is how much of TeX's memory you used:
  22102 strings out of 479418
- 404767 string characters out of 5884584
+ 404767 string characters out of 5884585
  848120 words of memory out of 5000000
  39199 multiletter control sequences out of 15000+600000
  538813 words of font info for 80 fonts, out of 8000000 for 9000

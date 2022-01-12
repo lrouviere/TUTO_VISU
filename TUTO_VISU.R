@@ -740,6 +740,8 @@ webshot::webshot("https://plus-loin-rouviere-shiny-2.apps.math.cnrs.fr/", file="
 #  library(bestglm)
 #  library(rAmCharts)
 #  amHist(SAheart$adiposity,freq=FALSE,xlab="adiposity")
+
+## ----echo=cor,eval=cor------------------------------------
 #  amBoxplot(adiposity~chd,data=SAheart)
 
 ## ---- eval=FALSE, message=FALSE, warning=FALSE, include=TRUE----
