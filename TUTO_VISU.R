@@ -827,7 +827,8 @@ pal <- colorNumeric(scales::seq_gradient_pal(low = "yellow", high = "red",
 m <- leaflet() %>% addTiles() %>% 
   addPolygons(data = dpt2,color=~pal(t_prev),fillOpacity = 0.6, 
               stroke = TRUE,weight=1,
-              popup=~paste(as.character(NOM_DEPT),as.character(t_prev),sep=" : ")) %>% 
+              popup=~paste(as.character(NOM_DEPT),as.character(t_prev),sep=" : "),
+              highlightOptions = highlightOptions(color = "black", weight = 3,bringToFront = TRUE)) %>% 
   addLayersControl(options=layersControlOptions(collapsed = FALSE))
 m
 
@@ -836,13 +837,10 @@ pal1 <- colorNumeric(palette = c("inferno"),domain = dpt2$t_prev)
 m1 <- leaflet() %>% addTiles() %>% 
   addPolygons(data = dpt2,color=~pal1(t_prev),fillOpacity = 0.6, 
               stroke = TRUE,weight=1,
-              popup=~paste(as.character(NOM_DEPT),as.character(t_prev),sep=" : ")) %>% 
+              popup=~paste(as.character(NOM_DEPT),as.character(t_prev),sep=" : "),
+              highlightOptions = highlightOptions(color = "black", weight = 3,bringToFront = TRUE)) %>% 
   addLayersControl(options=layersControlOptions(collapsed = FALSE))
 m1
-
-## ----echo=FALSE,eval=TRUE---------------------------------
-correct <- FALSE
-cor <- FALSE
 
 ## ---------------------------------------------------------
 library(rAmCharts)
@@ -873,7 +871,7 @@ D %>% plot_ly(x=~X,y=~Y) %>%
          yaxis=list(title="ordonnées"))
 
 ## ----name="plotly_html",eval=!comp_pdf,echo=!comp_pdf-----
-plot_ly(z = volcano, type = "surface")
+#  plot_ly(z = volcano, type = "surface")
 
 ## ---------------------------------------------------------
 plot_ly(z = volcano, type = "contour")
@@ -886,24 +884,24 @@ plot_ly(z = volcano, type = "contour")
 #  plot_ly(z = volcano, type = "surface")
 
 ## ----name="plotly_pdf1",eval=comp_pdf,echo=comp_pdf-------
-#  plot_ly(z = volcano, type = "contour")
+plot_ly(z = volcano, type = "contour")
 
 ## ---------------------------------------------------------
 p <- ggplot(iris)+aes(x=Species,y=Sepal.Length)+geom_boxplot()+theme_classic()
 ggplotly(p)
 
 ## ----echo=cor,eval=cor------------------------------------
-#  amPlot(Sepal.Length~Sepal.Width,data=iris,col=iris$Species)
+amPlot(Sepal.Length~Sepal.Width,data=iris,col=iris$Species) 
 
 ## ----echo=cor,eval=cor------------------------------------
-#  iris %>% plot_ly(x=~Sepal.Width,y=~Sepal.Length,color=~Species) %>%
-#    add_markers(type="scatter",mode="markers")
+iris %>% plot_ly(x=~Sepal.Width,y=~Sepal.Length,color=~Species) %>%
+  add_markers(type="scatter",mode="markers")
 
 ## ----echo=cor,eval=cor------------------------------------
-#  amBoxplot(Petal.Length~Species,data=iris)
+amBoxplot(Petal.Length~Species,data=iris)
 
 ## ----echo=cor,eval=cor------------------------------------
-#  iris %>% plot_ly(x=~Species,y=~Petal.Length) %>% add_boxplot()
+iris %>% plot_ly(x=~Species,y=~Petal.Length) %>% add_boxplot()
 
 ## ---------------------------------------------------------
 nodes <- data.frame(id = 1:15, label = paste("Id", 1:15),
@@ -936,6 +934,26 @@ V(media)$name <- nodes$media
 ## ---------------------------------------------------------
 plot(media)
 
+## ----teacher=correct--------------------------------------
+media.VN <- toVisNetworkData(media)
+visNetwork(nodes=media.VN$nodes,edges=media.VN$edges)
+
+## ----teacher=correct--------------------------------------
+names(media.VN$nodes)[4] <- "labels"
+visNetwork(nodes=media.VN$nodes,edges=media.VN$edges) %>% 
+  visOptions(selectedBy = "labels")
+
+## ----teacher=correct--------------------------------------
+media.VN1 <- media.VN
+names(media.VN1$nodes)[3] <- "group"
+visNetwork(nodes=media.VN1$nodes,edges=media.VN1$edges) %>% 
+  visOptions(selectedBy = "labels")
+
+## ----teacher=correct--------------------------------------
+names(media.VN1$edges)[3] <- "value"
+visNetwork(nodes=media.VN1$nodes,edges=media.VN1$edges) %>% 
+  visOptions(selectedBy = "labels",highlightNearest = TRUE) 
+
 ## ----echo=FALSE,eval=FALSE,indent='    '------------------
 #  df <- read.table("data/ozone.txt")
 #  gg.nuage <- ggplot(df)+aes(x=T12,y=maxO3)+geom_point()+geom_smooth()
@@ -943,6 +961,23 @@ plot(media)
 #  p12 <- predict(modT12) %>% as.numeric()
 #  am.nuage <- amPlot(x=df$T12,y=df$maxO3) %>% amLines(y=p12,type="line")
 #  pl.nuage <- ggplotly(gg.nuage)
+
+## ----teacher=correct,indent='        '--------------------
+df <- read.table("data/ozone.txt")
+cc <- cor(df[,1:11])
+mat.cor <- corrplot::corrplot(cc)
+
+## ----teacher=correct,indent='        '--------------------
+gg.H <- ggplot(df)+aes(x=maxO3)+geom_histogram(bins = 10)
+am.H <- amHist(df$maxO3)
+pl.H <- ggplotly(gg.H)
+
+## ----teacher=correct,indent='        '--------------------
+mod <- lm(maxO3~.,data=df)
+res <- rstudent(mod)
+df1 <- data.frame(maxO3=df$maxO3,r.student=res)
+Ggg <- ggplot(df1)+aes(x=maxO3,y=res)+geom_point()+geom_smooth()
+Gggp <- ggplotly(Ggg)
 
 ## ----eval=FALSE,indent='        '-------------------------
 #  radioButtons("variable1",
@@ -975,10 +1010,10 @@ plot(media)
 #                     selected=list("T9"))
 
 ## ----name='app_dash_html',screenshot.opts=list(delay = 5, cliprect = 'viewport',zoom=2,vwidth=200,vheight=200),echo=FALSE,eval=!comp_pdf,out.width=760,out.height=750----
-knitr::include_app('https://lrouviere.shinyapps.io/dashboard/', height = '650px')
+#  knitr::include_app('https://lrouviere.shinyapps.io/dashboard/', height = '650px')
 
 ## ----name='app_dash_pdf',echo=FALSE,eval=comp_pdf---------
-#  webshot::webshot("https://lrouviere.shinyapps.io/dashboard/", file="dashboard.png",delay=20,zoom=1)
+webshot::webshot("https://lrouviere.shinyapps.io/dashboard/", file="dashboard.png",delay=20,zoom=1)
 
 ## ---- echo = TRUE, eval = FALSE---------------------------
 #  selectInput(inputId = "color", label = "Couleur :",
@@ -994,10 +1029,10 @@ knitr::include_app('https://lrouviere.shinyapps.io/dashboard/', height = '650px'
 #  })
 
 ## ----name='input-output-app_html',screenshot.opts=list(delay = 5, cliprect = 'viewport',zoom=2,vwidth=200,vheight=200),echo=FALSE,eval=!comp_pdf,out.width=760,out.height=750----
-knitr::include_app('https://input-output-rouviere-shiny.apps.math.cnrs.fr/', height = '650px')
+#  knitr::include_app('https://input-output-rouviere-shiny.apps.math.cnrs.fr/', height = '650px')
 
 ## ----name='input-output-app_pdf',echo=FALSE,eval=comp_pdf----
-#  webshot::webshot("https://input-output-rouviere-shiny.apps.math.cnrs.fr/", file="dashboard.png",delay=5,zoom=1)
+webshot::webshot("https://input-output-rouviere-shiny.apps.math.cnrs.fr/", file="dashboard.png",delay=5,zoom=1)
 
 ## ---- echo = TRUE, eval = FALSE---------------------------
 #  # rappel de la structure (ui.R)
@@ -1021,10 +1056,10 @@ knitr::include_app('https://input-output-rouviere-shiny.apps.math.cnrs.fr/', hei
 #  )
 
 ## ----name='structure-app_html',screenshot.opts=list(delay = 5, cliprect = 'viewport',zoom=2,vwidth=200,vheight=200),echo=FALSE,eval=!comp_pdf,out.width=760,out.height=750----
-knitr::include_app('https://structure-rouviere-shiny.apps.math.cnrs.fr/', height = '650px')
+#  knitr::include_app('https://structure-rouviere-shiny.apps.math.cnrs.fr/', height = '650px')
 
 ## ----name='structure-app_pdf',echo=FALSE,eval=comp_pdf----
-#  webshot::webshot("https://structure-rouviere-shiny.apps.math.cnrs.fr/", file="dashboard.png",delay=5,zoom=1)
+webshot::webshot("https://structure-rouviere-shiny.apps.math.cnrs.fr/", file="dashboard.png",delay=5,zoom=1)
 
 ## ---- echo = TRUE, eval = FALSE---------------------------
 #  # server.R
@@ -1034,10 +1069,10 @@ knitr::include_app('https://structure-rouviere-shiny.apps.math.cnrs.fr/', height
 #  amChartsOutput("...")
 
 ## ----name='interactif-app_html',screenshot.opts=list(delay = 5, cliprect = 'viewport',zoom=2,vwidth=200,vheight=200),echo=FALSE,eval=!comp_pdf,out.width=760,out.height=750----
-knitr::include_app('https://interactifs-rouviere-shiny-2.apps.math.cnrs.fr/', height = '650px')
+#  knitr::include_app('https://interactifs-rouviere-shiny-2.apps.math.cnrs.fr/', height = '650px')
 
 ## ----name='interactif_pdf',echo=FALSE,eval=comp_pdf-------
-#  webshot::webshot("https://interactifs-rouviere-shiny-2.apps.math.cnrs.fr/", file="dashboard.png",delay=5,zoom=1)
+webshot::webshot("https://interactifs-rouviere-shiny-2.apps.math.cnrs.fr/", file="dashboard.png",delay=5,zoom=1)
 
 ## ---- echo = TRUE, eval = FALSE---------------------------
 #  # think to add  "session"
@@ -1067,31 +1102,31 @@ knitr::include_app('https://interactifs-rouviere-shiny-2.apps.math.cnrs.fr/', he
 #  h1("Dataset", style = "color : #0099ff;text-align:center")
 
 ## ----name='plus-loin-app_html',screenshot.opts=list(delay = 5, cliprect = 'viewport',zoom=2,vwidth=200,vheight=200),echo=FALSE,eval=!comp_pdf,out.width=760,out.height=750----
-knitr::include_app('https://plus-loin-rouviere-shiny-2.apps.math.cnrs.fr/', height = '650px')
+#  knitr::include_app('https://plus-loin-rouviere-shiny-2.apps.math.cnrs.fr/', height = '650px')
 
 ## ----name='plus-loin-app_pdf',echo=FALSE,eval=comp_pdf----
-#  webshot::webshot("https://plus-loin-rouviere-shiny-2.apps.math.cnrs.fr/", file="dashboard.png",delay=5,zoom=1)
+webshot::webshot("https://plus-loin-rouviere-shiny-2.apps.math.cnrs.fr/", file="dashboard.png",delay=5,zoom=1)
 
 ## ----echo=cor,eval=cor------------------------------------
-#  library(bestglm)
-#  library(rAmCharts)
-#  amHist(SAheart$adiposity,freq=FALSE,xlab="adiposity")
+library(bestglm)
+library(rAmCharts)
+amHist(SAheart$adiposity,freq=FALSE,xlab="adiposity")
 
 ## ----echo=cor,eval=cor------------------------------------
-#  amBoxplot(adiposity~chd,data=SAheart)
+amBoxplot(adiposity~chd,data=SAheart)
 
 ## ---- eval=FALSE, message=FALSE, warning=FALSE, include=TRUE----
 #  choices=names(SAheart)[sapply(SAheart,class)=="numeric"]
 
 ## ----name='desc-app_html',screenshot.opts=list(delay = 5, cliprect = 'viewport',zoom=2,vwidth=200,vheight=200),echo=FALSE,eval=!comp_pdf,out.width=760,out.height=750----
-knitr::include_app('https://lrouviere.shinyapps.io/DESC_APP/', height = '650px')
+#  knitr::include_app('https://lrouviere.shinyapps.io/DESC_APP/', height = '650px')
 
 ## ----name='desc-app_pdf',echo=FALSE,eval=comp_pdf---------
-#  webshot::webshot("https://lrouviere.shinyapps.io/DESC_APP/", file="dashboard.png",delay=5,zoom=1)
+webshot::webshot("https://lrouviere.shinyapps.io/DESC_APP/", file="dashboard.png",delay=5,zoom=1)
 
 ## ----name='velib-app_html',screenshot.opts=list(delay = 5, cliprect = 'viewport',zoom=2,vwidth=200,vheight=200),echo=FALSE,eval=!comp_pdf,out.width=760,out.height=750----
-knitr::include_app('https://lrouviere.shinyapps.io/velib/', height = '650px')
+#  knitr::include_app('https://lrouviere.shinyapps.io/velib/', height = '650px')
 
 ## ----name='velib-app_pdf',echo=FALSE,eval=comp_pdf--------
-#  webshot::webshot("https://lrouviere.shinyapps.io/velib/", file="dashboard.png",delay=5,zoom=1)
+webshot::webshot("https://lrouviere.shinyapps.io/velib/", file="dashboard.png",delay=5,zoom=1)
 
